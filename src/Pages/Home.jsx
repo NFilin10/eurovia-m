@@ -1,12 +1,12 @@
 import React from 'react'
-import Navbar from "../components/Common/Navbar/Navbar";
+import Header from "../components/Home/Header/Header";
 
 
 function Home() {
 
     return (
         <div className="homeWrapper">
-
+            <Header/>
         </div>
     );
 }
