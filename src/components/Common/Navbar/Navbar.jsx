@@ -2,7 +2,7 @@
 import React,{useState} from 'react';
 import {NavLink, Link} from 'react-router-dom';
 import {FiAlignRight,FiXCircle,FiChevronDown } from "react-icons/fi";
-import logo from '../../../assets/logo.jpeg'
+import logo from '../../../assets/logo-modified.png'
 
 
 const Navbar = () => {

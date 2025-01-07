@@ -1,0 +1,60 @@
+.ServicesWrapper{
+    width: 100%;
+    /*height: 600px;*/
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    flex-direction: column;
+}
+
+.textArea{
+    margin-top: 80px;
+    color: white;
+    text-align: center;
+}
+
+.heading{
+    color: red;
+    font-size: 20px;
+}
+
+h2{
+    text-transform: uppercase;
+    color: white;
+    font-size: 27px;
+}
+
+.red{
+    color: red;
+}
+
+.main{
+    margin: 0 auto;
+    width: 80%;
+    line-height: 1.5;
+    font-size: 20px;
+}
+
+.PromisesServicesWrapper{
+    width: 90%;
+    background-color: red;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 40px;
+}
+
+.Promises{
+    width: 35%;
+    background-color: #07a8ff;
+}
+
+.promise{
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.promiseText{
+    margin-top: 0;
+}
+

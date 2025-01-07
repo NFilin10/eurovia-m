@@ -6,15 +6,15 @@
 }
 
 .headerImage {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     object-fit: cover;
     z-index: 1;
     /*background-image: url("../../../assets/car-service-330.avif");*/
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../assets/car-service-330.avif");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url("../../../assets/header1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -50,16 +50,17 @@
     color: red;
     font-size: 20px;
     font-weight: 100;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
 .HeaderContent h2{
     color: white;
     text-transform: uppercase;
-    font-size: 50px;
+    font-size: 42px;
 }
 
 .main{
-    color: #908D8B;
+    color: #D7CFC7;
     font-size: 18px;
     line-height: 1.5;
     text-align: justify;
@@ -87,6 +88,7 @@
     height: 55px;
     width: 140px;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -115,10 +117,11 @@
         display: flex;
         gap: 50px;
         margin-top: 10px;
+        margin-bottom: 20px;
     }
 
     .headerImage {
-        height: 100em;
+        height: 100%;
     }
 }
 

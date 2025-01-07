@@ -11,9 +11,9 @@ function Header() {
             <div className={Styles.headerImage}>
                 <div className={Styles.HeaderContentWrapper}>
                     <div className={Styles.HeaderContent}>
-                        <p className={Styles.heading}>We are Eurovia-m</p>
-                        <h2>detail & precision car tire service</h2>
-                        <p className={Styles.main}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dolor odio, luctus at dui sit amet, malesuada scelerisque risus. Curabitur vitae consectetur justo, sed condimentum risus. Curabitur eros nunc, iaculis sit amet sollicitudin nec, posuere nec quam. Phasellus sagittis neque in egestas scelerisque. Integer et feugiat magna. </p>
+                        <p className={Styles.heading}>Me oleme Eurovia-m</p>
+                        <h2>Eurovia-m – täpsus ja usaldusväärsus teie rehvide hoolduses</h2>
+                        <p className={Styles.main}> Pakume kiiret rehvide vahetust, professionaalset remonti, protekteerimist ja mugavat rehvi hotelli. Meie eesmärk on tagada, et teie auto rehvid oleks alati valmis igaks sõiduks – turvaliselt ja usaldusväärselt. Eurovia-m, teie partner igal teel!</p>
                         <div className={Styles.ContactBtns}>
                             <span className={Styles.LearnMore}><NavLink to={`/Online`}> Uuri rohkem </NavLink></span>
                             <span className={Styles.Contact}><NavLink to={`/Online`}> Võta ühendust </NavLink></span>

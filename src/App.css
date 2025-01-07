@@ -91,7 +91,7 @@ li {
   /*float: left;*/
   display: flex;
   align-items: center;
-  background-color: #07a8ff;
+  /*background-color: #07a8ff;*/
   height: 70px;
   /*margin: 0 auto;*/
 }
@@ -99,7 +99,7 @@ li {
 .header__middle__logo a{
   height: 100%;
   width: 100%;
-  background-color: #545050;
+  /*background-color: #545050;*/
   display: flex;
   align-items: center;
 }
@@ -176,8 +176,8 @@ li {
 .sub__menus {
   position: absolute;
   display: none;
-  background: white;
-  border: 1px solid lavender;
+  background:rgba(60, 60, 60, 0.99);;
+  /*border: 1px solid lavender;*/
   width: 227px;
   left: -17px;
   padding: 2px 0 0 0;
@@ -185,11 +185,17 @@ li {
   box-shadow: 0 10px 12px rgb(22 33 39 / 25%);
 }
 
-.book-time-btn a{
-  border: 2px solid red;
-  margin-left: 50px;
 
+.book-time-btn a{
+  background-color: red;
+  margin-left: 50px;
+  width: 135px;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
 }
+
+
 
 @media (max-width:767px) {
   .header__middle .active {color: #ff3d00!important;}
@@ -245,14 +251,14 @@ li {
     position: absolute;
     left: 0;
     z-index: 10007;
-    background-color: #d8f1ff;
+    background-color: rgba(60, 60, 60, 0.99);
     /*border-bottom: 3px solid #ff3d00;*/
     right: 0;
     padding-bottom: 17px;
     padding-top: 57px;
     margin-top: -19px;
   }
-  .main-nav .menu-item a {margin: 10px 17px;text-align: center;color: #000000;}
+  .main-nav .menu-item a {margin: 10px 17px;text-align: center;color: white;}
   .main-nav  ul.main-menu {display: none}
   .main-nav .sub__menus__arrows:hover .sub__menus {margin: 0 auto;left: 0;right: 0;}
   .sub__menus__Active{display: block!important;margin: 0 auto;left: 0;right: 0;}
@@ -261,5 +267,10 @@ li {
   .menus__categorysss2{display: none;}
   .menu-item .sub__menus__full a {text-align: left;}
 
+  .book-time-btn a{
+    width: 135px;
+    border-radius: 5px;
+    margin: 0 auto !important;
+  }
 
 }
