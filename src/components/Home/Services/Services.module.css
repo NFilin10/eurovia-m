@@ -128,7 +128,7 @@ h2{
 }
 
 .bulletList{
-    height: 150px;
+    height: 250px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -138,6 +138,11 @@ h2{
 @media (min-width: 320px) and (max-width: 480px) {
     .PromisesServicesWrapper{
         flex-direction: column;
+    }
+
+    .ServiceElemWrapper{
+        padding: 0;
+        justify-content: center;
     }
 
     .bulletList{
@@ -160,5 +165,7 @@ h2{
     .textSection{
         margin-top: 20px;
     }
+
+
 
 }
