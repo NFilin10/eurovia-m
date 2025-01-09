@@ -47,6 +47,11 @@
     gap: 10px;
 }
 
+img{
+    width: 100px;
+    height: 70px;
+}
+
 @media (min-width: 320px) and (max-width: 480px) {
     .header__middle__logo{
         display: none;

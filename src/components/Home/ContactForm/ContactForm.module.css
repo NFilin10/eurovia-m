@@ -84,6 +84,10 @@ form{
     font-size: 18px;
 }
 
+textarea{
+    height: 140px !important;
+}
+
 
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -117,6 +121,10 @@ form{
 
         padding-top: 15px;
 
+    }
+
+    textarea{
+        height: auto !important;
     }
 
 }
