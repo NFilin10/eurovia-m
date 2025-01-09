@@ -1,0 +1,60 @@
+.counterWrapper{
+    width: 100%;
+    background-color: black;
+    color: #ffffff;
+    padding-top: 100px;
+}
+
+.counterContent{
+    width: 90%;
+    margin: 0 auto;
+    /*background-color: red;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.counterElem p:first-child{
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.counterElem p{
+    font-size: 20px;
+    margin-top: -20px;
+}
+
+.counterElem p span{
+    color: red;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .counterElem p:first-child{
+        font-size: 21px;
+        font-weight: bold;
+    }
+
+    .counterContent{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .counterWrapper{
+        padding-top: 45px;
+        margin-top: -1px;
+    }
+
+    .counterElem p{
+        font-size: 16px;
+        margin-top: -20px;
+    }
+
+
+}
