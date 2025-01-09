@@ -84,9 +84,39 @@ form{
     font-size: 18px;
 }
 
-.formField:nth-child(4){
-    resize: vertical;
 
 
+@media (min-width: 320px) and (max-width: 480px) {
+    .contactFormContainer{
+        flex-direction: column;
+    }
+
+    .left, .right{
+        width: 95%;
+    }
+
+    .formField{
+        width: 80%;
+        height: 20px;
+        padding: 10px;
+        background-color: black;
+        border: 1px solid #5E5E5E;
+        color: #5E5E5E;
+    }
+
+    form{
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    .right{
+        /*justify-content: center;*/
+    }
+
+    .contactFormWrapper{
+
+        padding-top: 15px;
+
+    }
 
 }
