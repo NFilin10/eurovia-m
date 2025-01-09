@@ -1,0 +1,68 @@
+.footerWrapper{
+    padding-top: 200px;
+    width: 100%;
+    background-color: black;
+}
+
+.footerContainer{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid red;
+    padding-top: 40px;
+}
+
+.contactElem{
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.icon{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.Contacts{
+    display: flex;
+    gap: 60px
+}
+
+
+
+
+.contactElem p{
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 5px 0 0 0;
+}
+
+.contactInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .header__middle__logo{
+        display: none;
+    }
+
+    .Contacts{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .footerContainer{
+        justify-content: center;
+    }
+
+    .footerWrapper{
+        padding-top: 100px;
+        margin-top: -1px;
+    }
+}
