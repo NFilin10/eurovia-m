@@ -1,0 +1,92 @@
+.contactFormWrapper{
+    width: 100%;
+    background-color: black;
+    padding-top: 70px;
+
+}
+
+.left{
+    width: 30%;
+}
+
+.contactFormContainer{
+    width: 90%;
+    margin: 0 auto;
+    color: white;
+    padding-top: 20px;
+    display: flex;
+}
+
+.heading{
+    color: red;
+    font-size: 20px;
+}
+
+.main{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 25px;
+    color: white;
+}
+
+.contactElem{
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.contactInfo{
+    display: flex;
+    flex-direction: column;
+}
+
+.contactData{
+    display: flex;
+    gap: 30px
+}
+
+.contactInfo p{
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.contactInfo span {
+    margin-top: -15px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 35px
+}
+
+.formField{
+    width: 400px;
+    height: 40px;
+    padding: 10px;
+    background-color: black;
+    border: 1px solid #5E5E5E;
+    color: #5E5E5E;
+}
+
+.right{
+    display: flex;
+    width: 50%;
+    justify-content: flex-end;
+}
+
+.submit{
+    width: 150px;
+    height: 60px;
+    background-color: red;
+    color: white;
+    border: none;
+    font-size: 18px;
+}
+
+.formField:nth-child(4){
+    resize: vertical;
+
+
+
+}
