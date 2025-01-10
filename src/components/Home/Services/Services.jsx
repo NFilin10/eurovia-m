@@ -3,32 +3,37 @@ import React from 'react';
 import Styles from './Services.module.css'
 import { TbCircleNumber1, TbCircleNumber2, TbCircleNumber3} from "react-icons/tb";
 import { TiTick } from "react-icons/ti";
+import { FaArrowRight } from "react-icons/fa6";
 
 import service1Image from '../../../assets/service1.jpg';
 import service2Image from '../../../assets/service4.jpg';
 import service3Image from '../../../assets/service2.jpg';
 import service4Image from '../../../assets/service3.jpg';
 import service5Image from '../../../assets/service5.jpg';
+import {GiCarWheel} from "react-icons/gi";
 
 
 
 const Services = () => {
+    let wheelIcon = {fontSize: "25px", color: "red"}
+    let arrow = {color: "red"}
+    let wheelIcon2 = {fontSize: "18px", color: "red"}
     let iconStyles = {fontSize: "3.5em", color: "red"};
     let tickStyles = {fontSize: "2em", color: "red"};
     let promiseData = [
         {
-            promiseHeading: "Affordable price",
-            promiseText: "fjdsk kfdjs kjf ksd fds",
+            promiseHeading: "Taskukohane hind",
+            promiseText: "Pakume alati parima hinna ja kvaliteedi suhtega teenuseid",
             icon: <TbCircleNumber1 style={iconStyles}/>
         },
         {
-            promiseHeading: "Good service",
-            promiseText: "fiosdju ifj sifj dsi",
+            promiseHeading: "Hea teenindus",
+            promiseText: "Professionaalne ja sõbralik lähenemine igale kliendile",
             icon: <TbCircleNumber2 style={iconStyles}/>
         },
         {
-            promiseHeading: "High quality",
-            promiseText: "fdlsj kkldfj ksdfj ksf",
+            promiseHeading: "Kõrge kvaliteet",
+            promiseText: "Kasutame ainult usaldusväärseid meetodeid ja materjale, et tagada teie rahulolu",
             icon: <TbCircleNumber3 style={iconStyles}/>
         },
     ]
@@ -36,43 +41,43 @@ const Services = () => {
     let serviceData = [
         {
             serviceName: "Sõiduautode rehivde vahetus",
-            serviceDescription: "dska jkdjsa kd jskadjask jdskajdksajdksa jska jksajd kdj askdjsakd jkld jsakdjas klasjd kadjklas",
+            serviceDescription: "Kiire ja täpne rehvide vahetus, et teie sõiduk oleks valmis igaks teekonnaks.",
             imageUrl: service1Image
         },
         {
             serviceName: "Veoautode rehivde vahetus",
-            serviceDescription: "dska jkdjsa kd jskadjask jdskajdksajdksa jska jksajd kdj askdjsakd jkld jsakdjas klasjd kadjklas",
+            serviceDescription: "Professionaalne teenus, mis tagab veoautode rehvide turvalisuse ja töökindluse.",
             imageUrl: service2Image
         },
         {
             serviceName: "Protekteerimine",
-            serviceDescription: "dska jkdjsa kd jskadjask jdskajdksajdksa jska jksajd kdj askdjsakd jkld jsakdjas klasjd kadjklas",
+            serviceDescription: "Pikendame rehvide eluiga kvaliteetse protekteerimise abil, et säästa teie raha ja keskkonda.",
             imageUrl: service3Image
         },
         {
             serviceName: "Rehvide remont",
-            serviceDescription: "dska jkdjsa kd jskadjask jdskajdksajdksa jska jksajd kdj askdjsakd jkld jsakdjas klasjd kadjklas",
+            serviceDescription: "Parandame teie rehvid kiiresti ja usaldusväärselt, et saaksite muretult edasi liikuda.",
             imageUrl: service4Image
         },
         {
             serviceName: "Rehvide hotell",
-            serviceDescription: "dska jkdjsa kd jskadjask jdskajdksajdksa jska jksajd kdj askdjsakd jkld jsakdjas klasjd kadjklas",
+            serviceDescription: "Hoidke oma hooajavälised rehvid turvaliselt ja mugavalt meie rehvide hotellis.",
             imageUrl: service5Image
         }
     ]
 
     let aimData = [
         {
-            aim: "djkpsaj l;d kal;dksal kdsla"
+            aim: "Täpsus ja kiirus igas teenuses"
         },
         {
-            aim: "djkpsaj l;d kal;dksal kdsla"
+            aim: "Kvaliteetsed materjalid ja lahendused"
         },
         {
-            aim: "djkpsaj l;d kal;dksal kdsla"
+            aim: "Meeskond, kes hoolib teie auto vajadustest"
         },
         {
-            aim: "djkpsaj l;d kal;dksal kdsla"
+            aim: "Kaasaegsed seadmed ja meetodid"
         }
     ]
 
@@ -90,7 +95,11 @@ const Services = () => {
         <div className={Styles.Service} style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${service.imageUrl})` }}>
             <h1>{service.serviceName}</h1>
             <p>{service.serviceDescription}</p>
-            <p>Read more</p>
+            <div className={Styles.arrow}>
+                <p>Loe lähemalt</p>
+                <FaArrowRight style={arrow}/>
+            </div>
+
         </div>
     )
 
@@ -105,29 +114,33 @@ const Services = () => {
     return (
         <div className={Styles.ServicesWrapper}>
             <div className={Styles.textArea}>
-                <h1 className={Styles.heading}>
-                    Welcome to Eurovia-m
-                </h1>
-                <h2>All you need in <span className={Styles.red}>one place</span></h2>
-                <p className={Styles.main}>kdfl kfdsl; fjdskjf ksdfjkdsjfks jdks jdskfj ksdjfksdjf kfjkdsfj dksfj ks
-                    jkdsfsdkf fhjusdi h</p>
+                <div className={Styles.iconBlock}>
+                    <GiCarWheel className={Styles.wheel} style={wheelIcon}/>
+                    <h1 className={Styles.heading}>Tere tulemast Eurovia-m-i</h1>
+                </div>
+                <h2>Kõik mida Te vajate <span className={Styles.red}>ühes kohas</span></h2>
+                <p className={Styles.main}>Pakume kõike alates rehvide vahetusest ja remondist kuni protekteerimise ja turvalise rehvi hoiustamiseni. Eurovia-m-is on teie turvalisus ja rahulolu alati esikohal!</p>
             </div>
             <div className={Styles.PromisesServicesWrapper}>
                 <div className={Styles.Promises}>
-                    <h1>OUR PROMISES</h1>
+                    <h1>MEIE LUBADUSED</h1>
                     {promiseElements}
 
                     <div className={Styles.textSection}>
-                        <p>High Technology</p>
-                        <h1>GET ALL YOUR CAR NEEDS</h1>
-                        <p>kfjsd klfjdksj fksdfj ksdjfkdsj kldsfj ksdfjdsklfjdskl fjsdkl jdf kldsjfksdjfks jsd kjfkdsjf  kdsjfkdsjf  f s fksj ks jksdjfksdskfj kls jfdksjf ksdfjdsk </p>
+                        <div className={Styles.iconBlock1}>
+                            <GiCarWheel className={Styles.wheel} style={wheelIcon}/>
+                            <p>Kõrgtehnoloogia</p>
+                        </div>
+                        <h1>KÕIK, MIDA TEIE AUTO VAJAB</h1>
+                        <p>Kasutame kaasaegseid tööriistu ja tehnoloogiaid, et tagada teie auto rehvide hoolduse ja
+                            remondi parim kvaliteet. Usaldage meid, et saaksite nautida turvalist ja sujuvat sõitu.</p>
                         <div className={Styles.bulletList}>
                             {aimElements}
                         </div>
                     </div>
                 </div>
                 <div className={Styles.Services}>
-                    <h1>OUR SERVICES</h1>
+                    <h1>MEIE TEENUSED</h1>
                     <div className={Styles.ServiceElemWrapper}>
                         {ServicElements}
                     </div>

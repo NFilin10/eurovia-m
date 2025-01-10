@@ -24,17 +24,17 @@ const Footer = () => {
 
                 <div className={Styles.Contacts}>
                     <div className={Styles.contactElem}>
-                        <p className={Styles.question}>want to call us?</p>
+                        <p className={Styles.question}>Soovite helistada meile?</p>
                         <div className={Styles.icon}>
                             <FaPhone style={iconStyles}/>
                             <div className={Styles.contactInfo}>
-                                <p>phone</p>
+                                <p>telefon</p>
                                 <p>473 4837248</p>
                             </div>
                         </div>
                     </div>
                     <div className={Styles.contactElem}>
-                        <p className={Styles.question}>want to email with us?</p>
+                        <p className={Styles.question}>Sooite kirjutada meile?</p>
                         <div className={Styles.icon}>
                             <MdEmail style={iconStyles}/>
                             <div className={Styles.contactInfo}>
@@ -44,11 +44,11 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className={Styles.contactElem}>
-                        <p className={Styles.question}>want to visit us?</p>
+                        <p className={Styles.question}>Soovite külastada meid?</p>
                         <div className={Styles.icon}>
                             <IoLocationSharp style={iconStyles}/>
                             <div className={Styles.contactInfo}>
-                                <p>location</p>
+                                <p>Asukoht</p>
                                 <p>suur manniku 8</p>
                             </div>
                         </div>

@@ -56,8 +56,9 @@ img{
     font-size: 18px;
 }
 
-.contactInfo span{
+.contactInfo p{
     font-size: 16px;
+    margin-top: -16px;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {

@@ -13,20 +13,20 @@ const ContactForm = () => {
         <div className={Styles.contactFormWrapper}>
             <div className={Styles.contactFormContainer}>
                 <div className={Styles.left}>
-                    <p className={Styles.heading}>Contact us</p>
-                    <h1 className={Styles.main}>contact us to get better<br/>information</h1>
-                    <p>djsak jdkasj kjdkas jkasjd kdjksajdkasj ksadj ksajd kajdskal jdkasjskajdkl aj ksajd ksa jkdjk djsak jkasjd kasdjkd </p>
+                    <p className={Styles.heading}>Võtke meiega ühendust</p>
+                    <h1 className={Styles.main}>Saame koos parima<br/>lahenduseni!</h1>
+                    <p>Kui teil on küsimusi või vajate rohkem teavet, võtke meiega julgelt ühendust. Oleme siin, et aidata!</p>
                     <div className={Styles.contactData}>
                         <div className={Styles.contactElem}>
-                            <FaPhone style={iconStyles}/>
+                            <FaPhone className={Styles.icon} style={iconStyles}/>
                             <div className={Styles.contactInfo}>
-                                <p>phone</p>
+                                <p>Telefon</p>
                                 <span>473 4837248</span>
                             </div>
 
                         </div>
                         <div className={Styles.contactElem}>
-                            <MdEmail style={iconStyles}/>
+                            <MdEmail className={Styles.icon} style={iconStyles}/>
                             <div className={Styles.contactInfo}>
                                 <p>Email</p>
                                 <span>eurovia-m@hot.ee</span>
