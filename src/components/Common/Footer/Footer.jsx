@@ -24,32 +24,32 @@ const Footer = () => {
 
                 <div className={Styles.Contacts}>
                     <div className={Styles.contactElem}>
-                        <p>want to call us?</p>
+                        <p className={Styles.question}>want to call us?</p>
                         <div className={Styles.icon}>
                             <FaPhone style={iconStyles}/>
                             <div className={Styles.contactInfo}>
                                 <p>phone</p>
-                                <span>473 4837248</span>
+                                <p>473 4837248</p>
                             </div>
                         </div>
                     </div>
                     <div className={Styles.contactElem}>
-                        <p>want to email with us?</p>
+                        <p className={Styles.question}>want to email with us?</p>
                         <div className={Styles.icon}>
                             <MdEmail style={iconStyles}/>
                             <div className={Styles.contactInfo}>
                                 <p>email</p>
-                                <span>euroviam@hot.ee</span>
+                                <p>euroviam@hot.ee</p>
                             </div>
                         </div>
                     </div>
                     <div className={Styles.contactElem}>
-                        <p>want to visit us?</p>
+                        <p className={Styles.question}>want to visit us?</p>
                         <div className={Styles.icon}>
                             <IoLocationSharp style={iconStyles}/>
                             <div className={Styles.contactInfo}>
                                 <p>location</p>
-                                <span>suur manniku 8</span>
+                                <p>suur manniku 8</p>
                             </div>
                         </div>
                     </div>

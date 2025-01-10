@@ -215,15 +215,19 @@ li {
   margin: 7px 27px;
 }
 .menu-item:hover > a{
-  color: #07a8ff !important;
+  color: red !important;
 }
 .menu-item .sub__menus li:hover a{
-  color: #07a8ff !important;
+  color: red !important;
 }
 
 .header__middle__logo img{
   max-width: 207px;
   margin: 17px 0 0 0;
+}
+
+.sub__menus li a{
+  font-size: 18px;
 }
 
 
@@ -271,6 +275,14 @@ li {
     width: 135px;
     border-radius: 5px;
     margin: 0 auto !important;
+  }
+
+  .sub__menus li a{
+    font-size: 16px;
+  }
+
+  .menu-item a {
+    font-size: 16px;
   }
 
 }

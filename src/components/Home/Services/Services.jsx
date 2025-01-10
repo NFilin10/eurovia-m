@@ -88,7 +88,7 @@ const Services = () => {
 
     let ServicElements = serviceData.map(service =>
         <div className={Styles.Service} style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${service.imageUrl})` }}>
-            <h2>{service.serviceName}</h2>
+            <h1>{service.serviceName}</h1>
             <p>{service.serviceDescription}</p>
             <p>Read more</p>
         </div>
@@ -97,7 +97,7 @@ const Services = () => {
     let aimElements = aimData.map(aim =>
         <div className={Styles.listElem}>
             <div><TiTick style={tickStyles}/></div>
-            <div><p className={Styles.mainAim}>{aim.aim}</p></div>
+            <p className={Styles.mainAim}>{aim.aim}</p>
         </div>
     )
 
@@ -105,21 +105,21 @@ const Services = () => {
     return (
         <div className={Styles.ServicesWrapper}>
             <div className={Styles.textArea}>
-                <p className={Styles.heading}>
+                <h1 className={Styles.heading}>
                     Welcome to Eurovia-m
-                </p>
+                </h1>
                 <h2>All you need in <span className={Styles.red}>one place</span></h2>
                 <p className={Styles.main}>kdfl kfdsl; fjdskjf ksdfjkdsjfks jdks jdskfj ksdjfksdjf kfjkdsfj dksfj ks
                     jkdsfsdkf fhjusdi h</p>
             </div>
             <div className={Styles.PromisesServicesWrapper}>
                 <div className={Styles.Promises}>
-                    <h2>OUR PROMISES</h2>
+                    <h1>OUR PROMISES</h1>
                     {promiseElements}
 
                     <div className={Styles.textSection}>
                         <p>High Technology</p>
-                        <h2>GET ALL YOUR CAR NEEDS</h2>
+                        <h1>GET ALL YOUR CAR NEEDS</h1>
                         <p>kfjsd klfjdksj fksdfj ksdjfkdsj kldsfj ksdfjdsklfjdskl fjsdkl jdf kldsjfksdjfks jsd kjfkdsjf  kdsjfkdsjf  f s fksj ks jksdjfksdskfj kls jfdksjf ksdfjdsk </p>
                         <div className={Styles.bulletList}>
                             {aimElements}
@@ -127,7 +127,7 @@ const Services = () => {
                     </div>
                 </div>
                 <div className={Styles.Services}>
-                    <h2>OUR SERVICES</h2>
+                    <h1>OUR SERVICES</h1>
                     <div className={Styles.ServiceElemWrapper}>
                         {ServicElements}
                     </div>

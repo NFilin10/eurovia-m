@@ -34,9 +34,9 @@
 
 
 
-.contactElem p{
+.contactElem p:first-child{
     text-transform: uppercase;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
     margin: 5px 0 0 0;
 }
@@ -50,6 +50,14 @@
 img{
     width: 100px;
     height: 70px;
+}
+
+.contactInfo p:first-child{
+    font-size: 18px;
+}
+
+.contactInfo span{
+    font-size: 16px;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -69,5 +77,47 @@ img{
     .footerWrapper{
         padding-top: 100px;
         margin-top: -1px;
+    }
+
+    .contactInfo p{
+        font-size: 16px;
+    }
+
+    .contactInfo span{
+        font-size: 16px;
+    }
+
+    .contactElem p:first-child{
+        font-size: 16px;
+    }
+
+    .question{
+        display: none;
+    }
+
+    .contactElem p:nth-last-child(1){
+        margin-top: 5px;
+    }
+
+
+
+    .contactInfo{
+        flex-direction: row;
+        gap: 10px;
+        /*align-items: center;*/
+    }
+
+    .footerContainer{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: start;
+        border-top: 1px solid red;
+        padding-top: 10px;
+    }
+
+    .Contacts{
+        display: flex;
+        gap: 6px
     }
 }

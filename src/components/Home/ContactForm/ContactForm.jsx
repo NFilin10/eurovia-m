@@ -14,7 +14,7 @@ const ContactForm = () => {
             <div className={Styles.contactFormContainer}>
                 <div className={Styles.left}>
                     <p className={Styles.heading}>Contact us</p>
-                    <p className={Styles.main}>contact us to get better<br/>information</p>
+                    <h1 className={Styles.main}>contact us to get better<br/>information</h1>
                     <p>djsak jdkasj kjdkas jkasjd kdjksajdkasj ksadj ksajd kajdskal jdkasjskajdkl aj ksajd ksa jkdjk djsak jkasjd kasdjkd </p>
                     <div className={Styles.contactData}>
                         <div className={Styles.contactElem}>

@@ -1,7 +1,7 @@
 .contactFormWrapper{
     width: 100%;
     background-color: black;
-    padding-top: 70px;
+    padding-top: 100px;
 
 }
 
@@ -25,15 +25,18 @@
 .main{
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 27px;
     color: white;
 }
 
 .contactElem{
     display: flex;
     align-items: center;
-    gap: 10px
+    gap: 10px;
+    margin-top: 15px;
 }
+
+
 
 .contactInfo{
     display: flex;
@@ -47,11 +50,13 @@
 
 .contactInfo p{
     font-size: 20px;
+    font-weight: bold;
     text-transform: uppercase;
 }
 
 .contactInfo span {
     margin-top: -15px;
+    font-size: 16px;
 }
 
 form{
@@ -88,7 +93,14 @@ textarea{
     height: 140px !important;
 }
 
+.left p:first-child{
+    font-size: 18px;
+}
 
+.left p:nth-last-child(2){
+    font-size: 18px;
+    /*margin-top: 30px;*/
+}
 
 @media (min-width: 320px) and (max-width: 480px) {
     .contactFormContainer{
@@ -127,4 +139,33 @@ textarea{
         height: auto !important;
     }
 
+    .left p:first-child{
+        font-size: 16px;
+    }
+
+    .main{
+        font-size: 22px;
+    }
+
+    .left p:nth-last-child(2){
+        font-size: 16px;
+    }
+
+    svg{
+        display: none;
+    }
+
+    .contactElem{
+
+        margin-top: -10px;
+    }
+
+    form{
+        margin-top: 60px;
+    }
+    .submit{
+        width: 130px;
+        height: 40px;
+        font-size: 16px;
+    }
 }
