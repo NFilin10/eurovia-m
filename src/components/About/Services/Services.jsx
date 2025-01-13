@@ -72,6 +72,9 @@ const Services = () => {
             items={serviceElements}
             responsive={responsive}
             controlsStrategy="alternate"
+            autoPlay={true}
+            infinite={true}
+
         />
     );
 };

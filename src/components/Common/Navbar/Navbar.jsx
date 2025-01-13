@@ -83,7 +83,7 @@ const Navbar = () => {
                                 <li className="menu-item"><NavLink onClick={toggleClass} activeClassName='is-active'
                                                                    to={`/meist`}> Meist </NavLink></li>
                                 <li className="menu-item"><NavLink onClick={toggleClass} activeClassName='is-active'
-                                                                   to={`/Contact`}> Kontakt </NavLink></li>
+                                                                   to={`/kontakt`}> Kontakt </NavLink></li>
 
                                 <li className="menu-item book-time-btn"><NavLink onClick={toggleClass} activeClassName='is-active'
                                                                                  to={`/Contact`}> Broneeri aeg </NavLink></li>
