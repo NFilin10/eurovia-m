@@ -41,3 +41,29 @@
     text-align: center;
     justify-content: center;
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .mainSection{
+        flex-direction: column;
+    }
+
+    .left{
+        width: 100%;
+        row-gap: 10px;
+    }
+
+    .iconElement{
+        width: 100%;
+    }
+
+    .right{
+        width: 100%;
+        height: 300px;
+    }
+
+    .right iframe{
+        width: 100%;
+
+    }
+}
+
