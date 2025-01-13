@@ -39,6 +39,44 @@ body{
     color: white;
 }
 
+.textArea{
+    margin-top: 80px;
+    color: white;
+    text-align: center;
+}
+
+.iconBlock{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+
+}
+
+.heading{
+    color: red;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+
+h2{
+    text-transform: uppercase;
+    color: white;
+    font-size: 27px;
+}
+
+h1{
+    text-transform: uppercase;
+    color: white;
+    font-size: 27px;
+}
+
+.red{
+    color: red;
+}
+
 @media (min-width: 320px) and (max-width: 480px) {
     .history, .vision, .mission{
         flex-direction: column;
