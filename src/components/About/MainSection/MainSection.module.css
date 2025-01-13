@@ -1,0 +1,61 @@
+body{
+    background-color: black;
+}
+
+.mainSectionWrapper{
+    color: white;
+    width: 70%;
+    background-color: black;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+
+}
+
+.heading{
+    color: red;
+}
+
+.history, .vision, .mission{
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+    width: 100%;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.image{
+    width: 45%;
+    height: 400px;
+}
+
+.mainText{
+    text-align: justify;
+}
+
+.whiteWord{
+    color: white;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .history, .vision, .mission{
+        flex-direction: column;
+        width: 100%;
+        margin-top: 0;
+        gap: 1px;
+    }
+
+    .image{
+        display: none;
+    }
+
+    .heading{
+        text-align: center;
+    }
+
+    .mainSectionWrapper{
+        width: 90%;
+    }
+}

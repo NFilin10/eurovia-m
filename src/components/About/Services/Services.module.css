@@ -1,0 +1,132 @@
+
+
+
+.serviceWrapper{
+    width: 360px !important;
+}
+
+.serviceWrapper:hover .serviceImage::before{
+    border: 3px solid red;
+}
+
+.serviceImage{
+    width: 360px !important;
+    height: 255px !important;
+}
+
+.serviceImage img{
+    width: 360px !important;
+    height: 255px !important;
+    object-fit: cover;
+}
+
+
+.serviceText{
+    width: 360px;
+    height: 190px;
+
+}
+
+
+.serviceHeading{
+    margin-top: 37px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: red;
+    margin-left: 25px;
+    font-size: 18px;
+}
+
+.serviceDescription{
+    margin-top: -20px;
+    font-weight: 400;
+    line-height: 23px !important;
+    color: white;
+    margin-left: 25px;
+}
+
+.serviceNum{
+    font-weight: 400;
+    color: white;
+    opacity: 0.3;
+    position: absolute;
+    top: 260px;
+    left: 1px;
+    font-size: 70px;
+}
+
+.serviceImage::before{
+    content: "";
+    border: 3px solid #E5E5E5;
+    z-index: -1;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transition: all 0.3s ease-in-out;
+    width: 360px !important;
+    height: 255px !important;
+}
+
+
+
+@media screen and (max-width: 780px){
+    .alice-carousel{
+        top: 0;
+        margin-top: 50px !important;
+    }
+
+    .serviceWrapper{
+        width: 100% !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .serviceImage{
+        width: 333px !important;
+        height: 235px !important;
+    }
+
+    .alice-carousel__stage-item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .serviceImage img{
+        width: 333px !important;
+        height: 235px !important;
+    }
+
+    .serviceImage::before{
+        content: "";
+        border: none;
+        z-index: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0 !important;
+        height: 0 !important;
+    }
+
+    .serviceHeading{
+        font-size: 16px;
+    }
+
+    .serviceDescription{
+        font-size: 14px;
+    }
+
+    .serviceNum{
+        opacity: 0.3;
+        top: 275px;
+        left: 1px;
+        font-size: 40px;
+    }
+
+
+
+
+}

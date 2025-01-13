@@ -3,10 +3,12 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
 
 import Home from './Pages/Home';
+import About from './Pages/About';
 import Navbar from "./components/Common/Navbar/Navbar";
 import Footer from "./components/Common/Footer/Footer";
 
 function App() {
+
     return (
         <div>
             <Router basename="/">
@@ -15,6 +17,7 @@ function App() {
 
                 <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="/meist" element={<About />} />
                 </Routes>
                 <Footer />
             </Router>
