@@ -65,15 +65,15 @@ const Navbar = () => {
                                     <Link to="#"> Teenused <FiChevronDown /> </Link>
                                     <ul className={boxClassSubMenu.join(' ')}>
                                         <li><NavLink onClick={toggleClass} activeClassName='is-active'
-                                                     to={`/Online`}> Sõiduautode rehvide vahetus </NavLink></li>
+                                                     to={`/sõiduauto-rehvvi-vahetus`}> Sõiduautode rehvide vahetus </NavLink></li>
                                         <li><NavLink onClick={toggleClass} activeClassName='is-active'
-                                                     to={`/Offline`}> Veoautode rehvide vahetus </NavLink></li>
+                                                     to={`/veoauto-rehvvi-vahetus`}> Veoautode rehvide vahetus </NavLink></li>
                                         <li><NavLink onClick={toggleClass} activeClassName='is-active'
-                                                     to={`/Offline`}> Protekteerimine </NavLink></li>
+                                                     to={`/protekteerimine`}> Protekteerimine </NavLink></li>
                                         <li><NavLink onClick={toggleClass} activeClassName='is-active'
-                                                     to={`/Offline`}> Rehvide remont </NavLink></li>
+                                                     to={`/remont`}> Rehvide remont </NavLink></li>
                                         <li><NavLink onClick={toggleClass} activeClassName='is-active'
-                                                     to={`/Offline`}> Rehvide hotell </NavLink></li>
+                                                     to={`/hotell`}> Rehvide hotell </NavLink></li>
                                     </ul>
                                 </li>
                                 <li className="menu-item">

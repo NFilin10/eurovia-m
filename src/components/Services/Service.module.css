@@ -1,0 +1,91 @@
+.serviceContainerWrapper{
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 200px;
+}
+
+
+.serviceContainer{
+    color: white;
+    width: 100%;
+    background-color: #1C080C;
+    border-radius: 10px;
+}
+
+.mainImgContainer{
+    width: 100%;
+}
+
+.mainImg{
+    width: 100%;
+    height: 450px;
+    border-radius: 10px;
+
+}
+
+.content{
+    padding: 0 30px;
+}
+
+.heading{
+    font-size: 52px;
+    font-weight: lighter;
+}
+
+.mainText, .secondaryText{
+    font-size: 18px;
+    color: #BBBBBB;
+    margin-top: -18px;
+}
+
+.serviceFeature{
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+.featureSection{
+    display: flex;
+}
+
+.secondaryImg{
+    width: 230px;
+    height: 150px;
+    border-radius: 30px;
+}
+
+.list{
+    margin-top: 60px;
+    color: #BBBBBB;
+
+}
+
+.listItem{
+    display: flex;
+    gap: 10px;
+
+}
+
+.listItem p{
+    font-size: 18px;
+    margin-top: -1px;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .serviceContainerWrapper{
+        width: 100%;
+        padding-top: 100px;
+
+    }
+
+    .mainImg{
+        width: 100%;
+        height: 200px;
+        border-radius: 10px;
+
+    }
+
+    .featureSection{
+        flex-direction: column;
+    }
+}
+
