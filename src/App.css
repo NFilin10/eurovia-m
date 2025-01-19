@@ -197,7 +197,9 @@ li {
   border-radius: 5px;
 }
 
-
+a{
+  text-decoration: none;
+}
 
 @media (max-width:767px) {
   .header__middle .active {color: #ff3d00!important;}

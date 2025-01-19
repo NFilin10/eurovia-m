@@ -11,6 +11,7 @@ import service3Image from '../../../assets/service2.jpg';
 import service4Image from '../../../assets/service3.jpg';
 import service5Image from '../../../assets/service5.jpg';
 import {GiCarWheel} from "react-icons/gi";
+import {NavLink} from "react-router-dom";
 
 
 
@@ -42,27 +43,32 @@ const Services = () => {
         {
             serviceName: "Sõiduautode rehivde vahetus",
             serviceDescription: "Kiire ja täpne rehvide vahetus, et teie sõiduk oleks valmis igaks teekonnaks.",
-            imageUrl: service1Image
+            imageUrl: service1Image,
+            link: "/sõiduauto-rehvvi-vahetus"
         },
         {
             serviceName: "Veoautode rehivde vahetus",
             serviceDescription: "Professionaalne teenus, mis tagab veoautode rehvide turvalisuse ja töökindluse.",
-            imageUrl: service2Image
+            imageUrl: service2Image,
+            link: "/veoauto-rehvvi-vahetus"
         },
         {
             serviceName: "Protekteerimine",
             serviceDescription: "Pikendame rehvide eluiga kvaliteetse protekteerimise abil, et säästa teie raha ja keskkonda.",
-            imageUrl: service3Image
+            imageUrl: service3Image,
+            link: "/protekteerimine"
         },
         {
             serviceName: "Rehvide remont",
             serviceDescription: "Parandame teie rehvid kiiresti ja usaldusväärselt, et saaksite muretult edasi liikuda.",
-            imageUrl: service4Image
+            imageUrl: service4Image,
+            link: "/remont"
         },
         {
             serviceName: "Rehvide hotell",
             serviceDescription: "Hoidke oma hooajavälised rehvid turvaliselt ja mugavalt meie rehvide hotellis.",
-            imageUrl: service5Image
+            imageUrl: service5Image,
+            link: "/hotell",
         }
     ]
 
@@ -95,15 +101,21 @@ const Services = () => {
         <div className={Styles.Service} style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${service.imageUrl})` }}>
             <h1>{service.serviceName}</h1>
             <p>{service.serviceDescription}</p>
-            <div className={Styles.arrow}>
-                <p>Loe lähemalt</p>
-                <FaArrowRight style={arrow}/>
-            </div>
+            <NavLink
+                to={service.link}>
+                <div className={Styles.arrow}>
+                    <div className={Styles.arrow}>
+                        <p>Loe lähemalt</p>
+                        <FaArrowRight style={arrow}/>
+                    </div>
+                </div>
+            </NavLink>
+
 
         </div>
-    )
+)
 
-    let aimElements = aimData.map(aim =>
+let aimElements = aimData.map(aim =>
         <div className={Styles.listElem}>
             <div><TiTick style={tickStyles}/></div>
             <p className={Styles.mainAim}>{aim.aim}</p>

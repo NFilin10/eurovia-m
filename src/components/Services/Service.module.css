@@ -45,6 +45,7 @@
 
 .featureSection{
     display: flex;
+    align-items: center;
 }
 
 .secondaryImg{

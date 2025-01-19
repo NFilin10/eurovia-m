@@ -18,7 +18,7 @@ const Footer = () => {
             <div className={Styles.footerContainer}>
                 <div className={Styles.header__middle__logo}>
                     <NavLink exact activeClassName='is-active' to="/">
-                        <img src={logo} alt="logo"/>
+                        <img className={Styles.footerImg} src={logo} alt="logo"/>
                     </NavLink>
                 </div>
 
