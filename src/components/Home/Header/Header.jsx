@@ -12,7 +12,7 @@ function Header() {
     return (
         <div className={Styles.HeaderWrapper}>
             <div className={Styles.headerImage}>
-                <div className={Styles.HeaderContentWrapper}>
+                <div className={Styles.HeaderContentContainer}>
                     <div className={Styles.HeaderContent}>
                         <div className={Styles.iconBlock}>
                             <GiCarWheel className={Styles.wheel} style={wheelIcon}/>

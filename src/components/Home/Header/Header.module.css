@@ -31,7 +31,7 @@
 
 }
 
-.HeaderContentWrapper{
+.HeaderContentContainer{
     width: 90%;
     margin: 80px auto 0 auto;
     /*background-color: red;*/
@@ -93,7 +93,7 @@
 
 @media (min-width: 320px) and (max-width: 480px) {
 
-    .HeaderContentWrapper{
+    .HeaderContentContainer{
         justify-content: center;
     }
 

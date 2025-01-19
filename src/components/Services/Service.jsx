@@ -21,7 +21,7 @@ function Service({props}) {
                 <div className={Styles.mainImgContainer}>
                     <img src={props.mainImg} className={Styles.mainImg} alt=""/>
                 </div>
-                <div className={Styles.content}>
+                <div className={Styles.serviceContent}>
                     <h1 className={Styles.heading}>{props.heading}</h1>
                     <p className={Styles.mainText}>{props.mainText}</p>
                     <div className={Styles.featureSection}>

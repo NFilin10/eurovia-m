@@ -8,7 +8,7 @@ const Counter = () => {
 
     return (
         <div className={Styles.counterWrapper}>
-            <div className={Styles.counterContent}>
+            <div className={Styles.counterContainer}>
                 <div className={Styles.counterElem}>
                     <p>20<span>+</span></p>
                     <p>Aastat kogemust</p>

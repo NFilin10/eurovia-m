@@ -5,7 +5,7 @@
     padding-top: 100px;
 }
 
-.counterContent{
+.counterContainer{
     width: 90%;
     margin: 0 auto;
     /*background-color: red;*/
@@ -35,7 +35,7 @@
         font-weight: bold;
     }
 
-    .counterContent{
+    .counterContainer{
         width: 90%;
         margin: 0 auto;
         display: flex;
