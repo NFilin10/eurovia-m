@@ -20,11 +20,10 @@ function App() {
     return (
         <div>
             <Router basename="/">
-                {/* Add Menu Component */}
-                <Navbar state={state} />
+                <Navbar state={state.navbar} />
 
                 <Routes>
-                    <Route path="/" element={<Home />} />
+                    <Route path="/" element={<Home state={state} />} />
                     <Route path="/meist" element={<About />} />
                     <Route path="/kontakt" element={<Contact />} />
                     <Route path="/sõiduauto-rehvvi-vahetus" element={<CarTiresS1 />} />

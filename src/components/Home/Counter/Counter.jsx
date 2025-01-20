@@ -4,27 +4,19 @@ import CountUp from 'react-countup';
 
 
 
-const Counter = () => {
+const Counter = ({state}) => {
+
+    const counterElem = state.map(elem =>
+        <div className={Styles.counterElem}>
+            <p>{elem.number}<span>+</span></p>
+            <p>{elem.heading}</p>
+        </div>
+    )
 
     return (
         <div className={Styles.counterWrapper}>
             <div className={Styles.counterContainer}>
-                <div className={Styles.counterElem}>
-                    <p>20<span>+</span></p>
-                    <p>Aastat kogemust</p>
-                </div>
-                <div className={Styles.counterElem}>
-                    <p>7<span>+</span></p>
-                    <p>Tehnikut</p>
-                </div>
-                <div className={Styles.counterElem}>
-                    <p>3500<span>+</span></p>
-                    <p>Autod tehtud</p>
-                </div>
-                <div className={Styles.counterElem}>
-                    <p>3000<span>+</span></p>
-                    <p>Rahulolevad kliendid</p>
-                </div>
+                {counterElem}
             </div>
         </div>
     )

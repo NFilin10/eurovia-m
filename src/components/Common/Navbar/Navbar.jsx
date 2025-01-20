@@ -19,7 +19,7 @@ const Navbar = ({ state }) => {
     const location = useLocation();
     const isHomePage = location.pathname === "/";
 
-    const { logo, menuItems } = state.navbar;
+    const { logo, menuItems } = state;
 
     return (
         <header className="header__middle">
