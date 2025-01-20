@@ -17,6 +17,16 @@ import mission from './assets/mission.jpg'
 import React from "react";
 import {FiPhone} from "react-icons/fi";
 import {LuBookCheck} from "react-icons/lu";
+import service1_1 from "./assets/servicePage1_1.jpg";
+import service1_2 from "./assets/servicePage1_2.jpg";
+import service2_1 from "./assets/servicePage2_1.jpg";
+import service2_2 from "./assets/servicePage2_2.avif";
+import service3_1 from './assets/servicePage3_1.jpg'
+import service3_2 from './assets/servicePage3_2.jpg'
+import service4_1 from "./assets/servicePage4_1_dark.jpg";
+import service4_2 from "./assets/servicePage4_2.jpg";
+import service5_1 from "./assets/servicePage5_1.jpg";
+import service5_2 from "./assets/servicePage5_2.jpg";
 
 let iconStylesHome = {fontSize: "3.5em", color: "red"};
 let iconStylesFooter = {fontSize: "30px", color:"red"};
@@ -35,11 +45,11 @@ const state = {
               subMenu: [
                   {
                       text: "Sõiduautode rehvide vahetus",
-                      to: "/sõiduauto-rehvvi-vahetus",
+                      to: "/sõiduauto-rehvi-vahetus",
                   },
                   {
                       text: "Veoautode rehvide vahetus",
-                      to: "/veoauto-rehvvi-vahetus",
+                      to: "/veoauto-rehvi-vahetus",
                   },
                   {
                       text: "Protekteerimine",
@@ -111,13 +121,13 @@ const state = {
                 serviceName: "Sõiduautode rehivde vahetus",
                 serviceDescription: "Kiire ja täpne rehvide vahetus, et teie sõiduk oleks valmis igaks teekonnaks.",
                 imageUrl: service1Image,
-                link: "/sõiduauto-rehvvi-vahetus"
+                link: "/sõiduauto-rehvi-vahetus"
             },
             {
                 serviceName: "Veoautode rehivde vahetus",
                 serviceDescription: "Professionaalne teenus, mis tagab veoautode rehvide turvalisuse ja töökindluse.",
                 imageUrl: service2Image,
-                link: "/veoauto-rehvvi-vahetus"
+                link: "/veoauto-rehvi-vahetus"
             },
             {
                 serviceName: "Protekteerimine",
@@ -285,7 +295,55 @@ const state = {
                 text: "djsak jkdsjak jdkasjdk jsa",
             }
         ]
-    }
+    },
+    servicePages:[
+        {
+            heading: "Sõiduautode rehvide vahetus",
+            mainImg: service1_1,
+            mainText: "Sõiduautode rehvide vahetamine on iga autojuhi jaoks oluline ülesanne, mis tagab nii sõiduki ohutuse kui ka optimaalse sõidumugavuse. Hooajaline rehvide vahetamine pole pelgalt seadusega ette nähtud, vaid ka praktiline viis kohandada sõidukit ilmastikuoludega, pakkudes paremat pidamist ja vähendades õnnetuste riski.",
+            secondaryText: "Meie teenus tagab kiire, mugava ja kvaliteetse rehvide vahetamise igat tüüpi sõiduautodele. Lisaks on meil lai valik lisateenuseid, mis teevad sõiduki hoolduse lihtsaks ja usaldusväärseks.",
+            secondaryImg: service1_2,
+            listItems: ["Professionaalne vahetusprotsess – kasutame kaasaegseid seadmeid, et vältida rehvide või velgede kahjustamist.Professionaalne vahetusprotsess – kasutame kaasaegseid seadmeid, et vältida rehvide või velgede kahjustamist.", "Tasakaalustamine – pärast iga vahetust tasakaalustame rehvid, et vältida vibratsiooni ja pikendada rehvide eluiga.", "Rehvide seisukorra hindamine – kontrollime mustri sügavust ja rehvide üldist seisukorda, andes vajadusel soovitusi uute rehvide ostmiseks."],
+            path: "/sõiduauto-rehvi-vahetus"
+        },
+        {
+            heading: "Veoautode rehvide vahetus",
+            mainImg: service2_1,
+            mainText: "Veoautode rehvide vahetus on kriitilise tähtsusega igale transpordiettevõttele. Veoauto rehvid on pidevalt kõrge koormuse ja pikaajalisel kasutamisel tekkiva kulumise all, mistõttu on nende õigeaegne vahetamine võtmetähtsusega, et tagada tööprotsesside sujuvus ja ohutus.Veoautode rehvide vahetus on kriitilise tähtsusega igale transpordiettevõttele. Veoauto rehvid on pidevalt kõrge koormuse ja pikaajalisel kasutamisel tekkiva kulumise all, mistõttu on nende õigeaegne vahetamine võtmetähtsusega, et tagada tööprotsesside sujuvus ja ohutus.",
+            secondaryText: "Meie meeskond on spetsialiseerunud veoautode rehvide vahetusele, pakkudes kõrge kvaliteediga teenust ja professionaalset nõu.",
+            secondaryImg: service2_2,
+            listItems: ["Erivarustus suurte rehvide jaoks – teostame rehvide vahetuse kiiresti ja tõhusalt, sõltumata nende suurusest või tüübist.", "Tasakaalustamine ja kütusesääst – õigesti tasakaalustatud rehvid vähendavad vibratsiooni, kütusekulu ja rehvide ebaühtlast kulumist.", "Personaalne nõustamine – aitame valida teie vajadustele vastavad rehvid, arvestades veoauto töökoormust ja liikumispiirkondi."],
+            path: "/veoauto-rehvi-vahetus"
+        },
+        {
+            heading: "Protekteerimine",
+            mainImg: service3_1,
+            mainText: "Protekteerimine on majanduslikult ja keskkonnasõbralik viis rehvide kasutusiga pikendada. EUROVIA-M on tegutsenud Eestis alates 1995. aastast ja on spetsialiseerunud protekteerimisele, pakkudes kõrgeima kvaliteediga teenuseid, mida toetavad kaasaegne tehnoloogia ja pikaajaline kogemus.\n" +
+                "Protekteerimine tähendab rehvi kulunud mustrilindi asendamist uuega, mis taastab selle algse funktsionaalsuse ja välimuse. See protsess on oluliselt odavam kui uue rehvi ostmine ja aitab säästa väärtuslikke ressursse. Lisaks pikendab see rehvide eluiga, vähendades samal ajal jäätmete hulka ja toetades keskkonnasäästlikkust.",
+            secondaryText: "EUROVIA-M pakub täielikku rehvide protekteerimise teenust, mis hõlmab uuenduslikke tehnoloogiaid ja rangeid kvaliteedikontrolli protseduure. Protekteerimine on eriti kasulik transpordiettevõtetele, kes soovivad vähendada kulusid, säilitades samal ajal sõidukite ja rehvide ohutuse. Meie pikaajaline kogemus selles valdkonnas teeb EUROVIA-Mist usaldusväärse partneri.",
+            secondaryImg: service3_2,
+            listItems: ["Kaasaegne külm-vulkaniseerimine – kasutame külm-vulkaniseerimise meetodit, mis tagab taastatud rehvide kõrge kvaliteedi ja pika kasutusea.",  "100% kontroll – iga rehv läbib põhjaliku kvaliteedikontrolli spetsiaalse kõrgsurve seadmega, et välistada võimalikud defektid.", "Garantii ja usaldusväärsus – igale protekteeritud rehvile väljastatakse garantii pass ja ühe-aastane mustrilindi garantii.", "Transport ja logistika – pakume uksest-ukseni transporti, toimetades rehvid kohale ja tagasi. Meie koostööpartnerid koguvad rehve üle Eesti, et tagada teenuse kiirus ja mugavus.", "ISO 9001 sertifikaat – meie teenuste kvaliteeti tõendab rahvusvaheline sertifikaat, mis kinnitab kõrgeid standardeid ja professionaalsust."],
+            path: "/protekteerimine"
+        },
+        {
+            heading: "Rehvide remont",
+            mainImg: service4_1,
+            mainText: "Rehvide remont on sageli säästlik ja kiire lahendus kahjustatud rehvide taastamiseks. Väikesed kahjustused, nagu torked või lõiked, võivad põhjustada suurt peavalu, kuid õigel ajal tehtud remont aitab vältida suuremaid probleeme ja pikendada rehvide eluiga.",
+            secondaryText: "EUROVIA-M pakub kvaliteetseid ja kiireid rehvide remonditeenuseid, et tagada teie sõiduki ohutus ja rehvide usaldusväärsus.",
+            secondaryImg: service4_2,
+            listItems: ["Torke- ja lõikekahjustuste parandamine – kasutame kvaliteetseid materjale, et tagada rehvi vastupidavus pärast remonti.", "Ventiiilide ja rehvirõhu kontroll – kõrvaldamine võimalikke lekkeid ja tagame rehvirõhu korrektsuse.", "Turvanõuetele vastav kvaliteet – iga remonditud rehv läbib põhjaliku kontrolli, et tagada sõiduki ohutus."],
+            path: "/remont"
+        },
+        {
+            heading: "Rehvide hotell",
+            mainImg: service5_1,
+            mainText: "Rehvide hotell on mugav ja praktiline lahendus, mis aitab säästa ruumi ja hoiab teie rehvid ideaalses korras hooajavälisel ajal. EUROVIA-M rehvide hotell on loodud pakkuma maksimaalset mugavust ja kindlustunnet, et teie rehvid on alati parimates võimalikes tingimustes.",
+            secondaryText: "Pakume terviklikku rehvide hoiustamisteenust, mis hõlmab nii ladustamist kui ka hooldust",
+            secondaryImg: service5_2,
+            listItems: ["Ideaalsed hoiutingimused – kaitseme rehve niiskuse, temperatuuri kõikumiste ja päikesevalguse eest, et säilitada nende kvaliteet.", "Rehvide seisukorra kontroll – enne ja pärast hoiustamist kontrollime rehvide seisukorda ning vajadusel teostame hooldustöid.", "Paigaldamiseks valmis rehvid – valmistame rehvid ette ja hoiame need valmis järgmiseks hooajaks."],
+            path: "/hotell"
+        }
+    ]
 
 
 
