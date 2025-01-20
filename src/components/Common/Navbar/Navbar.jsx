@@ -1,33 +1,25 @@
 import React, { useState } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { FiAlignRight, FiXCircle, FiChevronDown } from "react-icons/fi";
-import logo from '../../../assets/logo-modified.png';
 
-const Navbar = () => {
-    const [isMenu, setisMenu] = useState(false);
-    const [isResponsiveclose, setResponsiveclose] = useState(false);
+const Navbar = ({ state }) => {
+    const [isMenu, setIsMenu] = useState(false);
+    const [isResponsiveClose, setIsResponsiveClose] = useState(false);
+    const [activeSubMenu, setActiveSubMenu] = useState(null);
+
     const toggleClass = () => {
-        setisMenu(!isMenu);
-        setResponsiveclose(!isResponsiveclose);
+        setIsMenu(!isMenu);
+        setIsResponsiveClose(!isResponsiveClose);
     };
 
-    let boxClass = ["main-menu menu-right menuq1"];
-    if (isMenu) {
-        boxClass.push('menuq2');
-    }
-
-    const [isMenuSubMenu, setMenuSubMenu] = useState(false);
-    const toggleSubmenu = () => {
-        setMenuSubMenu(!isMenuSubMenu);
+    const toggleSubmenu = (menuIndex) => {
+        setActiveSubMenu(activeSubMenu === menuIndex ? null : menuIndex);
     };
 
-    let boxClassSubMenu = ["sub__menus"];
-    if (isMenuSubMenu) {
-        boxClassSubMenu.push('sub__menus__Active');
-    }
+    const location = useLocation();
+    const isHomePage = location.pathname === "/";
 
-    const location = useLocation(); // Get the current route
-    const isHomePage = location.pathname === "/"; // Check if the current route is the home page
+    const { logo, menuItems } = state.navbar;
 
     return (
         <header className="header__middle">
@@ -39,18 +31,15 @@ const Navbar = () => {
             >
                 <div className="row">
 
-                    {/* Add Logo */}
                     <div className="header__middle__logo">
-                        <NavLink exact activeClassName='is-active' to="/">
+                        <NavLink exact="true" activeClassName="is-active" to="/">
                             <img src={logo} alt="logo" />
                         </NavLink>
                     </div>
 
                     <div className="header__middle__menus">
                         <nav className="main-nav">
-
-                            {/* Responsive Menu Button */}
-                            {isResponsiveclose ? (
+                            {isResponsiveClose ? (
                                 <span className="menubar__button" style={{ display: 'none' }} onClick={toggleClass}>
                                     <FiXCircle />
                                 </span>
@@ -60,33 +49,44 @@ const Navbar = () => {
                                 </span>
                             )}
 
-                            <ul className={boxClass.join(' ')}>
-                                <li onClick={toggleSubmenu} className="menu-item sub__menus__arrows">
-                                    <Link to="#"> Teenused <FiChevronDown /> </Link>
-                                    <ul className={boxClassSubMenu.join(' ')}>
-                                        <li><NavLink onClick={toggleClass} activeClassName='is-active'
-                                                     to={`/sõiduauto-rehvvi-vahetus`}> Sõiduautode rehvide vahetus </NavLink></li>
-                                        <li><NavLink onClick={toggleClass} activeClassName='is-active'
-                                                     to={`/veoauto-rehvvi-vahetus`}> Veoautode rehvide vahetus </NavLink></li>
-                                        <li><NavLink onClick={toggleClass} activeClassName='is-active'
-                                                     to={`/protekteerimine`}> Protekteerimine </NavLink></li>
-                                        <li><NavLink onClick={toggleClass} activeClassName='is-active'
-                                                     to={`/remont`}> Rehvide remont </NavLink></li>
-                                        <li><NavLink onClick={toggleClass} activeClassName='is-active'
-                                                     to={`/hotell`}> Rehvide hotell </NavLink></li>
-                                    </ul>
-                                </li>
-                                <li className="menu-item">
-                                    <NavLink exact activeClassName='is-active' onClick={toggleClass}
-                                             to={`/`}> Hinnakiri </NavLink>
-                                </li>
-                                <li className="menu-item"><NavLink onClick={toggleClass} activeClassName='is-active'
-                                                                   to={`/meist`}> Meist </NavLink></li>
-                                <li className="menu-item"><NavLink onClick={toggleClass} activeClassName='is-active'
-                                                                   to={`/kontakt`}> Kontakt </NavLink></li>
+                            <ul className={`main-menu menu-right menuq1 ${isMenu ? 'menuq2' : ''}`}>
+                                {menuItems.map((item, index) => (
+                                    <li
+                                        key={index}
+                                        className={`menu-item ${item.subMenu ? 'sub__menus__arrows' : ''}`}
+                                        onClick={() => item.subMenu && toggleSubmenu(index)}
+                                    >
+                                        <Link to={item.to}>
+                                            {item.text} {item.subMenu && <FiChevronDown />}
+                                        </Link>
 
-                                <li className="menu-item book-time-btn"><NavLink onClick={toggleClass} activeClassName='is-active'
-                                                                                 to={`/Contact`}> Broneeri aeg </NavLink></li>
+                                        {item.subMenu && (
+                                            <ul className={`sub__menus ${activeSubMenu === index ? 'sub__menus__Active' : ''}`}>
+                                                {item.subMenu.map((subItem, subIndex) => (
+                                                    <li key={subIndex}>
+                                                        <NavLink
+                                                            to={subItem.to}
+                                                            activeClassName="is-active"
+                                                            onClick={toggleClass}
+                                                        >
+                                                            {subItem.text}
+                                                        </NavLink>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        )}
+                                    </li>
+                                ))}
+
+                                <li className="menu-item book-time-btn">
+                                    <NavLink
+                                        to="/Contact"
+                                        activeClassName="is-active"
+                                        onClick={toggleClass}
+                                    >
+                                        Broneeri aeg
+                                    </NavLink>
+                                </li>
                             </ul>
                         </nav>
                     </div>

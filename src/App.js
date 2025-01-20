@@ -13,13 +13,15 @@ import ProtectionS3 from "./Pages/ProtectionS3";
 import TireFixS4 from "./Pages/TireFixS4";
 import HotellS5 from "./Pages/HotellS5";
 
+import state from './state'
+
 function App() {
 
     return (
         <div>
             <Router basename="/">
                 {/* Add Menu Component */}
-                <Navbar />
+                <Navbar state={state} />
 
                 <Routes>
                     <Route path="/" element={<Home />} />
