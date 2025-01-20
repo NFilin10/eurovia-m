@@ -18,29 +18,29 @@ function ContactSection() {
             </div>
 
             <div className={Styles.mainSection}>
-            <div className={Styles.left}>
-                    <div className={Styles.iconElement}>
-                        <IoLocationOutline style={iconStyles}/>
-                        <h1>address</h1>
-                        <p>djsak jkdsjak jdkasjdk jsa k</p>
-                    </div>
-                    <div className={Styles.iconElement}>
-                        <MdOutlineEmail style={iconStyles}/>
-                        <h1>email</h1>
-                        <p>djsak jkdsjak jdkasjdk jsa k</p>
-                    </div>
-                    <div className={Styles.iconElement}>
-                        <FiPhone style={iconStyles}/>
-                        <h1>call us</h1>
-                        <p>847 5894357843</p>
-                    </div>
-                    <div className={Styles.iconElement}>
-                        <LuBookCheck style={iconStyles}/>
-                        <h1>book time online</h1>
-                        <p>djsak jkdsjak jdkasjdk jsa k</p>
-                    </div>
+                <div className={Styles.contactIcons}>
+                        <div className={Styles.iconElement}>
+                            <IoLocationOutline style={iconStyles}/>
+                            <h1>address</h1>
+                            <p>djsak jkdsjak jdkasjdk jsa k</p>
+                        </div>
+                        <div className={Styles.iconElement}>
+                            <MdOutlineEmail style={iconStyles}/>
+                            <h1>email</h1>
+                            <p>djsak jkdsjak jdkasjdk jsa k</p>
+                        </div>
+                        <div className={Styles.iconElement}>
+                            <FiPhone style={iconStyles}/>
+                            <h1>call us</h1>
+                            <p>847 5894357843</p>
+                        </div>
+                        <div className={Styles.iconElement}>
+                            <LuBookCheck style={iconStyles}/>
+                            <h1>book time online</h1>
+                            <p>djsak jkdsjak jdkasjdk jsa k</p>
+                        </div>
                 </div>
-                <div className={Styles.right}>
+                <div className={Styles.map}>
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2032.8163325824592!2d24.71359817735978!3d59.369404207812025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46929549e90fbb15%3A0x400f1edc6b616ee2!2sEurovia-M%20O%C3%9C!5e0!3m2!1sru!2see!4v1736785830834!5m2!1sru!2see"
                         width="600"
@@ -53,10 +53,6 @@ function ContactSection() {
 
                 </div>
             </div>
-            <div className={Styles.ContactForm}>
-
-            </div>
-
         </div>
     );
 }

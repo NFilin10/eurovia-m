@@ -3,28 +3,35 @@
     background-color: black;
     padding-top: 100px;
 
-
 }
 
-.left{
+.contactSection{
     width: 30%;
 }
 
 .contactFormContainer{
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     color: white;
     padding-top: 20px;
     display: flex;
-
 }
 
-.heading{
+.contactFormContainerContactPg{
+    width: 70%;
+    margin: 0 auto;
+    color: white;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.secondaryHeading{
     color: red;
     font-size: 20px;
 }
 
-.main{
+.mainHeading{
     text-transform: uppercase;
     font-weight: bold;
     font-size: 27px;
@@ -76,7 +83,7 @@ form{
     color: #5E5E5E;
 }
 
-.right{
+.formSection{
     display: flex;
     width: 50%;
     justify-content: flex-end;
@@ -95,11 +102,11 @@ textarea{
     height: 140px !important;
 }
 
-.left p:first-child{
+.contactSection p:first-child{
     font-size: 18px;
 }
 
-.left p:nth-last-child(2){
+.contactSection p:nth-last-child(2){
     font-size: 18px;
     /*margin-top: 30px;*/
 }
@@ -109,7 +116,7 @@ textarea{
         flex-direction: column;
     }
 
-    .left, .right{
+    .contactSection, .formSection{
         width: 95%;
     }
 
@@ -127,7 +134,7 @@ textarea{
         width: 100%;
     }
 
-    .right{
+    .formSection{
         /*justify-content: center;*/
     }
 
@@ -141,7 +148,7 @@ textarea{
         height: auto !important;
     }
 
-    .left p:first-child{
+    .contactSection p:first-child{
         font-size: 16px;
     }
 
@@ -149,7 +156,7 @@ textarea{
         font-size: 22px;
     }
 
-    .left p:nth-last-child(2){
+    .contactSection p:nth-last-child(2){
         font-size: 16px;
     }
 

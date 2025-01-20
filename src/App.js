@@ -9,7 +9,6 @@ import CarTiresS1 from './Pages/CarTiresS1';
 import TruckTireS2 from "./Pages/TruckTireS2";
 import Navbar from "./components/Common/Navbar/Navbar";
 import Footer from "./components/Common/Footer/Footer";
-import ContactForm from "./components/Home/ContactForm/ContactForm";
 import ProtectionS3 from "./Pages/ProtectionS3";
 import TireFixS4 from "./Pages/TireFixS4";
 import HotellS5 from "./Pages/HotellS5";
