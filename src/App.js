@@ -24,7 +24,7 @@ function App() {
 
                 <Routes>
                     <Route path="/" element={<Home state={state} />} />
-                    <Route path="/meist" element={<About />} />
+                    <Route path="/meist" element={<About state={state.about} />} />
                     <Route path="/kontakt" element={<Contact />} />
                     <Route path="/sõiduauto-rehvvi-vahetus" element={<CarTiresS1 />} />
                     <Route path="/veoauto-rehvvi-vahetus" element={<TruckTireS2 />} />

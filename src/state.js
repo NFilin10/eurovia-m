@@ -9,6 +9,11 @@ import service2Image from "./assets/service4.jpg";
 import service3Image from "./assets/service2.jpg";
 import service4Image from "./assets/service3.jpg";
 import service5Image from "./assets/service5.jpg";
+import history from './assets/history.jpg'
+import vision from './assets/vision.jpg'
+import mission from './assets/mission.jpg'
+
+
 import React from "react";
 
 let iconStylesHome = {fontSize: "3.5em", color: "red"};
@@ -195,6 +200,59 @@ const state = {
                 heading: "Soovite külastada meid?",
                 contactChoice: "asukoht",
                 icon: <IoLocationSharp style={iconStylesFooter}/>
+            }
+        ]
+    },
+    about: {
+        section1: {
+            heading: ["Meie teekond alates ", "1995. ", "aastast"],
+            text: "EUROVIA-M alustas tegevust Eesti turul 1995. aastal, pakkudes laia valikut autorehvidega seotud teenuseid. Ettevõtte pikaajaline kogemus veoautorehvide protekteerimise valdkonnas on võimaldanud luua usaldusväärseid koostöösuhteid kohalike ja rahvusvaheliste klientidega. Alates 2002. aastast omame rahvusvahelist kvaliteedisertifikaati ISO 9001, mis kinnitab meie töötajate kõrget kvalifikatsiooni, tehnoloogilisi võimalusi ning vastutustundlikku garantiisüsteemi. Oleme jätkuvalt pühendunud kvaliteedile ja innovatsioonile.",
+            image: history
+        },
+        section2: {
+            heading: ["Meie ", "missioon", "– kvaliteet ja keskkonnasäästlikkus"],
+            text: "EUROVIA-M eesmärk on pakkuda autotranspordiettevõtetele kvaliteetseid, keskkonnasõbralikke ja kulutõhusaid rehvilahendusi. Meie töö aitab pikendada rehvide eluiga, vähendada jäätmete teket ja edendada vastutustundlikku ettevõtlust transpordisektoris.EUROVIA-M eesmärk on pakkuda autotranspordiettevõtetele kvaliteetseid, keskkonnasõbralikke ja kulutõhusaid rehvilahendusi. Meie töö aitab pikendada rehvide eluiga, vähendada jäätmete teket ja edendada vastutustundlikku ettevõtlust transpordisektoris.",
+            image: mission
+        },
+        section3: {
+            heading: ["Visioon ", "– olla rehvilahenduste juhtiv tegija"],
+            text: "Meie visiooniks on saada regiooni juhtivaks autorehvide taastamise ja hooldusteenuste pakkujaks, pakkudes innovatiivseid lahendusi, mis toetavad nii meie klientide kui ka keskkonna heaolu. EUROVIA-M seab eesmärgiks tehnoloogia pideva arendamise ning klientide usalduse säilitamise läbi laitmatu teeninduse ja kvaliteedi.",
+            image: vision
+        },
+        headings: {
+            secondaryHeading: "EUROVIA-M teenused – kõik autorehvidele",
+            mainHeading: ["Pakume laia valikut autorehvidega", "seotud teenuseid"]
+        },
+        serviceCarousel: [
+            {
+                id: 1,
+                serviceImg: service1Image,
+                serviceName: "Sõiduautode rehvide vahetus",
+                serviceDescription: "Kiire ja täpne rehvide vahetus, et teie sõiduk oleks valmis igaks teekonnaks."
+            },
+            {
+                id: 2,
+                serviceImg: service2Image,
+                serviceName: "Veoautode rehvide vahetus",
+                serviceDescription: "Professionaalne teenus, mis tagab veoautode rehvide turvalisuse ja töökindluse."
+            },
+            {
+                id: 3,
+                serviceImg: service3Image,
+                serviceName: "Protekteerimine",
+                serviceDescription: "Kasutame kaasaegseid seadmeid ja külm-vulkaniseerimise meetodit, mis pikendab rehvide eluiga ja säästab kulusid."
+            },
+            {
+                id: 4,
+                serviceImg: service4Image,
+                serviceName: "Rehvide remont",
+                serviceDescription: "Professionaalsed teenused, mis tagavad teie rehvide maksimaalse töökindluse."
+            },
+            {
+                id: 5,
+                serviceImg: service5Image,
+                serviceName: "Rehvide hotell",
+                serviceDescription: "Hoidke oma hooajavälised rehvid turvaliselt ja mugavalt meie rehvide hotellis."
             }
         ]
     }
