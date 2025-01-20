@@ -1,44 +1,27 @@
 import React from 'react'
 import Styles from './ContactSection.module.css'
-import { IoLocationOutline } from "react-icons/io5";
-import { MdOutlineEmail } from "react-icons/md";
-import { FiPhone } from "react-icons/fi";
-import { LuBookCheck } from "react-icons/lu";
 
 
-function ContactSection() {
+function ContactSection({state}) {
 
-    let iconStyles = {padding: "15px", fontSize:"50px", color:"white", border: "2px solid white", borderRadius: "50%"};
+    const iconElements = state.contactElements.map(element =>
+        <div className={Styles.iconElement}>
+            {element.icon}
+            <h1>{element.heading}</h1>
+            <p>{element.text}</p>
+        </div>
+    )
 
     return (
         <div className={Styles.contactSectionWrapper}>
             <div className={Styles.heading}>
-                <h1>Contact us</h1>
-                <h2>jdfslk jfkds jfkdlsj fkf</h2>
+                <h1>{state.mainHeading}</h1>
+                <h2>{state.secondaryHeading}</h2>
             </div>
 
             <div className={Styles.mainSection}>
                 <div className={Styles.contactIcons}>
-                        <div className={Styles.iconElement}>
-                            <IoLocationOutline style={iconStyles}/>
-                            <h1>address</h1>
-                            <p>djsak jkdsjak jdkasjdk jsa k</p>
-                        </div>
-                        <div className={Styles.iconElement}>
-                            <MdOutlineEmail style={iconStyles}/>
-                            <h1>email</h1>
-                            <p>djsak jkdsjak jdkasjdk jsa k</p>
-                        </div>
-                        <div className={Styles.iconElement}>
-                            <FiPhone style={iconStyles}/>
-                            <h1>call us</h1>
-                            <p>847 5894357843</p>
-                        </div>
-                        <div className={Styles.iconElement}>
-                            <LuBookCheck style={iconStyles}/>
-                            <h1>book time online</h1>
-                            <p>djsak jkdsjak jdkasjdk jsa k</p>
-                        </div>
+                    {iconElements}
                 </div>
                 <div className={Styles.map}>
                     <iframe

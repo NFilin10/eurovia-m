@@ -1,7 +1,7 @@
 import { TbCircleNumber1, TbCircleNumber2, TbCircleNumber3} from "react-icons/tb";
 import {FaPhone} from "react-icons/fa6";
-import { MdEmail } from "react-icons/md";
-import { IoLocationSharp } from "react-icons/io5";
+import {MdEmail, MdOutlineEmail} from "react-icons/md";
+import {IoLocationOutline, IoLocationSharp} from "react-icons/io5";
 
 import logo from './assets/logo-modified.png';
 import service1Image from "./assets/service1.jpg";
@@ -15,9 +15,13 @@ import mission from './assets/mission.jpg'
 
 
 import React from "react";
+import {FiPhone} from "react-icons/fi";
+import {LuBookCheck} from "react-icons/lu";
 
 let iconStylesHome = {fontSize: "3.5em", color: "red"};
 let iconStylesFooter = {fontSize: "30px", color:"red"};
+let iconStylesContact = {padding: "15px", fontSize:"50px", color:"white", border: "2px solid white", borderRadius: "50%"};
+
 
 
 
@@ -253,6 +257,32 @@ const state = {
                 serviceImg: service5Image,
                 serviceName: "Rehvide hotell",
                 serviceDescription: "Hoidke oma hooajavälised rehvid turvaliselt ja mugavalt meie rehvide hotellis."
+            }
+        ]
+    },
+    contact: {
+        mainHeading: "Võtke  meeiega  ühhendust",
+        secondaryHeading: "ldkf ls;dfk lsdkf",
+        contactElements: [
+            {
+                icon: <IoLocationOutline style={iconStylesContact}/>,
+                heading: "address",
+                text: "suur manniku 8",
+            },
+            {
+                icon: <MdOutlineEmail style={iconStylesContact}/>,
+                heading: "email",
+                text: "euroviam@hot.ee",
+            },
+            {
+                icon: <FiPhone style={iconStylesContact}/>,
+                heading: "call us",
+                text: "442 4732832",
+            },
+            {
+                icon: <LuBookCheck style={iconStylesContact}/>,
+                heading: "book time online",
+                text: "djsak jkdsjak jdkasjdk jsa",
             }
         ]
     }
