@@ -89,7 +89,13 @@
     width: 140px;
     cursor: pointer;
     border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
+
+.Contact:hover, .LearnMore:hover{
+    background-color: #cc0000;
+}
+
 
 @media (min-width: 320px) and (max-width: 480px) {
 
@@ -105,7 +111,7 @@
     }
 
     .HeaderContent h1{
-        font-size: 30px;
+        font-size: 25px;
     }
 
     .Contact, .LearnMore{
@@ -126,7 +132,7 @@
 
     .ContactBtns span a{
         width: 100%;
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .headerImage {
@@ -135,11 +141,12 @@
     }
 
     .heading{
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .main{
         font-size: 16px;
+        margin-top: 40px;
     }
 
     .Contact, .LearnMore{

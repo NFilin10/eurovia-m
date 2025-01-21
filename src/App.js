@@ -28,7 +28,7 @@ function App() {
                     ))}
                 </Routes>
 
-                <Footer />
+                <Footer state={state.footer} />
             </div>
         </Router>
     );

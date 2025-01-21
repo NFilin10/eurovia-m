@@ -96,17 +96,24 @@ form{
     color: white;
     border: none;
     font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+}
+
+.submit:hover{
+    background-color: #cc0000;
 }
 
 textarea{
     height: 140px !important;
 }
 
-.contactSection p:first-child{
+.secondaryHeading{
     font-size: 18px;
 }
 
-.contactSection p:nth-last-child(2){
+.mainText{
     font-size: 18px;
     /*margin-top: 30px;*/
 }
@@ -148,16 +155,17 @@ textarea{
         height: auto !important;
     }
 
-    .contactSection p:first-child{
-        font-size: 16px;
-    }
 
     .main{
         font-size: 22px;
     }
 
-    .contactSection p:nth-last-child(2){
+    .mainText {
         font-size: 16px;
+    }
+
+    .contactInfo p, .contactInfo span{
+        font-size: 14px;
     }
 
     .icon{
@@ -175,6 +183,14 @@ textarea{
     .submit{
         width: 130px;
         height: 40px;
+        font-size: 16px;
+    }
+
+    .mainHeading{
+        font-size: 18px;
+    }
+
+    .secondaryHeading{
         font-size: 16px;
     }
 }

@@ -1,8 +1,11 @@
 import React from 'react'
 import Styles from './ContactSection.module.css'
+import {GiCarWheel} from "react-icons/gi";
 
 
 function ContactSection({state}) {
+
+    let wheelIcon = {fontSize: "25px", color: "red"}
 
     const iconElements = state.contactElements.map(element =>
         <div className={Styles.iconElement}>
@@ -15,8 +18,12 @@ function ContactSection({state}) {
     return (
         <div className={Styles.contactSectionWrapper}>
             <div className={Styles.heading}>
-                <h1>{state.mainHeading}</h1>
-                <h2>{state.secondaryHeading}</h2>
+                <h1>{state.mainHeading[0]}<span>{state.mainHeading[1]}</span></h1>
+                <div className={Styles.iconBlock}>
+                    <GiCarWheel className={Styles.wheel} style={wheelIcon}/>
+                    <h2 className={Styles.heading1}>{state.secondaryHeading}</h2>
+                </div>
+
             </div>
 
             <div className={Styles.mainSection}>

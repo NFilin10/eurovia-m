@@ -15,7 +15,7 @@ const ContactFormSection = ({className, state}) => {
                 <div className={Styles.contactSection}>
                     <p className={Styles.secondaryHeading}>{state.textSection.secondaryHeading}</p>
                     <h1 className={Styles.mainHeading}>{state.textSection.mainHeading[0]}<br/>{state.textSection.mainHeading[1]}</h1>
-                    <p>{state.textSection.text}</p>
+                    <p className={Styles.mainText}>{state.textSection.text}</p>
                     <div className={Styles.contactData}>
                         <div className={Styles.contactElem}>
                             <FaPhone className={Styles.icon} style={iconStyles}/>

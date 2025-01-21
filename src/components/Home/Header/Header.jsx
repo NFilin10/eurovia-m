@@ -1,5 +1,4 @@
 import React from 'react'
-import workman from "../../../assets/car-service-330.avif"
 import Styles from './Header.module.css'
 import {NavLink, Link} from 'react-router-dom';
 import { GiCarWheel } from "react-icons/gi";

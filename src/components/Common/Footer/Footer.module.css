@@ -81,15 +81,15 @@
     }
 
     .contactInfo p{
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .contactInfo span{
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .contactElem p:first-child{
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .question{

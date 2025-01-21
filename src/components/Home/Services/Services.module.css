@@ -8,7 +8,8 @@
 }
 
 .textArea{
-    margin-top: 80px;
+    width: 90%;
+    margin: 80px auto;
     color: white;
     text-align: center;
 }
@@ -38,7 +39,7 @@ h1{
 
 .main{
     margin: 0 auto;
-    width: 50%;
+    width: 60%;
     line-height: 1.5;
     font-size: 20px;
 
@@ -95,6 +96,15 @@ h1{
     color: #D7CFC7;
     text-align: justify;
     font-size: 16px;
+}
+
+.arrow{
+    cursor: pointer;
+    transition: color 0.8s ease, transform 0.8s ease;
+}
+
+.arrow p:hover{
+    color: #D7CFC7;
 }
 
 .arrow p{
@@ -181,10 +191,19 @@ h1{
         flex-direction: column;
     }
 
+
+    .textArea{
+        width: 90%;
+        margin: 20px auto;
+        color: white;
+        text-align: left;
+    }
+
     .ServiceElemWrapper{
         padding: 0;
         justify-content: center;
     }
+
 
     .bulletList{
         height: auto;
@@ -192,12 +211,16 @@ h1{
     }
 
     .Promises{
-        margin-top: -50px;
+        margin-top: -60px;
         width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
 
+    }
+
+    .Promises h1, .Services h1{
+        font-size: 18px;
     }
 
     .promise{
@@ -208,20 +231,23 @@ h1{
         margin-top: 20px;
     }
 
-    .textArea{
-        margin-top: 20px;
-    }
 
     .heading{
         font-size: 16px;
     }
 
-    h2{
+    .textArea h2{
         font-size: 18px;
     }
 
     .main{
         font-size: 16px;
+        text-align: left;
+        width: 100%;
+    }
+
+    .mainAim{
+        font-size: 14px;
     }
 
     h1{
@@ -229,11 +255,11 @@ h1{
     }
 
     .promiseText p:nth-child(1){
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .promiseText p:nth-child(2){
-        font-size: 16px;
+        font-size: 14px;
 
     }
 
@@ -250,12 +276,37 @@ h1{
     }
 
     .Service h1{
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .Service p{
         font-size: 16px;
     }
+
+    .iconBlock{
+        justify-content: start;
+    }
+
+    .Services{
+        width: auto;
+        align-items: flex-start;
+    }
+
+    .Service{
+        align-items: flex-start;
+        width: 100%;
+        height: 330px;
+        justify-content: flex-end;
+    }
+
+    .arrow p{
+        font-size: 14px;
+    }
+
+    .arrow:nth-last-child(1){
+        font-size: 14px;
+    }
+
 
 
 

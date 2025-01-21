@@ -43,7 +43,7 @@ function MainSection({state}) {
             <div className={Styles.textArea}>
                 <div className={Styles.iconBlock}>
                     <GiCarWheel className={Styles.wheel} style={wheelIcon}/>
-                    <h1 className={Styles.heading}>{state.headings.secondaryHeading}</h1>
+                    <h1 className={Styles.headingSecond}>{state.headings.secondaryHeading}</h1>
                 </div>
                 <h2>{state.headings.mainHeading[0]} <span className={Styles.red}>{state.headings.mainHeading[1]}</span></h2>
             </div>

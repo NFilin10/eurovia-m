@@ -30,7 +30,7 @@ import service5_2 from "./assets/servicePage5_2.jpg";
 
 let iconStylesHome = {fontSize: "3.5em", color: "red"};
 let iconStylesFooter = {fontSize: "30px", color:"red"};
-let iconStylesContact = {padding: "15px", fontSize:"50px", color:"white", border: "2px solid white", borderRadius: "50%"};
+let iconStylesContact = {padding: "15px", fontSize:"50px", color:"red", border: "2px solid red", borderRadius: "50%"};
 
 
 
@@ -203,17 +203,20 @@ const state = {
             {
                 heading: "Soovite helistada meile?",
                 contactChoice: "telefon",
-                icon: <FaPhone style={iconStylesFooter}/>
+                icon: <FaPhone style={iconStylesFooter}/>,
+                value: "372 384724775"
             },
             {
                 heading: "Sooite kirjutada meile?",
                 contactChoice: "email",
-                icon: <MdEmail style={iconStylesFooter}/>
+                icon: <MdEmail style={iconStylesFooter}/>,
+                value: "euroviam@hot.ee"
             },
             {
                 heading: "Soovite külastada meid?",
                 contactChoice: "asukoht",
-                icon: <IoLocationSharp style={iconStylesFooter}/>
+                icon: <IoLocationSharp style={iconStylesFooter}/>,
+                value: "suur manniku 8",
             }
         ]
     },
@@ -271,7 +274,7 @@ const state = {
         ]
     },
     contact: {
-        mainHeading: "Võtke  meeiega  ühhendust",
+        mainHeading: ["Võtke  meeiega ",  "ühendust"],
         secondaryHeading: "ldkf ls;dfk lsdkf",
         contactElements: [
             {
@@ -343,7 +346,8 @@ const state = {
             listItems: ["Ideaalsed hoiutingimused – kaitseme rehve niiskuse, temperatuuri kõikumiste ja päikesevalguse eest, et säilitada nende kvaliteet.", "Rehvide seisukorra kontroll – enne ja pärast hoiustamist kontrollime rehvide seisukorda ning vajadusel teostame hooldustöid.", "Paigaldamiseks valmis rehvid – valmistame rehvid ette ja hoiame need valmis järgmiseks hooajaks."],
             path: "/hotell"
         }
-    ]
+    ],
+
 
 
 
