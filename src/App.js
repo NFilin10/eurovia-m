@@ -7,8 +7,8 @@ import About from './Pages/About';
 import Contact from './Pages/Contact';
 import Navbar from "./components/Common/Navbar/Navbar";
 import Footer from "./components/Common/Footer/Footer";
-
 import Service from "./components/Services/Service"
+import Admin from "./Pages/Admin";
 
 import state from './state'
 
@@ -26,6 +26,7 @@ function App() {
 
                         <Route key={service.path} path={service.path} element={<Service state={service} />} />
                     ))}
+                    <Route path="/admin" element={<Admin />} />
                 </Routes>
 
                 <Footer state={state.footer} />
