@@ -1,0 +1,266 @@
+.headerMiddle {
+    display: flex;
+    width: 100%;
+    float: left;
+    position: relative;
+    z-index: 10;
+}
+
+.container {
+    width: 100%;
+    /*padding-right:15px;*/
+    /*padding-left:15px;*/
+    margin-right:auto;
+    margin-left:auto;
+    height: 80px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 90%;
+    height: 100%;
+    /*background-color: blue;*/
+}
+
+img {
+    max-width: 100%;
+}
+
+.sec__one {
+    position: relative;
+    width: 100%;
+    display: flex;
+    padding: 60px 0;
+}
+.sec__one h1{
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    color: #07a8ff;
+    font-family: 'Inter', sans-serif;
+}
+.navBar .logo img {
+    float: left;
+    max-height: 120px;
+}
+.isActive {
+    color: #ff5800!important;
+}
+
+.navBar .col-md-3 {
+    z-index: 7;
+}
+ul.mainMenu {
+    display: inline-flex;
+    list-style: none;
+    margin: 0px auto 0;
+    padding: 0;
+    float: right;
+    z-index: 7;
+}
+ul.mainMenu>li.menuItem:first-child {
+    padding-left: 0;
+    margin-left: 0;
+}
+.menuItem {
+    line-height: 23px;
+}
+li {
+    list-style-type: none;
+}
+.menuItem a {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 40px;
+    position: relative;
+    display: block;
+    color: white;
+    margin: 27px 17px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.headerMiddleLogo{
+    /*width: 20%;*/
+    /*display: inline-block;*/
+    /*float: left;*/
+    display: flex;
+    align-items: center;
+    /*background-color: #07a8ff;*/
+    height: 70px;
+    /*margin: 0 auto;*/
+}
+
+.headerMiddleLogo a{
+    height: 100%;
+    width: 100%;
+    /*background-color: #545050;*/
+    display: flex;
+    align-items: center;
+}
+
+.headerMiddleLogo a img{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+
+}
+
+.headerMiddleMenus {
+    width: 70%;
+    display: inline-block;
+    float: left;
+
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: flex-end;*/
+}
+.menuItem.menu__qqqitem a{
+    margin: 27px 10px;
+}
+.header__middle__search {
+    width: 7%;
+    display: inline-block;
+    float: right;
+    padding: 36px 3px 27px 3px;
+    border-left: 1px solid lavender;
+}
+
+.headerMiddleLogoheaderMiddleLogo > a > h1 {
+    color: #07a8ff;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-top: 33px;
+}
+/* .active{
+  color: #ff1800!important;
+} */
+.headerMiddleMenus span.text {
+    position: absolute;
+    right: 177px;
+    bottom: 10px;
+    font-size: 14px;
+    color: #ff1800;
+}
+.subMenusArrows{
+    position: relative;
+}
+.subMenusArrows svg, .subMenusArrows__full svg{
+    padding-top: 0px;
+    position: absolute;
+    top: 13px;
+}
+.subMenus {
+    position: absolute;
+    display: none;
+    background:rgba(60, 60, 60, 0.99);;
+    /*border: 1px solid lavender;*/
+    width: 227px;
+    left: -17px;
+    padding: 2px 0 0 0;
+    z-index: 1000;
+    box-shadow: 0 10px 12px rgb(22 33 39 / 25%);
+}
+
+
+.bookTimeBtn a{
+    background-color: red;
+    margin-left: 50px;
+    width: 135px;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+a{
+    text-decoration: none;
+}
+
+@media (max-width:767px) {
+    .headerMiddle .active {color: #ff3d00!important;}
+}
+
+@media (min-width:992px) {
+    .subMenusArrows:hover .subMenus{
+        display: block;
+    }
+    .subMenusArrows__full:hover .subMenus{
+        display: block;
+        z-index: 1000000;
+    }
+}
+.menuItem .subMenus  a {
+    padding: 7px 0 0px 0;
+    margin: 7px 27px;
+}
+.menuItem:hover > a{
+    color: red !important;
+}
+.menuItem .subMenus li:hover a{
+    color: red !important;
+}
+
+.headerMiddleLogo img{
+    max-width: 207px;
+    margin: 17px 0 0 0;
+}
+
+.subMenus li a{
+    font-size: 18px;
+}
+
+
+@media(max-width:991px){
+    .headerMiddleLogo {width: 40%;}
+    .headerMiddleMenus {width: 20%;}
+    .headerMiddleLogo img {max-width: 197px;margin: 27px 0 0 0;}
+    .mainNav .menubarButton:hover {background-color: #f44336;}
+    .mainNav .menuItem:hover > a {color: red !important}
+    .mainNav .menubarButton {
+        display: block!important;
+        float: right;
+        background-color: #080808;
+        color: #fff;
+        padding: 6px 7px;
+        border-radius: 5px;
+        /*margin: 27px auto 0;*/
+        cursor: pointer;
+        position: relative;
+        z-index: 10037;
+    }
+    .mainNav .menubarButton svg{font-size: 27px;}
+    .mainNav ul.menuq2 {
+        display: block!important;
+        position: absolute;
+        left: 0;
+        z-index: 10007;
+        background-color: rgba(60, 60, 60, 0.99);
+        /*border-bottom: 3px solid #ff3d00;*/
+        right: 0;
+        padding-bottom: 17px;
+        padding-top: 57px;
+        margin-top: -19px;
+    }
+    .mainNav .menuItem a {margin: 10px 17px;text-align: center;color: white;}
+    .mainNav  ul.mainMenu {display: none}
+    .mainNav .subMenusArrows:hover .subMenus {margin: 0 auto;left: 0;right: 0;}
+    .subMenusActive{display: block!important;margin: 0 auto;left: 0;right: 0;}
+    .menuItem .subMenus__full a {text-align: left;}
+
+    .bookTimeBtn a{
+        width: 135px;
+        border-radius: 5px;
+        margin: 0 auto !important;
+    }
+
+    .subMenus li a{
+        font-size: 16px;
+    }
+
+    .menuItem a {
+        font-size: 16px;
+    }
+
+}

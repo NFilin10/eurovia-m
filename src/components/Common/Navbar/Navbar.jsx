@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { FiAlignRight, FiXCircle, FiChevronDown } from "react-icons/fi";
+import Styles from './Navbar.module.css';
 
 const Navbar = ({ state }) => {
     const [isMenu, setIsMenu] = useState(false);
@@ -22,38 +23,39 @@ const Navbar = ({ state }) => {
     const { logo, menuItems } = state;
 
     return (
-        <header className="header__middle">
+        <header className={Styles.headerMiddle}>
             <div
-                className="container"
+                className={Styles.container}
                 style={{
                     backgroundColor: isHomePage ? 'transparent' : 'black',
                 }}
             >
-                <div className="row">
+                <div className={Styles.row}>
 
-                    <div className="header__middle__logo">
-                        <NavLink exact="true" activeClassName="is-active" to="/">
+                    <div className={Styles.headerMiddleLogo}>
+                        <NavLink exact="true" activeClassName={Styles.isActive} to="/">
                             <img src={logo} alt="logo" />
                         </NavLink>
                     </div>
 
-                    <div className="header__middle__menus">
-                        <nav className="main-nav">
+                    <div className={Styles.headerMiddleMenus}>
+                        <nav className={Styles.mainNav}>
                             {isResponsiveClose ? (
-                                <span className="menubar__button" style={{ display: 'none' }} onClick={toggleClass}>
+                                <span className={Styles.menubarButton} style={{ display: 'none' }} onClick={toggleClass}>
                                     <FiXCircle />
                                 </span>
                             ) : (
-                                <span className="menubar__button" style={{ display: 'none' }} onClick={toggleClass}>
+                                <span className={Styles.menubarButton} style={{ display: 'none' }} onClick={toggleClass}>
                                     <FiAlignRight />
                                 </span>
                             )}
 
-                            <ul className={`main-menu menu-right menuq1 ${isMenu ? 'menuq2' : ''}`}>
+                            <ul className={`${Styles.mainMenu} ${Styles.menuRight} ${Styles.menuq1} ${
+                                isMenu ? Styles.menuq2 : ''}`}>
                                 {menuItems.map((item, index) => (
                                     <li
                                         key={index}
-                                        className={`menu-item ${item.subMenu ? 'sub__menus__arrows' : ''}`}
+                                        className={`${Styles.menuItem} ${item.subMenu ? Styles.subMenusArrows : ''}`}
                                         onClick={() => item.subMenu && toggleSubmenu(index)}
                                     >
                                         <Link to={item.to}>
@@ -61,12 +63,13 @@ const Navbar = ({ state }) => {
                                         </Link>
 
                                         {item.subMenu && (
-                                            <ul className={`sub__menus ${activeSubMenu === index ? 'sub__menus__Active' : ''}`}>
+                                            <ul className={`${Styles.subMenus} ${
+                                                activeSubMenu === index ? Styles.subMenusActive : ''}`}>
                                                 {item.subMenu.map((subItem, subIndex) => (
                                                     <li key={subIndex}>
                                                         <NavLink
                                                             to={subItem.to}
-                                                            activeClassName="is-active"
+                                                            activeClassName={Styles.isActive}
                                                             onClick={toggleClass}
                                                         >
                                                             {subItem.text}
@@ -78,10 +81,10 @@ const Navbar = ({ state }) => {
                                     </li>
                                 ))}
 
-                                <li className="menu-item book-time-btn">
+                                <li className={`${Styles.menuItem} ${Styles.bookTimeBtn}`}>
                                     <NavLink
                                         to="/Contact"
-                                        activeClassName="is-active"
+                                        activeClassName={Styles.isActive}
                                         onClick={toggleClass}
                                     >
                                         Broneeri aeg
