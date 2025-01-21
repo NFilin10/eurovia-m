@@ -198,3 +198,9 @@ textarea{
         width: 90%;
     }
 }
+
+@media (min-width: 1400px) and (max-width: 1628px) {
+    .contactSection{
+        width: 50%;
+    }
+}

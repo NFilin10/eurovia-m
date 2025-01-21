@@ -123,3 +123,9 @@ h1{
         text-align: left;
     }
 }
+
+@media (min-width: 1400px) and (max-width: 1628px) {
+    .mainSectionWrapper{
+        width: 90%;
+    }
+}
