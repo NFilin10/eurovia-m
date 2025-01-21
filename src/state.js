@@ -294,8 +294,8 @@ const state = {
             },
             {
                 icon: <LuBookCheck style={iconStylesContact}/>,
-                heading: "book time online",
-                text: "djsak jkdsjak jdkasjdk jsa",
+                heading: "online booking",
+                text: "book time",
             }
         ]
     },
