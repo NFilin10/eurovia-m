@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const sendPriceInfo = async (data) => {
     try {
-        const response = await axios.post('http://localhost:5000/api/price-management/add', data, {
+        const response = await axios.post('http://localhost:5000/add', data, {
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -25,4 +25,13 @@ export const fetchPriceData = async () => {
         console.error('Error fetching data:', error);
     }
 
+};
+
+export const deleteService = async (serviceId) => {
+    try {
+        await axios.delete(`http://localhost:5000/delete-service/${serviceId}`);
+    } catch (error) {
+        console.error('Error deleting service:', error);
+        throw error;
+    }
 };

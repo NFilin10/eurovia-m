@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import Styles from './PriceManagement.module.css';
 import { sendPriceInfo, fetchPriceData } from '../../../http/priceManagement';
-import axios from "axios";
+
 
 function PriceManagement() {
     const [columnNum, setColumnNum] = useState(0);
@@ -78,38 +78,6 @@ function PriceManagement() {
 
     return (
         <div className={Styles.priceManagementContainer}>
-            <h1>Price Management</h1>
-
-            <div>
-                <div className={Styles.container}>
-                    {data.map((category, index) => (
-                        <div key={index} className={Styles.categorySection}>
-                            <h2>{category.category_name}</h2>
-                            <table className={Styles.table}>
-                                <thead>
-                                <tr>
-                                    {category.headers.map(header => (
-                                        <th key={header.id}>{header.name}</th>
-                                    ))}
-                                </tr>
-                                </thead>
-                                <tbody>
-                                {Object.values(category.services).map((service, serviceIndex) => (
-                                    <tr key={serviceIndex}>
-                                        <td>{service.name}</td>
-                                        {category.headers.map(header => (
-                                            <td key={header.id}>
-                                                {service.prices[header.id] !== undefined ? service.prices[header.id] : '-'}
-                                            </td>
-                                        ))}
-                                    </tr>
-                                ))}
-                                </tbody>
-                            </table>
-                        </div>
-                    ))}
-                </div>
-            </div>
 
             <div className={Styles.formContainer}>
                 <button className={Styles.newService} onClick={handleShowInputs}>
