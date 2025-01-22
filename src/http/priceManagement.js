@@ -35,3 +35,25 @@ export const deleteService = async (serviceId) => {
         throw error;
     }
 };
+
+export const updateService = async (serviceId, updatedPrices) => {
+    try {
+        const response = await fetch(`http://localhost:5000/update/${serviceId}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(updatedPrices), // Sending the updated prices here
+        });
+
+        if (!response.ok) {
+            throw new Error('Failed to update service prices');
+        }
+
+        return response.json(); // Assuming you want to return the response or any data from the API
+    } catch (error) {
+        console.error('Error updating service prices:', error);
+        throw error;
+    }
+};
+

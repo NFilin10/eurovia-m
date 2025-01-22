@@ -1,9 +1,57 @@
 import React, { useEffect, useState } from 'react';
 import Styles from "./CurrentServiceTable.module.css";
-import { fetchPriceData, deleteService } from "../../../http/priceManagement"; // Assuming you add the delete function
+import {fetchPriceData, deleteService, updateService} from "../../../http/priceManagement"; // Assuming you add the delete function
 
 function CurrentServiceTable(props) {
     const [data, setData] = useState([]);
+
+    const [editedValues, setEditedValues] = useState({}); // Store the edited values temporarily
+
+    console.log(editedValues);
+
+    const handleInputChange = (serviceId, headerId, value) => {
+        setEditedValues(prevState => ({
+            ...prevState,
+            [serviceId]: {
+                ...prevState[serviceId],
+                [headerId]: value,
+
+
+            },
+        }));
+    };
+
+    const handleUpdate = async (serviceId) => {
+        const updatedPrices = editedValues[serviceId];
+
+        if (!updatedPrices) {
+            console.error('No edited prices for service ID:', serviceId);
+            return;
+        }
+
+        try {
+            // Send the updated prices to the backend (assuming updateServicePrices handles the API call)
+            const response = await fetch(`http://localhost:5000/update/${serviceId}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ [serviceId]: updatedPrices }) // Send the data as an object with serviceId as the key
+            });
+
+            const result = await response.json();
+            if (response.ok) {
+                alert('Prices updated successfully!');
+            } else {
+                console.error('Failed to update prices:', result.error);
+            }
+
+            // Optionally, refresh the data or update local state
+        } catch (error) {
+            console.error('Error updating prices:', error);
+        }
+    };
+
 
     // Fetch data from the backend
     useEffect(() => {
@@ -63,12 +111,18 @@ function CurrentServiceTable(props) {
                                 <td>{service.name}</td>
                                 {category.headers.slice(0, -1).map(header => (
                                     <td key={header.id}>
-                                        <input type="text" value={service.prices[header.id]} readOnly />
+                                        <input
+                                            type="text"
+                                            value={editedValues[service.service_id]?.[header.id] || service.prices[header.id]}
+                                            onChange={(e) => handleInputChange(service.service_id, header.id, e.target.value)}
+                                        />
                                         €
                                     </td>
                                 ))}
-                                <button>update</button>
-                                <button onClick={() => handleDelete(service.service_id, category.category_name)}>delete</button>
+                                <button onClick={() => handleUpdate(service.service_id)}>Update</button>
+                                <button
+                                    onClick={() => handleDelete(service.service_id, category.category_name)}>delete
+                                </button>
                             </tr>
                         ))}
                         </tbody>
@@ -80,3 +134,4 @@ function CurrentServiceTable(props) {
 }
 
 export default CurrentServiceTable;
+
