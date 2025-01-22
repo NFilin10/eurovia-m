@@ -67,7 +67,7 @@ const state = {
           },
           {
               text: "Hinnakiri",
-              to: "/"
+              to: "/hinnakiri"
           },
           {
               text: "Meist",

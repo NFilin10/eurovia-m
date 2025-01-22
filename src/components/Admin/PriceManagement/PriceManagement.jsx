@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import Styles from './PriceManagement.module.css';
-import { sendPriceInfo } from '../../../http/priceManagement';
+import { sendPriceInfo, fetchPriceData } from '../../../http/priceManagement';
 import axios from "axios";
 
 function PriceManagement() {
@@ -14,6 +14,8 @@ function PriceManagement() {
     const handleShowInputs = () => {
         setShowInputs(true);
     };
+
+    console.log("rows",  rows)
 
     // Adds a new row with blank cells based on the number of columns
     const addRow = () => {
@@ -63,8 +65,8 @@ function PriceManagement() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/price-management/get');
-                setData(response.data);
+                const resp = await fetchPriceData(); // Wait for the data to be fetched
+                setData(resp); // Update state with the fetched data
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
@@ -72,6 +74,7 @@ function PriceManagement() {
 
         fetchData();
     }, []);
+
 
     return (
         <div className={Styles.priceManagementContainer}>
