@@ -1,9 +1,66 @@
+.priceManagementContainer{
+    width: 80%;
+    margin: 0 auto;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    color: white;
+}
 .attrInputs{
     display: flex;
     align-items: center;
     gap: 20px
 }
 
-.a{
+.priceManagementContainer{
     color: white;
+}
+
+.priceManagementContainer h1{
+    text-align: center;
+}
+
+.newService{
+    width: 130px;
+    height: 40px;
+}
+
+.formContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.columnNumContainer{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.columnNumContainer input{
+    height: 20px;
+    width: 60px;
+}
+
+.tableHeading{
+    display: flex;
+    gap: 20px;
+}
+
+.plusBtn{
+    margin-top: 20px;
+}
+
+.tableHead{
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.tableBody{
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
 }
