@@ -5,7 +5,6 @@ import CurrentServiceTable from "../components/Admin//CurrentServiceTables/Curre
 function Admin() {
     return (
         <div>
-            <h1>Price Management</h1>
             <CurrentServiceTable/>
             <PriceManagement/>
         </div>

@@ -1,7 +1,6 @@
 .priceManagementContainer{
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
-    background-color: red;
     display: flex;
     flex-direction: column;
 }
@@ -22,6 +21,8 @@
 .priceManagementContainer h1{
     text-align: center;
 }
+
+
 
 .newService{
     width: 130px;

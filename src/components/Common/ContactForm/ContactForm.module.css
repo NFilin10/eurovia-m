@@ -26,6 +26,15 @@
     justify-content: space-between;
 }
 
+.contactFormContainerPricesPg{
+    width: 70%;
+    margin: 0 auto;
+    color: white;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
 .secondaryHeading{
     color: red;
     font-size: 20px;

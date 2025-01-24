@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Styles from "./CurrentServiceTable.module.css";
-import {fetchPriceData, deleteService, updateService} from "../../../http/priceManagement"; // Assuming you add the delete function
+import { fetchPriceData, deleteService, updateService, sendPrice } from "../../../http/priceManagement";
 
 function CurrentServiceTable(props) {
     const [data, setData] = useState([]);
-
-    const [editedValues, setEditedValues] = useState({}); // Store the edited values temporarily
-
-    console.log(editedValues);
+    const [editedValues, setEditedValues] = useState({});
+    const [newRowValues, setNewRowValues] = useState({}); // State to track new row inputs
 
     const handleInputChange = (serviceId, headerId, value) => {
         setEditedValues(prevState => ({
@@ -15,8 +13,16 @@ function CurrentServiceTable(props) {
             [serviceId]: {
                 ...prevState[serviceId],
                 [headerId]: value,
+            },
+        }));
+    };
 
-
+    const handleNewRowChange = (categoryId, headerId, value) => {
+        setNewRowValues(prevState => ({
+            ...prevState,
+            [categoryId]: {
+                ...prevState[categoryId],
+                [headerId]: value,
             },
         }));
     };
@@ -30,53 +36,63 @@ function CurrentServiceTable(props) {
         }
 
         try {
-            // Send the updated prices to the backend (assuming updateServicePrices handles the API call)
-            const response = await fetch(`http://localhost:5000/update/${serviceId}`, {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ [serviceId]: updatedPrices }) // Send the data as an object with serviceId as the key
-            });
+            const response = await updateService(serviceId, { [serviceId]: updatedPrices });
 
-            const result = await response.json();
-            if (response.ok) {
+            if (response.status ===  200) {
                 alert('Prices updated successfully!');
+                await refreshData();
             } else {
-                console.error('Failed to update prices:', result.error);
+                console.error('Failed to update prices:', response.error);
             }
-
-            // Optionally, refresh the data or update local state
+            // await refreshData();
         } catch (error) {
             console.error('Error updating prices:', error);
         }
     };
 
+    const handleAddNewRow =  async (category) => {
+        const newRow = newRowValues[category.category_name];
+        if (!newRow || Object.values(newRow).some(val => !val)) {
+            alert('Please fill out all fields for the new row.');
+            return;
+        }
 
-    // Fetch data from the backend
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const resp = await fetchPriceData(); // Wait for the data to be fetched
-                setData(resp); // Update state with the fetched data
-            } catch (error) {
-                console.error('Error fetching data:', error);
+        try {
+            const response = await sendPrice({
+                categoryID: category.categoryID,
+                new_service: newRow,
+            });
+
+            console.log("status", response.status)
+
+            if (response.status === 201) {
+                alert('New service added successfully!');
+                setNewRowValues(prev => ({...prev, [category.category_name]: {}})); // Clear inputs
+                await refreshData(); // Refresh data from the server
+            } else {
+                console.error('Failed to add new row:', response.error);
             }
-        };
+        } catch (error) {
+            console.error('Error adding new row:', error);
+        }
+    };
 
-        fetchData();
-    }, []);
+    const refreshData =  async () => {
+        console.log("function call")
+        try {
+            const resp = fetchPriceData();
+            setData(await resp);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
 
     const handleDelete = async (serviceId, categoryName) => {
         try {
-            // Call the API to delete the service from the database
             await deleteService(serviceId);
-
-            // Update local state to reflect the deletion
             setData(prevData => {
                 return prevData.map(category => {
                     if (category.category_name === categoryName) {
-                        // Remove service from the category's services
                         const updatedServices = { ...category.services };
                         delete updatedServices[serviceId];
                         return {
@@ -92,8 +108,14 @@ function CurrentServiceTable(props) {
         }
     };
 
+    useEffect(() => {
+        refreshData();
+    }, []); // Only run on component mount
+
     return (
         <div className={Styles.pricesTableContainer}>
+            <h1>Управление ценами</h1>
+
             {data.map((category, index) => (
                 <div key={index} className={Styles.tableSection}>
                     <h2>{category.category_name}</h2>
@@ -114,17 +136,40 @@ function CurrentServiceTable(props) {
                                         <input
                                             type="text"
                                             value={editedValues[service.service_id]?.[header.id] || service.prices[header.id]}
-                                            onChange={(e) => handleInputChange(service.service_id, header.id, e.target.value)}
+                                            onChange={(e) =>
+                                                handleInputChange(service.service_id, header.id, e.target.value)
+                                            }
                                         />
                                         €
                                     </td>
                                 ))}
-                                <button onClick={() => handleUpdate(service.service_id)}>Update</button>
+
+                                <button onClick={() => handleUpdate(service.service_id)}>Обновить</button>
                                 <button
-                                    onClick={() => handleDelete(service.service_id, category.category_name)}>delete
+                                    onClick={() => handleDelete(service.service_id, category.category_name)}>Удалить
                                 </button>
+
                             </tr>
                         ))}
+
+                        {/* New row for adding services */}
+                        <tr>
+                            {category.headers.map(header => (
+                                <td key={header.id}>
+                                    <input
+                                        type="text"
+                                        placeholder={`Enter ${header.name}`}
+                                        value={newRowValues[category.category_name]?.[header.id] || ''}
+                                        onChange={(e) =>
+                                            handleNewRowChange(category.category_name, header.id, e.target.value)
+                                        }
+                                    />
+                                </td>
+                            ))}
+
+                            <button onClick={() => handleAddNewRow(category)}>Сохранить</button>
+
+                        </tr>
                         </tbody>
                     </table>
                 </div>
@@ -134,4 +179,3 @@ function CurrentServiceTable(props) {
 }
 
 export default CurrentServiceTable;
-

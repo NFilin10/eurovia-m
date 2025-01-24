@@ -81,13 +81,13 @@ function PriceManagement() {
 
             <div className={Styles.formContainer}>
                 <button className={Styles.newService} onClick={handleShowInputs}>
-                    Add New Service
+                    Добавить новую таблицу
                 </button>
                 {showInputs && (
                     <div className={Styles.inputSection}>
                         {/* Number of Columns */}
                         <div className={Styles.columnInput}>
-                            <label>Number of Columns:</label>
+                            <label>Количество колонок: </label>
                             <input
                                 type="number"
                                 value={columnNum}
@@ -97,7 +97,7 @@ function PriceManagement() {
 
                         {/* Table Heading */}
                         <div className={Styles.tableHeading}>
-                            <label>Table Heading:</label>
+                            <label>Заголовок таблицы: </label>
                             <input
                                 type="text"
                                 value={headingInput}
@@ -111,7 +111,7 @@ function PriceManagement() {
                                 <div key={index}>
                                     <input
                                         type="text"
-                                        placeholder={`Header ${index + 1}`}
+                                        placeholder={`Шапка таблицы ${index + 1}`}
                                         value={headData[index] || ''}
                                         onChange={e => {
                                             const updatedHeaders = [...headData];
@@ -130,7 +130,7 @@ function PriceManagement() {
                                     <div key={columnIndex}>
                                         <input
                                             type="text"
-                                            placeholder={columnIndex === 0 ? 'Service Name' : `Value ${columnIndex}`}
+                                            placeholder={columnIndex === 0 ? 'Услугв' : `Цена ${columnIndex}`}
                                             value={cellValue || ''}
                                             onChange={e => handleBodyInputChange(rowIndex, columnIndex, e.target.value)}
                                         />
@@ -146,7 +146,7 @@ function PriceManagement() {
 
                         {/* Submit Button */}
                         <button className={Styles.submitBtn} onClick={handleSubmit}>
-                            Submit
+                            Сохранить
                         </button>
                     </div>
                 )}

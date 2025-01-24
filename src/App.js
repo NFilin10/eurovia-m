@@ -28,7 +28,7 @@ function App() {
                         <Route key={service.path} path={service.path} element={<Service state={service} />} />
                     ))}
                     <Route path="/admin" element={<Admin />} />
-                    <Route path="/hinnakiri" element={<Prices />} />
+                    <Route path="/hinnakiri" element={<Prices state={state} />} />
                 </Routes>
 
                 <Footer state={state.footer} />
