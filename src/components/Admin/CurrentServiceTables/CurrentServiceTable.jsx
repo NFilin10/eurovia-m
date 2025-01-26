@@ -143,11 +143,16 @@ function CurrentServiceTable(props) {
                                         €
                                     </td>
                                 ))}
+                                <td className={Styles.buttonsColumn}>
+                                    <div className={Styles.buttons}>
+                                        <button onClick={() => handleUpdate(service.service_id)}>Обновить</button>
+                                        <button
+                                            onClick={() => handleDelete(service.service_id, category.category_name)}>Удалить
+                                        </button>
+                                    </div>
 
-                                <button onClick={() => handleUpdate(service.service_id)}>Обновить</button>
-                                <button
-                                    onClick={() => handleDelete(service.service_id, category.category_name)}>Удалить
-                                </button>
+                                </td>
+
 
                             </tr>
                         ))}
@@ -166,8 +171,9 @@ function CurrentServiceTable(props) {
                                     />
                                 </td>
                             ))}
-
-                            <button onClick={() => handleAddNewRow(category)}>Сохранить</button>
+                            <td>
+                                <button onClick={() => handleAddNewRow(category)}>Сохранить</button>
+                            </td>
 
                         </tr>
                         </tbody>

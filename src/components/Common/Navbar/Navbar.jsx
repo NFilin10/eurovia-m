@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import { NavLink, Link, useLocation } from 'react-router-dom';
+import {NavLink, Link, useLocation, useNavigate} from 'react-router-dom';
 import { FiAlignRight, FiXCircle, FiChevronDown } from "react-icons/fi";
 import Styles from './Navbar.module.css';
 
-const Navbar = ({ state }) => {
+const Navbar = ({ state, setIsAuthenticated, isAuthenticated }) => {
     const [isMenu, setIsMenu] = useState(false);
     const [isResponsiveClose, setIsResponsiveClose] = useState(false);
     const [activeSubMenu, setActiveSubMenu] = useState(null);
+
 
     const toggleClass = () => {
         setIsMenu(!isMenu);
@@ -21,6 +22,26 @@ const Navbar = ({ state }) => {
     const isHomePage = location.pathname === "/";
 
     const { logo, menuItems } = state;
+
+    const navigate = useNavigate(); // Declare useNavigate at the top level
+
+    const logout = async () => {
+        try {
+            const response = await fetch("http://localhost:5000/auth/logout", {
+                credentials: 'include',
+            });
+
+            if (response.ok) {
+                setIsAuthenticated(false);
+                navigate("/"); // Use the navigate function here
+            } else {
+                console.error("Failed to log out");
+            }
+        } catch (e) {
+            console.error("Error during logout:", e);
+        }
+    };
+
 
     return (
         <header className={Styles.headerMiddle}>
@@ -59,7 +80,7 @@ const Navbar = ({ state }) => {
                                         onClick={() => item.subMenu && toggleSubmenu(index)}
                                     >
                                         <Link to={item.to}>
-                                            {item.text} {item.subMenu && <FiChevronDown />}
+                                            {item.text} {item.subMenu && <FiChevronDown/>}
                                         </Link>
 
                                         {item.subMenu && (
@@ -81,15 +102,20 @@ const Navbar = ({ state }) => {
                                     </li>
                                 ))}
 
-                                <li className={`${Styles.menuItem} ${Styles.bookTimeBtn}`}>
-                                    <NavLink
-                                        to="/Contact"
-                                        activeClassName={Styles.isActive}
-                                        onClick={toggleClass}
-                                    >
-                                        Broneeri aeg
-                                    </NavLink>
-                                </li>
+                                {/*<li className={`${Styles.menuItem} ${Styles.bookTimeBtn}`}>*/}
+                                {/*    <NavLink*/}
+                                {/*        to="/Contact"*/}
+                                {/*        activeClassName={Styles.isActive}*/}
+                                {/*        onClick={toggleClass}*/}
+                                {/*    >*/}
+                                {/*        Broneeri aeg*/}
+                                {/*    </NavLink>*/}
+                                {/*</li>*/}
+                                {
+                                    isAuthenticated && <li className={`${Styles.menuItem1} `}>
+                                        <button className={`${Styles.logoutBtn}`} onClick={logout}>Log out</button>
+                                    </li>
+                                }
                             </ul>
                         </nav>
                     </div>

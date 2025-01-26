@@ -275,7 +275,7 @@ const state = {
     },
     contact: {
         mainHeading: ["Võtke  meeiega ",  "ühendust"],
-        secondaryHeading: "ldkf ls;dfk lsdkf",
+        secondaryHeading: "Ootame teie küsimusi või kommentaare",
         contactElements: [
             {
                 icon: <IoLocationOutline style={iconStylesContact}/>,

@@ -110,12 +110,12 @@ li {
 
 .headerMiddleMenus {
     width: 70%;
-    display: inline-block;
+    /*display: inline-block;*/
     float: left;
 
-    /*display: flex;*/
-    /*align-items: center;*/
-    /*justify-content: flex-end;*/
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 .menuItem.menu__qqqitem a{
     margin: 27px 10px;
@@ -165,13 +165,37 @@ li {
 }
 
 
-.bookTimeBtn a{
+/*.bookTimeBtn a{*/
+/*    background-color: red;*/
+/*    margin-left: 50px;*/
+/*    width: 135px;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    border-radius: 5px;*/
+/*}*/
+
+.logoutBtn{
     background-color: red;
     margin-left: 50px;
-    width: 135px;
-    display: flex;
-    justify-content: center;
+    width: 100px;
     border-radius: 5px;
+
+}
+
+.menuItem1{
+    display: flex;
+    align-items: center;
+}
+
+.menuItem1 button {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 40px;
+    display: block;
+    color: white;
+    /*margin: 27px 17px;*/
+    text-decoration: none;
+    cursor: pointer;
 }
 
 a{
@@ -249,7 +273,7 @@ a{
     .subMenusActive{display: block!important;margin: 0 auto;left: 0;right: 0;}
     .menuItem .subMenus__full a {text-align: left;}
 
-    .bookTimeBtn a{
+    .bookTimeBtn {
         width: 135px;
         border-radius: 5px;
         margin: 0 auto !important;
@@ -261,6 +285,15 @@ a{
 
     .menuItem a {
         font-size: 16px;
+    }
+    .logoutBtn{
+        margin-left: 0px;
+        font-size: 16px !important;
+
+    }
+
+    .menuItem1{
+        justify-content: center;
     }
 
 }

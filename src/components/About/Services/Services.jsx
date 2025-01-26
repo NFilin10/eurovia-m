@@ -41,7 +41,7 @@ const Services = ({state}) => {
             items={serviceElements}
             responsive={responsive}
             controlsStrategy="alternate"
-            autoPlay={true}
+            autoPlay={false}
             infinite={true}
 
         />

@@ -44,3 +44,26 @@
     text-align: left;
     padding-left: 12px;
 }
+
+.buttons{
+    display: flex;
+    gap: 10px;
+}
+
+.buttonsColumn{
+    width: 100px;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .buttons{
+        flex-direction: column;
+    }
+
+    .buttonsColumn{
+        width: 50px;
+    }
+
+    input{
+        width: 50px;
+    }
+}
