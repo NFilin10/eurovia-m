@@ -33,7 +33,7 @@ function App() {
     }, []);
 
     return (
-        <Router> {/* Ensure the Router wraps the entire app */}
+        <Router>
             <div>
                 <Navbar state={state.navbar} setIsAuthenticated={setIsAuthenticated} isAuthenticated={isAuthenticated} />
                 <Routes>

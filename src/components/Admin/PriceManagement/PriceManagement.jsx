@@ -43,7 +43,7 @@ function PriceManagement({data, setData}) {
     };
 
     // Submits the table data as a structured payload
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
         const services = rows.map(row => ({
             service_name: row[0], // First cell of each row is the service name
         }));
@@ -66,8 +66,13 @@ function PriceManagement({data, setData}) {
         };
 
         console.log('Payload:', JSON.stringify(payload, null, 2));
-        sendPriceInfo(payload);
-        refreshData()// Send data to API
+        await sendPriceInfo(payload);
+        await refreshData()// Send data to API
+        setColumnNum(0);
+        setHeadingInput('');
+        setHeadData([]);
+        setRows([]);
+        setShowInputs(false); // Hide input section
     };
 
 

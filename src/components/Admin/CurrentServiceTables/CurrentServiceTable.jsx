@@ -103,6 +103,7 @@ function CurrentServiceTable({data, setData}) {
                     return category;
                 });
             });
+            await refreshData()
         } catch (error) {
             console.error('Error deleting service:', error);
         }
