@@ -14,9 +14,9 @@ function MainSection({state}) {
     return (
         <div className={Styles.mainSectionWrapper}>
             <div className={Styles.history}>
-                <img className={Styles.image} src={state.section1.image} alt=""/>
+                <img className={Styles.image} src={state.section1.image} alt="" data-aos="fade-right"/>
 
-                <div className={Styles.textPart}>
+                <div className={Styles.textPart} data-aos="fade-left">
                     <h1 className={Styles.heading}>{state.section1.heading[0]}<span
                         className={Styles.whiteWord}>{state.section1.heading[1]}</span>{state.section1.heading[2]}</h1>
                     <p className={Styles.mainText}>{state.section1.text}</p>
@@ -24,16 +24,16 @@ function MainSection({state}) {
             </div>
 
             <div className={Styles.vision}>
-                <div className={Styles.textPart}>
+                <div className={Styles.textPart} data-aos="fade-right">
                     <h1 className={Styles.heading}>{state.section2.heading[0]}<span className={Styles.whiteWord}>{state.section2.heading[1]}</span>{state.section2.heading[2]}</h1>
                     <p className={Styles.mainText}>{state.section2.text}</p>
                 </div>
-                <img className={Styles.image} src={state.section2.image} alt=""/>
+                <img className={Styles.image} src={state.section2.image} alt="" data-aos="fade-left"/>
             </div>
 
             <div className={Styles.mission}>
-                <img className={Styles.image} src={state.section3.image} alt=""/>
-                <div className={Styles.textPart}>
+                <img className={Styles.image} src={state.section3.image} alt="" data-aos="fade-right"/>
+                <div className={Styles.textPart} data-aos="fade-left">
                     <h1 className={Styles.heading}><span className={Styles.whiteWord}>{state.section3.heading[0]}</span>{state.section3.heading[1]}</h1>
                     <p className={Styles.mainText}>
                         {state.section3.text}

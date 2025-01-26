@@ -22,7 +22,7 @@ function PriceTable() {
     }, []);
 
     return (
-        <div className={Styles.pricesTableContainer}>
+        <div className={Styles.pricesTableContainer} data-aos="zoom-in">
             {data.map((category, index) => (
                 <div key={index} className={Styles.tableSection}>
                     <h2>{category.category_name}</h2>

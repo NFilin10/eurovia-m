@@ -10,7 +10,7 @@ const ContactFormSection = ({className, state}) => {
     let iconStyles = {fontSize: "30px", color:"white", backgroundColor:"red", padding: "13px"};
 
     return (
-        <div className={Styles.contactFormWrapper}>
+        <div className={Styles.contactFormWrapper} data-aos="fade-up">
             <div className={Styles[className]}>
                 <div className={Styles.contactSection}>
                     <p className={Styles.secondaryHeading}>{state.textSection.secondaryHeading}</p>

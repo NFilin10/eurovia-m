@@ -5,7 +5,7 @@ function Login({setIsAuthenticated}) {
 
     return (
         <>
-            <LoginForm setIsAuthenticated={setIsAuthenticated}/>
+            <LoginForm setIsAuthenticated={setIsAuthenticated} />
         </>
     );
 }

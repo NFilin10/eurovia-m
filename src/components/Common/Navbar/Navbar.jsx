@@ -33,7 +33,6 @@ const Navbar = ({ state, setIsAuthenticated, isAuthenticated }) => {
 
             if (response.ok) {
                 setIsAuthenticated(false);
-                navigate("/"); // Use the navigate function here
             } else {
                 console.error("Failed to log out");
             }

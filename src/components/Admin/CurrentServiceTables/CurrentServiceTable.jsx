@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import Styles from "./CurrentServiceTable.module.css";
 import { fetchPriceData, deleteService, updateService, sendPrice } from "../../../http/priceManagement";
 
-function CurrentServiceTable(props) {
-    const [data, setData] = useState([]);
+function CurrentServiceTable({data, setData}) {
+
     const [editedValues, setEditedValues] = useState({});
     const [newRowValues, setNewRowValues] = useState({}); // State to track new row inputs
 

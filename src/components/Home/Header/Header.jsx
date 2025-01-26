@@ -2,7 +2,8 @@ import React from 'react'
 import Styles from './Header.module.css'
 import {NavLink, Link} from 'react-router-dom';
 import { GiCarWheel } from "react-icons/gi";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Header({state}) {
 
@@ -12,7 +13,7 @@ function Header({state}) {
         <div className={Styles.HeaderWrapper}>
             <div className={Styles.headerImage}>
                 <div className={Styles.HeaderContentContainer}>
-                    <div className={Styles.HeaderContent}>
+                    <div className={Styles.HeaderContent} data-aos="fade-left">
                         <div className={Styles.iconBlock}>
                             <GiCarWheel className={Styles.wheel} style={wheelIcon}/>
                             <p className={Styles.heading}>{state.secondaryHeading}</p>

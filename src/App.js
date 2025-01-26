@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import './App.css';
 
@@ -12,41 +12,47 @@ import Admin from "./Pages/Admin";
 import Prices from "./Pages/Prices";
 import Signup from "./Pages/Signup";
 import Login from "./Pages/Login";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import state from './state';
-import useAuth from "./hooks/useAuth";
+import auth from "./hooks/useAuth"; // Import hook
+import axios from "axios";
 
 function App() {
-    const [isAuthenticated, setIsAuthenticated] = useState(null); // Lifted state
+    AOS.init({});
+
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+    useEffect(() => {
+        const checkAuthentication = async () => {
+            const isAuthenticated = await auth.authenticated();
+            setIsAuthenticated(isAuthenticated);
+        };
+
+        checkAuthentication();
+    }, []);
 
     return (
-        <Router>
-            <MainApp isAuthenticated={isAuthenticated} setIsAuthenticated={setIsAuthenticated} />
+        <Router> {/* Ensure the Router wraps the entire app */}
+            <div>
+                <Navbar state={state.navbar} setIsAuthenticated={setIsAuthenticated} isAuthenticated={isAuthenticated} />
+                <Routes>
+                    <Route path="/" element={<Home state={state} />} />
+                    <Route path="/meist" element={<About state={state.about} />} />
+                    <Route path="/kontakt" element={<Contact state={state} />} />
+                    {state.servicePages.map(service => (
+                        <Route key={service.path} path={service.path} element={<Service state={service} />} />
+                    ))}
+                    <Route
+                        path="/admin"
+                        element={isAuthenticated ? <Admin /> : <Navigate to="/login" />}
+                    />
+                    <Route path="/hinnakiri" element={<Prices state={state} />} />
+                    <Route path="/login" element={!isAuthenticated ? <Login setIsAuthenticated={setIsAuthenticated} /> : <Navigate to="/admin" />} />
+                </Routes>
+                <Footer state={state.footer} />
+            </div>
         </Router>
-    );
-}
-
-function MainApp({ isAuthenticated, setIsAuthenticated }) {
-
-    return (
-        <div>
-            <Navbar state={state.navbar} setIsAuthenticated={setIsAuthenticated} isAuthenticated={isAuthenticated}/>
-            <Routes>
-                <Route path="/" element={<Home state={state} />} />
-                <Route path="/meist" element={<About state={state.about} />} />
-                <Route path="/kontakt" element={<Contact state={state} />} />
-                {state.servicePages.map(service => (
-                    <Route key={service.path} path={service.path} element={<Service state={service} />} />
-                ))}
-                <Route
-                    path="/admin"
-                    element={isAuthenticated ? <Admin /> : <Navigate to="/login" />}
-                />
-                <Route path="/hinnakiri" element={<Prices state={state} />} />
-                <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
-            </Routes>
-            <Footer state={state.footer} />
-        </div>
     );
 }
 

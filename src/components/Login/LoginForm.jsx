@@ -26,11 +26,11 @@ const LoginForm = ({ setIsAuthenticated }) => {
                     withCredentials: true,
                 }
             );
+            setIsAuthenticated(true);
 
-            if (response.status === 201) {
-                setIsAuthenticated(true); // Update the state in the parent component
-                navigate("/admin");
-            }
+            // Redirect to admin page
+            navigate("/admin");
+
         } catch (error) {
             console.error("Login error:", error);
             setError("Invalid credentials. Please try again.");
@@ -40,7 +40,7 @@ const LoginForm = ({ setIsAuthenticated }) => {
     return (
         <div className={Styles.wrapper}>
             <div className={Styles.main}>
-                <form>
+                <form onSubmit={LoginIn}>
                     <label className={Styles.label} htmlFor="email">Login</label>
                     <input
                         className={Styles.input}
@@ -58,7 +58,7 @@ const LoginForm = ({ setIsAuthenticated }) => {
                         placeholder="Password"
                         value={password}
                     />
-                    <button onClick={LoginIn} className={Styles.button}>Login</button>
+                    <button type="submit" className={Styles.button}>Login</button>
                     {error && <div className={Styles.error}>{error}</div>}
                 </form>
             </div>

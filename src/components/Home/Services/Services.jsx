@@ -51,7 +51,7 @@ let aimElements = state.aims.map(aim =>
 
 
     return (
-        <div className={Styles.ServicesWrapper}>
+        <div className={Styles.ServicesWrapper} data-aos="fade-up">
             <div className={Styles.textArea}>
                 <div className={Styles.iconBlock}>
                     <GiCarWheel className={Styles.wheel} style={wheelIcon}/>
@@ -65,7 +65,7 @@ let aimElements = state.aims.map(aim =>
                     <h1>{state.headings.promises}</h1>
                     {promiseElements}
 
-                    <div className={Styles.textSection}>
+                    <div className={Styles.textSection} data-aos="fade-up-right">
                         <div className={Styles.iconBlock1}>
                             <GiCarWheel className={Styles.wheel} style={wheelIcon}/>
                             <p>{state.headings.tech}</p>

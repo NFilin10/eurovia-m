@@ -6,7 +6,7 @@ import ContactForm from "../../Common/ContactForm/ContactForm";
 
 function Contacts({state}){
     return (
-        <div>
+        <div data-aos="fade-up">
             <ContactForm className="contactFormContainerPricesPg" state={state}/>
         </div>
     )

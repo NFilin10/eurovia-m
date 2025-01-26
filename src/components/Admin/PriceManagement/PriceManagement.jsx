@@ -3,7 +3,7 @@ import Styles from './PriceManagement.module.css';
 import { sendPriceInfo, fetchPriceData } from '../../../http/priceManagement';
 
 
-function PriceManagement() {
+function PriceManagement({data, setData}) {
     const [columnNum, setColumnNum] = useState(0);
     const [headingInput, setHeadingInput] = useState('');
     const [headData, setHeadData] = useState([]);
@@ -32,6 +32,16 @@ function PriceManagement() {
         setRows(updatedRows);
     };
 
+    const refreshData =  async () => {
+        console.log("function call")
+        try {
+            const resp = fetchPriceData();
+            setData(await resp);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
+
     // Submits the table data as a structured payload
     const handleSubmit = () => {
         const services = rows.map(row => ({
@@ -56,10 +66,10 @@ function PriceManagement() {
         };
 
         console.log('Payload:', JSON.stringify(payload, null, 2));
-        sendPriceInfo(payload); // Send data to API
+        sendPriceInfo(payload);
+        refreshData()// Send data to API
     };
 
-    const [data, setData] = useState([]);
 
     // Fetch data from the backend
     useEffect(() => {
