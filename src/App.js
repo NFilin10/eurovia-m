@@ -10,27 +10,16 @@ import Footer from "./components/Common/Footer/Footer";
 import Service from "./components/Services/Service";
 import Admin from "./Pages/Admin";
 import Prices from "./Pages/Prices";
-import Signup from "./Pages/Signup";
 import Login from "./Pages/Login";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import state from './state';
-import auth from "./hooks/useAuth"; // Import hook
-import axios from "axios";
+import useAuth from "./hooks/useAuth";
 
 function App() {
     AOS.init({});
 
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
-
-    useEffect(() => {
-        const checkAuthentication = async () => {
-            const isAuthenticated = await auth.authenticated();
-            setIsAuthenticated(isAuthenticated);
-        };
-
-        checkAuthentication();
-    }, []);
+    const {isAuthenticated, setIsAuthenticated} = useAuth();
 
     return (
         <Router>

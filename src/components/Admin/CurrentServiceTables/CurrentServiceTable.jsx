@@ -2,10 +2,18 @@ import React, { useEffect, useState } from 'react';
 import Styles from "./CurrentServiceTable.module.css";
 import { fetchPriceData, deleteService, updateService, sendPrice } from "../../../http/priceManagement";
 
-function CurrentServiceTable({data, setData}) {
-
+function CurrentServiceTable({ data, setData }) {
     const [editedValues, setEditedValues] = useState({});
     const [newRowValues, setNewRowValues] = useState({}); // State to track new row inputs
+
+    const refreshPrices = async () => {
+        try {
+            const resp = await fetchPriceData();
+            setData(resp);
+        } catch (error) {
+            console.error('Error refreshing data:', error);
+        }
+    };
 
     const handleInputChange = (serviceId, headerId, value) => {
         setEditedValues(prevState => ({
@@ -38,19 +46,18 @@ function CurrentServiceTable({data, setData}) {
         try {
             const response = await updateService(serviceId, { [serviceId]: updatedPrices });
 
-            if (response.status ===  200) {
+            if (response.status === 200) {
                 alert('Prices updated successfully!');
-                await refreshData();
+                await refreshPrices(); // Refresh data after update
             } else {
                 console.error('Failed to update prices:', response.error);
             }
-            // await refreshData();
         } catch (error) {
             console.error('Error updating prices:', error);
         }
     };
 
-    const handleAddNewRow =  async (category) => {
+    const handleAddNewRow = async (category) => {
         const newRow = newRowValues[category.category_name];
         if (!newRow || Object.values(newRow).some(val => !val)) {
             alert('Please fill out all fields for the new row.');
@@ -63,12 +70,10 @@ function CurrentServiceTable({data, setData}) {
                 new_service: newRow,
             });
 
-            console.log("status", response.status)
-
             if (response.status === 201) {
                 alert('New service added successfully!');
-                setNewRowValues(prev => ({...prev, [category.category_name]: {}})); // Clear inputs
-                await refreshData(); // Refresh data from the server
+                setNewRowValues(prev => ({ ...prev, [category.category_name]: {} })); // Clear inputs
+                await refreshPrices(); // Refresh data after adding new row
             } else {
                 console.error('Failed to add new row:', response.error);
             }
@@ -77,41 +82,15 @@ function CurrentServiceTable({data, setData}) {
         }
     };
 
-    const refreshData =  async () => {
-        console.log("function call")
-        try {
-            const resp = fetchPriceData();
-            setData(await resp);
-        } catch (error) {
-            console.error('Error fetching data:', error);
-        }
-    };
-
     const handleDelete = async (serviceId, categoryName) => {
         try {
             await deleteService(serviceId);
-            setData(prevData => {
-                return prevData.map(category => {
-                    if (category.category_name === categoryName) {
-                        const updatedServices = { ...category.services };
-                        delete updatedServices[serviceId];
-                        return {
-                            ...category,
-                            services: updatedServices,
-                        };
-                    }
-                    return category;
-                });
-            });
-            await refreshData()
+            alert('Service deleted successfully!');
+            await refreshPrices(); // Refresh data after delete
         } catch (error) {
             console.error('Error deleting service:', error);
         }
     };
-
-    useEffect(() => {
-        refreshData();
-    }, []); // Only run on component mount
 
     return (
         <div className={Styles.pricesTableContainer}>
@@ -151,10 +130,7 @@ function CurrentServiceTable({data, setData}) {
                                             onClick={() => handleDelete(service.service_id, category.category_name)}>Удалить
                                         </button>
                                     </div>
-
                                 </td>
-
-
                             </tr>
                         ))}
 
@@ -175,7 +151,6 @@ function CurrentServiceTable({data, setData}) {
                             <td>
                                 <button onClick={() => handleAddNewRow(category)}>Сохранить</button>
                             </td>
-
                         </tr>
                         </tbody>
                     </table>

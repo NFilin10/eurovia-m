@@ -1,20 +1,26 @@
+import { useState, useEffect } from "react";
+import axios from "axios";
+import { useLocation } from "react-router-dom";
 
-const auth = {
-    user: { authenticated: false },
-    authenticated: async function() {
-        try {
-            const response = await fetch("http://localhost:5000/auth/authenticate", {
-                credentials: 'include',
-            });
-            const data = await response.json();
-            this.user.authenticated = data.authenticated;
-            console.log("DATA in auth.js", data);
-            return this.user.authenticated;
-        } catch (error) {
-            console.error("ERROR", error);
-            return false; // Assuming false means not authenticated in case of an error
-        }
-    }
+const useAuth = () => {
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
+    useEffect(() => {
+
+        const checkAuth = async () => {
+            try {
+                const response = await axios.get("http://localhost:5000/auth/authenticate", {
+                    withCredentials: true,
+                });
+                setIsAuthenticated(response.data.authenticated);
+            } catch (error) {
+                setIsAuthenticated(false);
+            }
+        };
+        checkAuth();
+    }, []);
+
+
+    return {isAuthenticated, setIsAuthenticated};
 };
 
-export default auth;
+export default useAuth;

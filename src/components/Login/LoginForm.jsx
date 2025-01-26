@@ -1,7 +1,7 @@
 import Styles from "./LoginForm.module.css";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import axios from "axios";
+import {loginPost} from "../../http/authentication";
 
 const LoginForm = ({ setIsAuthenticated }) => {
     const [login, setLogin] = useState("");
@@ -10,30 +10,17 @@ const LoginForm = ({ setIsAuthenticated }) => {
 
     const navigate = useNavigate();
 
-    const LoginIn = async (e) => {
+    const LoginIn = (e) => {
         e.preventDefault();
 
         const data = { email: login, password: password };
+        const loginResponse = loginPost(data.email, data.password, setIsAuthenticated);
 
-        try {
-            const response = await axios.post(
-                "http://localhost:5000/auth/login",
-                {
-                    password: data.password,
-                    email: data.email,
-                },
-                {
-                    withCredentials: true,
-                }
-            );
-            setIsAuthenticated(true);
-
-            // Redirect to admin page
+        if (loginResponse.status === 201) {
             navigate("/admin");
-
-        } catch (error) {
-            console.error("Login error:", error);
+        }  else {
             setError("Invalid credentials. Please try again.");
+
         }
     };
 

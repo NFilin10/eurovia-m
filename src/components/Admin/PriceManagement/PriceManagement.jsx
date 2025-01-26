@@ -15,6 +15,15 @@ function PriceManagement({data, setData}) {
         setShowInputs(true);
     };
 
+    const refreshPrices = async () => {
+        try {
+            const resp = await fetchPriceData();
+            setData(resp);
+        } catch (error) {
+            console.error('Error refreshing data:', error);
+        }
+    };
+
     console.log("rows",  rows)
 
     // Adds a new row with blank cells based on the number of columns
@@ -32,15 +41,6 @@ function PriceManagement({data, setData}) {
         setRows(updatedRows);
     };
 
-    const refreshData =  async () => {
-        console.log("function call")
-        try {
-            const resp = fetchPriceData();
-            setData(await resp);
-        } catch (error) {
-            console.error('Error fetching data:', error);
-        }
-    };
 
     // Submits the table data as a structured payload
     const handleSubmit = async () => {
@@ -67,7 +67,7 @@ function PriceManagement({data, setData}) {
 
         console.log('Payload:', JSON.stringify(payload, null, 2));
         await sendPriceInfo(payload);
-        await refreshData()// Send data to API
+        await refreshPrices()// Send data to API
         setColumnNum(0);
         setHeadingInput('');
         setHeadData([]);
@@ -75,20 +75,6 @@ function PriceManagement({data, setData}) {
         setShowInputs(false); // Hide input section
     };
 
-
-    // Fetch data from the backend
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const resp = await fetchPriceData(); // Wait for the data to be fetched
-                setData(resp); // Update state with the fetched data
-            } catch (error) {
-                console.error('Error fetching data:', error);
-            }
-        };
-
-        fetchData();
-    }, []);
 
 
     return (

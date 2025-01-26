@@ -1,25 +1,10 @@
-import React, {useEffect, useState} from 'react';
-import {fetchPriceData} from "../../../http/priceManagement";
+import React from 'react';
 import Styles from "./PriceTable.module.css";
+import useFetchPrices from "../../../hooks/useFetchPrices";
 
 function PriceTable() {
 
-    const [data, setData] = useState([]);
-
-    console.log("DATA", data)
-    // Fetch data from the backend
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const resp = await fetchPriceData(); // Wait for the data to be fetched
-                setData(resp); // Update state with the fetched data
-            } catch (error) {
-                console.error('Error fetching data:', error);
-            }
-        };
-
-        fetchData();
-    }, []);
+    const data = useFetchPrices()
 
     return (
         <div className={Styles.pricesTableContainer} data-aos="zoom-in">
