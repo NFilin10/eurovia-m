@@ -59,7 +59,10 @@ function CurrentServiceTable({ data, setData }) {
 
     const handleAddNewRow = async (category) => {
         const newRow = newRowValues[category.category_name];
-        if (!newRow || Object.values(newRow).some(val => !val)) {
+        if (
+            !newRow ||
+            category.headers.some(header => !newRow[header.id]?.trim())
+        ) {
             alert('Please fill out all fields for the new row.');
             return;
         }

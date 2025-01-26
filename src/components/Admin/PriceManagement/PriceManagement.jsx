@@ -9,6 +9,7 @@ function PriceManagement({data, setData}) {
     const [headData, setHeadData] = useState([]);
     const [rows, setRows] = useState([]);
     const [showInputs, setShowInputs] = useState(false);
+    const [plusClick, setPlusClick] = useState(false);
 
     // Handles showing the input fields for table setup
     const handleShowInputs = () => {
@@ -32,6 +33,7 @@ function PriceManagement({data, setData}) {
             ...prevRows,
             Array.from({ length: columnNum }).fill(''),
         ]);
+        setPlusClick(true)
     };
 
     // Handles changes in table body inputs
@@ -44,6 +46,25 @@ function PriceManagement({data, setData}) {
 
     // Submits the table data as a structured payload
     const handleSubmit = async () => {
+        // Validation: Check if all fields are filled
+        if (!headingInput.trim()) {
+            alert("Please enter a table heading.");
+            return;
+        }
+
+        if (headData.length !== columnNum || headData.some(header => !header.trim())) {
+            alert("Please fill in all column headers.");
+            return;
+        }
+
+        if (
+            rows.length === 0 ||
+            rows.some(row => row.length !== columnNum || row.some(cell => !cell.trim()))
+        ) {
+            alert("Please fill in all rows and cells.");
+            return;
+        }
+
         const services = rows.map(row => ({
             service_name: row[0], // First cell of each row is the service name
         }));
@@ -66,13 +87,22 @@ function PriceManagement({data, setData}) {
         };
 
         console.log('Payload:', JSON.stringify(payload, null, 2));
-        await sendPriceInfo(payload);
-        await refreshPrices()// Send data to API
+        try {
+            await sendPriceInfo(payload);
+            await refreshPrices();
+            alert("Data saved successfully!");
+        } catch (error) {
+            console.error("Error saving data:", error);
+            alert("An error occurred while saving data.");
+        }
+
+        // Reset form
         setColumnNum(0);
         setHeadingInput('');
         setHeadData([]);
         setRows([]);
         setShowInputs(false); // Hide input section
+        setPlusClick(false);
     };
 
 
@@ -92,6 +122,7 @@ function PriceManagement({data, setData}) {
                             <input
                                 type="number"
                                 value={columnNum}
+                                disabled={plusClick}
                                 onChange={e => setColumnNum(Number(e.target.value))}
                             />
                         </div>
@@ -140,10 +171,10 @@ function PriceManagement({data, setData}) {
                             </div>
                         ))}
 
-                        {/* Add Row Button */}
-                        <button className={Styles.plusBtn} onClick={addRow}>
-                            +
-                        </button>
+                        {
+                            columnNum > 0 && <button className={Styles.plusBtn} onClick={addRow}>+</button>
+
+                        }
 
                         {/* Submit Button */}
                         <button className={Styles.submitBtn} onClick={handleSubmit}>
