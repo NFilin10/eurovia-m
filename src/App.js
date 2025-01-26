@@ -20,6 +20,7 @@ function App() {
     AOS.init({});
 
     const {isAuthenticated, setIsAuthenticated} = useAuth();
+    console.log(isAuthenticated);
 
     return (
         <Router>

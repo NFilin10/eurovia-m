@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
-import { useLocation } from "react-router-dom";
+import {authenticate} from "../http/authentication";
 
 const useAuth = () => {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -8,9 +7,7 @@ const useAuth = () => {
 
         const checkAuth = async () => {
             try {
-                const response = await axios.get("http://localhost:5000/auth/authenticate", {
-                    withCredentials: true,
-                });
+                const response = await authenticate()
                 setIsAuthenticated(response.data.authenticated);
             } catch (error) {
                 setIsAuthenticated(false);

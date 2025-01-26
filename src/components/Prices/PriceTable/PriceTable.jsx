@@ -4,7 +4,7 @@ import useFetchPrices from "../../../hooks/useFetchPrices";
 
 function PriceTable() {
 
-    const data = useFetchPrices()
+    const {data} = useFetchPrices()
 
     return (
         <div className={Styles.pricesTableContainer} data-aos="zoom-in">
