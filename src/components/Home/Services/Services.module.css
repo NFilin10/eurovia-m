@@ -18,20 +18,21 @@
     color: red;
     font-size: 20px;
     font-weight: 100;
+    text-transform: uppercase;
+
 }
 
+.serviceHeading{
+    color: white;
+    font-size: 20px;
+}
 
-h2{
+.secondaryHeading{
     text-transform: uppercase;
     color: white;
     font-size: 27px;
 }
 
-h1{
-    text-transform: uppercase;
-    color: white;
-    font-size: 27px;
-}
 
 .red{
     color: red;
@@ -48,7 +49,7 @@ h1{
 .PromisesServicesWrapper{
     width: 90%;
     display: flex;
-    margin: 90px auto 0;
+    margin: 20px auto 0;
 }
 
 .Promises{
@@ -89,6 +90,7 @@ h1{
 }
 
 .Service h1{
+    color: white;
     font-size: 22px;
 }
 
@@ -250,9 +252,9 @@ h1{
         font-size: 14px;
     }
 
-    h1{
-        font-size: 22px;
-    }
+    /*h1{*/
+    /*    font-size: 22px;*/
+    /*}*/
 
     .promiseText p:nth-child(1){
         font-size: 16px;

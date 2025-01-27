@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+body {
+    margin: auto;
+    padding: 0px;
+    overflow-x: hidden;
+    background-repeat: repeat;
+    font-family: 'Inter', sans-serif;
+    /*display: grid;*/
+    line-height: 1.6;
+    letter-spacing: 1px;
+    background-color: black;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}

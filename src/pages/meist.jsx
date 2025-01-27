@@ -5,9 +5,9 @@ import Services from "../components/About/Services/Services";
 function About({state}) {
 
     return (
-        <div className="aboutWrapper">
-            <MainSection state={state}/>
-            <Services state={state.serviceCarousel} />
+        <div>
+            <MainSection state={state.about} />
+            <Services state={state.about.serviceCarousel} />
         </div>
     );
 }

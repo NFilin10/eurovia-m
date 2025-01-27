@@ -4,7 +4,7 @@ import Styles from './Services.module.css'
 import { TiTick } from "react-icons/ti";
 import { FaArrowRight } from "react-icons/fa6";
 import {GiCarWheel} from "react-icons/gi";
-import {NavLink} from "react-router-dom";
+import Link from "next/link";
 
 
 
@@ -25,18 +25,18 @@ const Services = ({state}) => {
     )
 
     let ServicElements = state.serviceCards.map(service =>
-        <div className={Styles.Service} style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${service.imageUrl})` }}>
-            <h1>{service.serviceName}</h1>
+        <div className={Styles.Service} style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${service.imageUrlRaw})` }}>
+            <h1 className={Styles.serviceHeading}>{service.serviceName}</h1>
             <p>{service.serviceDescription}</p>
-            <NavLink
-                to={service.link}>
+            <Link
+                href={service.link}>
                 <div className={Styles.arrow}>
                     <div className={Styles.arrow}>
                         <p>Loe lähemalt</p>
                         <FaArrowRight style={arrow}/>
                     </div>
                 </div>
-            </NavLink>
+            </Link>
 
 
         </div>
@@ -57,7 +57,7 @@ let aimElements = state.aims.map(aim =>
                     <GiCarWheel className={Styles.wheel} style={wheelIcon}/>
                     <h1 className={Styles.heading}>{state.welcomeSection.secondaryHeading}</h1>
                 </div>
-                <h2>{state.welcomeSection.mainHeading[0]} <span className={Styles.red}>{state.welcomeSection.mainHeading[1]}</span></h2>
+                <h2 className={Styles.secondaryHeading}>{state.welcomeSection.mainHeading[0]} <span className={Styles.red}>{state.welcomeSection.mainHeading[1]}</span></h2>
                 <p className={Styles.main}>{state.welcomeSection.text}</p>
             </div>
             <div className={Styles.PromisesServicesWrapper}>

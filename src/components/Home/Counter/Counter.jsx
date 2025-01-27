@@ -1,6 +1,5 @@
 import React from 'react';
 import Styles from './Counter.module.css'
-import CountUp from 'react-countup';
 
 
 

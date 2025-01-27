@@ -1,9 +1,7 @@
 import React from 'react'
 import Styles from './MainSection.module.css'
-import history from './../../../assets/history.jpg'
-import vision from './../../../assets/vision.jpg'
-import mission from './../../../assets/mission.jpg'
 import {GiCarWheel} from "react-icons/gi";
+import Image from "next/image";
 
 
 function MainSection({state}) {
@@ -14,7 +12,7 @@ function MainSection({state}) {
     return (
         <div className={Styles.mainSectionWrapper}>
             <div className={Styles.history}>
-                <img className={Styles.image} src={state.section1.image} alt="" data-aos="fade-right"/>
+                <Image className={Styles.image} src={state.section1.image} alt="" data-aos="fade-right"/>
 
                 <div className={Styles.textPart} data-aos="fade-left">
                     <h1 className={Styles.heading}>{state.section1.heading[0]}<span
@@ -28,11 +26,11 @@ function MainSection({state}) {
                     <h1 className={Styles.heading}>{state.section2.heading[0]}<span className={Styles.whiteWord}>{state.section2.heading[1]}</span>{state.section2.heading[2]}</h1>
                     <p className={Styles.mainText}>{state.section2.text}</p>
                 </div>
-                <img className={Styles.image} src={state.section2.image} alt="" data-aos="fade-left"/>
+                <Image className={Styles.image} src={state.section2.image} alt="" data-aos="fade-left"/>
             </div>
 
             <div className={Styles.mission}>
-                <img className={Styles.image} src={state.section3.image} alt="" data-aos="fade-right"/>
+                <Image className={Styles.image} src={state.section3.image} alt="" data-aos="fade-right"/>
                 <div className={Styles.textPart} data-aos="fade-left">
                     <h1 className={Styles.heading}><span className={Styles.whiteWord}>{state.section3.heading[0]}</span>{state.section3.heading[1]}</h1>
                     <p className={Styles.mainText}>
@@ -45,7 +43,7 @@ function MainSection({state}) {
                     <GiCarWheel className={Styles.wheel} style={wheelIcon}/>
                     <h1 className={Styles.headingSecond}>{state.headings.secondaryHeading}</h1>
                 </div>
-                <h2>{state.headings.mainHeading[0]} <span className={Styles.red}>{state.headings.mainHeading[1]}</span></h2>
+                <h2 className={Styles.secondaryHeading}>{state.headings.mainHeading[0]} <span className={Styles.red}>{state.headings.mainHeading[1]}</span></h2>
             </div>
         </div>
 

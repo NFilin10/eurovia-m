@@ -3,30 +3,32 @@ import {FaPhone} from "react-icons/fa6";
 import {MdEmail, MdOutlineEmail} from "react-icons/md";
 import {IoLocationOutline, IoLocationSharp} from "react-icons/io5";
 
-import logo from './assets/logo-modified.png';
-import service1Image from "./assets/service1.jpg";
-import service2Image from "./assets/service4.jpg";
-import service3Image from "./assets/service2.jpg";
-import service4Image from "./assets/service3.jpg";
-import service5Image from "./assets/service5.jpg";
-import history from './assets/history.jpg'
-import vision from './assets/vision.jpg'
-import mission from './assets/mission.jpg'
+import logo from '../public/assets/logo-modified.png'
+
+console.log(logo)
+import service1Image from "../public/assets/service1.jpg";
+import service2Image from "../public/assets/service4.jpg";
+import service3Image from "../public/assets/service2.jpg";
+import service4Image from "../public/assets/service3.jpg";
+import service5Image from "../public/assets/service5.jpg";
+import history from '../public/assets/history.jpg'
+import vision from '../public/assets/vision.jpg'
+import mission from '../public/assets/mission.jpg'
 
 
 import React from "react";
 import {FiPhone} from "react-icons/fi";
 import {LuBookCheck} from "react-icons/lu";
-import service1_1 from "./assets/servicePage1_1.jpg";
-import service1_2 from "./assets/servicePage1_2.jpg";
-import service2_1 from "./assets/servicePage2_1.jpg";
-import service2_2 from "./assets/servicePage2_2.avif";
-import service3_1 from './assets/servicePage3_1.jpg'
-import service3_2 from './assets/servicePage3_2.jpg'
-import service4_1 from "./assets/servicePage4_1_dark.jpg";
-import service4_2 from "./assets/servicePage4_2.jpg";
-import service5_1 from "./assets/servicePage5_1.jpg";
-import service5_2 from "./assets/servicePage5_2.jpg";
+import service1_1 from "../public/assets/servicePage1_1.jpg";
+import service1_2 from "../public/assets/servicePage1_2.jpg";
+import service2_1 from "../public/assets/servicePage2_1.jpg";
+import service2_2 from "../public/assets/servicePage2_2.avif";
+import service3_1 from '../public/assets/servicePage3_1.jpg'
+import service3_2 from '../public/assets/servicePage3_2.jpg'
+import service4_1 from "../public/assets/servicePage4_1_dark.jpg";
+import service4_2 from "../public/assets/servicePage4_2.jpg";
+import service5_1 from "../public/assets/servicePage5_1.jpg";
+import service5_2 from "../public/assets/servicePage5_2.jpg";
 
 let iconStylesHome = {fontSize: "3.5em", color: "red"};
 let iconStylesFooter = {fontSize: "30px", color:"red"};
@@ -41,7 +43,7 @@ const state = {
       menuItems: [
           {
               text: "Teenused",
-              to: "#",
+              to: "/",
               subMenu: [
                   {
                       text: "Sõiduautode rehvide vahetus",
@@ -121,30 +123,35 @@ const state = {
                 serviceName: "Sõiduautode rehivde vahetus",
                 serviceDescription: "Kiire ja täpne rehvide vahetus, et teie sõiduk oleks valmis igaks teekonnaks.",
                 imageUrl: service1Image,
+                imageUrlRaw: "/assets/service1.jpg",
                 link: "/sõiduauto-rehvi-vahetus"
             },
             {
                 serviceName: "Veoautode rehivde vahetus",
                 serviceDescription: "Professionaalne teenus, mis tagab veoautode rehvide turvalisuse ja töökindluse.",
                 imageUrl: service2Image,
+                imageUrlRaw: "./assets/service2.jpg",
                 link: "/veoauto-rehvi-vahetus"
             },
             {
                 serviceName: "Protekteerimine",
                 serviceDescription: "Pikendame rehvide eluiga kvaliteetse protekteerimise abil, et säästa teie raha ja keskkonda.",
                 imageUrl: service3Image,
+                imageUrlRaw: "./assets/service3.jpg",
                 link: "/protekteerimine"
             },
             {
                 serviceName: "Rehvide remont",
                 serviceDescription: "Parandame teie rehvid kiiresti ja usaldusväärselt, et saaksite muretult edasi liikuda.",
                 imageUrl: service4Image,
+                imageUrlRaw: "./assets/service4.jpg",
                 link: "/remont"
             },
             {
                 serviceName: "Rehvide hotell",
                 serviceDescription: "Hoidke oma hooajavälised rehvid turvaliselt ja mugavalt meie rehvide hotellis.",
                 imageUrl: service5Image,
+                imageUrlRaw: "./assets/service5.jpg",
                 link: "/hotell",
             }
         ],

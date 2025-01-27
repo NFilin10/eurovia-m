@@ -1,33 +1,39 @@
 import Styles from "./LoginForm.module.css";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/router";
 import { useState } from "react";
-import {loginPost} from "../../http/authentication";
+import { loginPost } from "@/http/authentication";  // Assuming you have an authentication service
 
 const LoginForm = ({ setIsAuthenticated }) => {
     const [login, setLogin] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
+    const router = useRouter();
 
-    const navigate = useNavigate();
-
-    const LoginIn = (e) => {
+    const loginIn = async (e) => {
         e.preventDefault();
 
-        const data = { email: login, password: password };
-        const loginResponse = loginPost(data.email, data.password, setIsAuthenticated);
+        const data = {email: login, password: password};
+        try {
+            const loginResponse = await loginPost(data.email, data.password, setIsAuthenticated);  // Handle login request
+            console.log("login response made", loginResponse.status); // Log the response status to check what you're getting
 
-        if (loginResponse.status === 201) {
-            navigate("/admin");
-        }  else {
+            if (loginResponse.status === 201) {  // Most likely you will get 200 or 201
+                console.log("Login successful");
+                setIsAuthenticated(true);  // Now set isAuthenticated to true
+                router.push("/admin");
+            } else {
+                console.log("login response not good", loginResponse.status);
+                setError("Invalid credentials. Please try again.");
+            }
+        } catch (error) {
             setError("Invalid credentials. Please try again.");
-
         }
     };
 
     return (
         <div className={Styles.wrapper}>
             <div className={Styles.main}>
-                <form onSubmit={LoginIn}>
+                <form onSubmit={loginIn}>
                     <label className={Styles.label} htmlFor="email">Login</label>
                     <input
                         className={Styles.input}

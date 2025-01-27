@@ -1,31 +1,34 @@
+import { useState, useEffect } from 'react';
 import Styles from './Services.module.css';
 import './ServicesCarousel.css';
-
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
+import Image from "next/image";
 
-import service1Image from '../../../assets/service1.jpg';
-import service2Image from '../../../assets/service4.jpg';
-import service3Image from '../../../assets/service2.jpg';
-import service4Image from '../../../assets/service3.jpg';
-import service5Image from '../../../assets/service5.jpg';
+const Services = ({ state }) => {
+    const [windowWidth, setWindowWidth] = useState(0);  // State for tracking window width
 
-const Services = ({state}) => {
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            setWindowWidth(window.innerWidth); // Set initial value when on client
+            const handleResize = () => setWindowWidth(window.innerWidth); // Update on resize
+            window.addEventListener('resize', handleResize);
+            return () => window.removeEventListener('resize', handleResize);
+        }
+    }, []);
 
     const handleDragStart = (e) => e.preventDefault();
 
     const responsive = {
         0: { items: 1 },
         568: { items: 1 },
-        1024: { items: 3 },
+        1024: { items: windowWidth < 1024 ? 1 : 3 }, // Adjust based on windowWidth
     };
 
-
-
-    let serviceElements = state.map(service => (
+    const serviceElements = state.map(service => (
         <div className={Styles.serviceWrapper} key={service.id}>
             <div className={Styles.serviceImage}>
-                <img src={service.serviceImg} onDragStart={handleDragStart} role="presentation" alt={service.serviceName} />
+                <Image src={service.serviceImg} onDragStart={handleDragStart} role="presentation" />
             </div>
             <div className={Styles.serviceText}>
                 <span className={Styles.serviceNum}>0{service.id}</span>
@@ -39,11 +42,11 @@ const Services = ({state}) => {
         <AliceCarousel
             mouseTracking
             items={serviceElements}
-            responsive={responsive}
+            responsive={responsive}  // Use responsive prop
             controlsStrategy="alternate"
             autoPlay={false}
             infinite={true}
-
+            ssrSilentMode={true}  // Hide carousel during SSR
         />
     );
 };

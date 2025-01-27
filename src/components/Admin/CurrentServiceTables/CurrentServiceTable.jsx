@@ -117,6 +117,7 @@ function CurrentServiceTable({ data, setData }) {
                                 {category.headers.slice(0, -1).map(header => (
                                     <td key={header.id}>
                                         <input
+                                            className={Styles.input}
                                             type="text"
                                             value={editedValues[service.service_id]?.[header.id] || service.prices[header.id]}
                                             onChange={(e) =>
@@ -142,6 +143,7 @@ function CurrentServiceTable({ data, setData }) {
                             {category.headers.map(header => (
                                 <td key={header.id}>
                                     <input
+                                        className={Styles.input}
                                         type="text"
                                         placeholder={`Enter ${header.name}`}
                                         value={newRowValues[category.category_name]?.[header.id] || ''}

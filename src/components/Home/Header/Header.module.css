@@ -14,7 +14,7 @@
     object-fit: cover;
     z-index: 1;
     /*background-image: url("../../../assets/car-service-330.avif");*/
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url("../../../assets/header1.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url("../../../../public/assets/header1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }

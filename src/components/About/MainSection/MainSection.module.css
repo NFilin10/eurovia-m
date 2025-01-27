@@ -22,6 +22,10 @@ body{
     gap: 100px;
 }
 
+.textPart{
+    width: 50%;
+}
+
 .image{
     width: 45%;
     height: 320px;
@@ -54,8 +58,10 @@ body{
 
 .heading{
     color: red;
-    font-size: 25px;
+    /*font-size: 25px;*/
     font-weight: 600;
+    text-transform: uppercase;
+    font-size: 27px;
 }
 
 .headingSecond{
@@ -64,18 +70,13 @@ body{
     font-weight: 100;
 }
 
-h2{
+.secondaryHeading{
     text-transform: uppercase;
     color: white;
     font-size: 27px;
     font-weight: bold;
 }
 
-h1{
-    text-transform: uppercase;
-    color: white;
-    font-size: 27px;
-}
 
 .red{
     color: red;

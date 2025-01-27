@@ -2,13 +2,12 @@ import React from 'react'
 import Header from "../components/Home/Header/Header";
 import Services from "../components/Home/Services/Services";
 import Counter from "../components/Home/Counter/Counter";
-import ContactFormSection from "../components/Common/ContactForm/ContactForm";
+import ContactFormSection from "@/components/Common/ContactForm/ContactForm";
 
-function Home({state}) {
-
+function Index({state}) {
 
     return (
-        <div className="homeWrapper">
+        <div>
             <Header state={state.header}/>
             <Services state={state.services} />
             <Counter state={state.counter}/>
@@ -17,4 +16,4 @@ function Home({state}) {
     );
 }
 
-export default Home;
+export default Index;

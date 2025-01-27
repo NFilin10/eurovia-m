@@ -25,7 +25,7 @@
     /*background-color: blue;*/
 }
 
-img {
+.logo {
     max-width: 100%;
 }
 
@@ -68,9 +68,7 @@ ul.mainMenu>li.menuItem:first-child {
 .menuItem {
     line-height: 23px;
 }
-li {
-    list-style-type: none;
-}
+
 .menuItem a {
     font-size: 20px;
     font-weight: 400;
@@ -198,9 +196,6 @@ li {
     cursor: pointer;
 }
 
-a{
-    text-decoration: none;
-}
 
 @media (max-width:767px) {
     .headerMiddle .active {color: #ff3d00!important;}

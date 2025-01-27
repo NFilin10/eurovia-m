@@ -1,9 +1,9 @@
 import React from 'react'
 import Styles from './Header.module.css'
-import {NavLink, Link} from 'react-router-dom';
 import { GiCarWheel } from "react-icons/gi";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Link from "next/link";
 
 function Header({state}) {
 
@@ -21,8 +21,8 @@ function Header({state}) {
                         <h1>{state.mainHeading}</h1>
                         <p className={Styles.main}>{state.text}</p>
                         <div className={Styles.ContactBtns}>
-                            <span className={Styles.LearnMore}><NavLink to={`/meist`}>{state.buttonReadMore}</NavLink></span>
-                            <span className={Styles.Contact}><NavLink to={`/kontakt`}>{state.buttonContact}</NavLink></span>
+                            <span className={Styles.LearnMore}><Link href={`/meist`}>{state.buttonReadMore}</Link></span>
+                            <span className={Styles.Contact}><Link href={`/kontakt`}>{state.buttonContact}</Link></span>
                         </div>
 
                     </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Styles from './Footer.module.css'
-import {NavLink} from "react-router-dom";
-
+import Link from "next/link";
+import Image from "next/image";
 
 const Footer = ({state}) => {
 
@@ -23,9 +23,9 @@ const Footer = ({state}) => {
         <div className={Styles.footerWrapper}>
             <div className={Styles.footerContainer}>
                 <div className={Styles.header__middle__logo}>
-                    <NavLink exact activeClassName='is-active' to="/">
-                        <img className={Styles.footerImg} src={state.logo} alt="logo"/>
-                    </NavLink>
+                    <Link exact activeClassName='is-active' href={"/"}>
+                        <Image className={Styles.footerImg} src={state.logo} alt="logo"/>
+                    </Link>
                 </div>
 
                 <div className={Styles.Contacts}>

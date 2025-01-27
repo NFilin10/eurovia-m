@@ -90,7 +90,6 @@ function PriceManagement({data, setData}) {
         try {
             await sendPriceInfo(payload);
             await refreshPrices();
-            alert("Data saved successfully!");
         } catch (error) {
             console.error("Error saving data:", error);
             alert("An error occurred while saving data.");

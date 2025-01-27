@@ -35,11 +35,11 @@ const ContactFormSection = ({className, state}) => {
                     </div>
                 </div>
                 <div className={Styles.formSection}>
-                    <form>
+                    <form className={Styles.form}>
                         <input className={Styles.formField} type="text" name="name" placeholder={state.formFields.name}/>
                         <input className={Styles.formField} type="email" name="email" placeholder={state.formFields.mail}/>
                         <input className={Styles.formField} type="text" name="topic" placeholder={state.formFields.subject}/>
-                        <textarea className={Styles.formField} name="msg" placeholder={state.formFields.message}/>
+                        <textarea className={`${Styles.formField} ${Styles.textArea}`} name="msg" placeholder={state.formFields.message}/>
                         <input className={Styles.submit} type="submit" value={state.formFields.submit}/>
                     </form>
                 </div>

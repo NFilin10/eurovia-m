@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
-import {NavLink, Link, useLocation, useNavigate} from 'react-router-dom';
+import { useRouter } from 'next/router';
 import { FiAlignRight, FiXCircle, FiChevronDown } from "react-icons/fi";
 import Styles from './Navbar.module.css';
 import {logout} from "../../../http/authentication";
+import Link from "next/link";
+import Image from "next/image";
 
 const Navbar = ({ state, setIsAuthenticated, isAuthenticated }) => {
     const [isMenu, setIsMenu] = useState(false);
     const [isResponsiveClose, setIsResponsiveClose] = useState(false);
     const [activeSubMenu, setActiveSubMenu] = useState(null);
 
+    console.log("NAV", isAuthenticated);
 
     const toggleClass = () => {
         setIsMenu(!isMenu);
@@ -19,10 +22,11 @@ const Navbar = ({ state, setIsAuthenticated, isAuthenticated }) => {
         setActiveSubMenu(activeSubMenu === menuIndex ? null : menuIndex);
     };
 
-    const location = useLocation();
+    const location = useRouter();
     const isHomePage = location.pathname === "/";
 
     const { logo, menuItems } = state;
+
 
     return (
         <header className={Styles.headerMiddle}>
@@ -35,9 +39,9 @@ const Navbar = ({ state, setIsAuthenticated, isAuthenticated }) => {
                 <div className={Styles.row}>
 
                     <div className={Styles.headerMiddleLogo}>
-                        <NavLink exact="true" activeClassName={Styles.isActive} to="/">
-                            <img src={logo} alt="logo" />
-                        </NavLink>
+                        <Link exact="true" activeClassName={Styles.isActive} href="/">
+                            <Image  className={Styles.logo} src={logo} alt="logo" />
+                        </Link>
                     </div>
 
                     <div className={Styles.headerMiddleMenus}>
@@ -60,7 +64,7 @@ const Navbar = ({ state, setIsAuthenticated, isAuthenticated }) => {
                                         className={`${Styles.menuItem} ${item.subMenu ? Styles.subMenusArrows : ''}`}
                                         onClick={() => item.subMenu && toggleSubmenu(index)}
                                     >
-                                        <Link to={item.to}>
+                                        <Link href={item.to}>
                                             {item.text} {item.subMenu && <FiChevronDown/>}
                                         </Link>
 
@@ -69,13 +73,12 @@ const Navbar = ({ state, setIsAuthenticated, isAuthenticated }) => {
                                                 activeSubMenu === index ? Styles.subMenusActive : ''}`}>
                                                 {item.subMenu.map((subItem, subIndex) => (
                                                     <li key={subIndex}>
-                                                        <NavLink
-                                                            to={subItem.to}
+                                                        <Link
                                                             activeClassName={Styles.isActive}
                                                             onClick={toggleClass}
-                                                        >
+                                                         href={subItem.to}>
                                                             {subItem.text}
-                                                        </NavLink>
+                                                        </Link>
                                                     </li>
                                                 ))}
                                             </ul>

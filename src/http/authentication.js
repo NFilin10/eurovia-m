@@ -13,24 +13,28 @@ export const loginPost = async (email, password, setIsAuthenticated) => {
             }
         );
 
-        if (response.status === 201) {
-            setIsAuthenticated(true);
-        }
+        // Return the response for further handling in loginIn
+        return response; // <- return response
     } catch (error) {
         console.error("Login error:", error);
+        throw error; // propagate the error
     }
 }
+
 
 export const authenticate = async () => {
     try {
-        return await axios.get("http://localhost:5000/auth/authenticate", {
-            withCredentials: true,
+        // Send request to server to validate the token
+        const response = await axios.get("http://localhost:5000/auth/authenticate", {
+            withCredentials: true,  // Ensure cookies are sent with the request
         });
+        return response;  // Server will respond with 200 or an error if the token is invalid
     } catch (error) {
-        console.error("authentication error:", error);
-
+        console.error("Authentication failed:", error);
+        throw error;  // Let the error propagate
     }
-}
+};
+
 
 export const logout = async (setIsAuthenticated) => {
     try {
@@ -47,3 +51,5 @@ export const logout = async (setIsAuthenticated) => {
         console.error("Error during logout:", e);
     }
 };
+
+
