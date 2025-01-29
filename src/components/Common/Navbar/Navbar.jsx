@@ -5,13 +5,14 @@ import Styles from './Navbar.module.css';
 import {logout} from "../../../http/authentication";
 import Link from "next/link";
 import Image from "next/image";
+import {useTranslation} from "next-i18next";
 
-const Navbar = ({ state, setIsAuthenticated, isAuthenticated }) => {
+const Navbar = ({ staticData, setIsAuthenticated, isAuthenticated }) => {
     const [isMenu, setIsMenu] = useState(false);
     const [isResponsiveClose, setIsResponsiveClose] = useState(false);
     const [activeSubMenu, setActiveSubMenu] = useState(null);
 
-    console.log("NAV", isAuthenticated);
+    const { t } = useTranslation('common')
 
     const toggleClass = () => {
         setIsMenu(!isMenu);
@@ -25,7 +26,7 @@ const Navbar = ({ state, setIsAuthenticated, isAuthenticated }) => {
     const location = useRouter();
     const isHomePage = location.pathname === "/";
 
-    const { logo, menuItems } = state;
+    const { logo, menuItems } = staticData;
 
 
     return (
@@ -65,7 +66,7 @@ const Navbar = ({ state, setIsAuthenticated, isAuthenticated }) => {
                                         onClick={() => item.subMenu && toggleSubmenu(index)}
                                     >
                                         <Link href={item.to}>
-                                            {item.text} {item.subMenu && <FiChevronDown/>}
+                                            {t(`navbar.menuItems.${index}.text`)} {item.subMenu && <FiChevronDown/>}
                                         </Link>
 
                                         {item.subMenu && (
@@ -77,7 +78,7 @@ const Navbar = ({ state, setIsAuthenticated, isAuthenticated }) => {
                                                             activeClassName={Styles.isActive}
                                                             onClick={toggleClass}
                                                          href={subItem.to}>
-                                                            {subItem.text}
+                                                            {t(`navbar.menuItems.0.subMenu.${subIndex}.text`)}
                                                         </Link>
                                                     </li>
                                                 ))}

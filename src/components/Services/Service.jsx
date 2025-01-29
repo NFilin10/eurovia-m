@@ -3,23 +3,25 @@ import Styles from './Service.module.css'
 import { TiTick } from "react-icons/ti";
 import Image from 'next/image';
 
-function Service({ state }) {
+function Service({ state, staticData }) {
     const tickIcon = { fontSize: "25px", color: "red" };
 
+    console.log(state)
+
     // Generate list items dynamically from state
-    const listItems = state.listItems.map((item, index) => (
-        <div key={index} className={Styles.listItem}>
-            <span><TiTick style={tickIcon}/></span>
-            <p>{item}</p>
-        </div>
-    ));
+    // const listItems = state.listItems.map((item, index) => (
+    //     <div key={index} className={Styles.listItem}>
+    //         <span><TiTick style={tickIcon}/></span>
+    //         <p>{item}</p>
+    //     </div>
+    // ));
 
     return (
         <div className={Styles.serviceContainerWrapper} data-aos="flip-up">
             <div className={Styles.serviceContainer}>
                 <div className={Styles.mainImgContainer}>
                     <Image
-                        src={state.mainImg}
+                        src={staticData.mainImg}
                         alt="Main Service Image"
                         className={Styles.mainImg}
                     />
@@ -36,7 +38,7 @@ function Service({ state }) {
                         <div className={Styles.secondaryImgWrapper}>
                             <Image
                                 className={Styles.secondaryImg}
-                                src={state.secondaryImg}
+                                src={staticData.secondaryImg}
                                 alt="Secondary Service Image"
                                 width={500}
                                 height={300}
@@ -44,7 +46,7 @@ function Service({ state }) {
                         </div>
                     </div>
                     <div className={Styles.list}>
-                        {listItems}
+                        {/*{listItems}*/}
                     </div>
                 </div>
             </div>

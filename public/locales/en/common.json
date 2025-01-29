@@ -1,0 +1,226 @@
+{
+  "navbar": {
+    "menuItems": [
+      {
+        "text": "Services",
+        "subMenu": [
+          { "text": "Passenger car tire replacement" },
+          { "text": "Truck tire replacement" },
+          { "text": "Retreading" },
+          { "text": "Tire repair" },
+          { "text": "Tire hotel" }
+        ]
+      },
+      { "text": "Price list" },
+      { "text": "About us" },
+      { "text": "Contact" }
+    ]
+  },
+  "header": {
+    "secondaryHeading": "We are Eurovia-m",
+    "mainHeading": "Eurovia-m – precision and reliability in your tire maintenance",
+    "text": "We offer quick tire replacement, professional repair, retreading, and convenient tire storage. Our goal is to ensure that your car tires are always ready for any journey – safely and reliably. Eurovia-m, your partner on every road!",
+    "buttonReadMore": "Learn more",
+    "buttonContact": "Contact us"
+  },
+  "services": {
+    "welcomeSection": {
+      "secondaryHeading": "Welcome to Eurovia-m",
+      "mainHeading": ["Everything you need", "in one place"],
+      "text": "We offer everything from tire replacement and repair to retreading and safe tire storage. At Eurovia-m, your safety and satisfaction are always our priority!"
+    },
+    "headings": {
+      "promises": "OUR PROMISES",
+      "services": "OUR SERVICES",
+      "tech": "High technology",
+      "mainHeading": "EVERYTHING YOUR CAR NEEDS",
+      "text": "We use modern tools and technologies to ensure the best quality of your car's tire maintenance and repair. Trust us, so you can enjoy a safe and smooth ride."
+    },
+    "promises": [
+      {
+        "promiseHeading": "Affordable price",
+        "promiseText": "We always offer services with the best price-quality ratio"
+      },
+      {
+        "promiseHeading": "Good service",
+        "promiseText": "Professional and friendly approach to every customer"
+      },
+      {
+        "promiseHeading": "High quality",
+        "promiseText": "We only use reliable methods and materials to ensure your satisfaction"
+      }
+    ],
+    "serviceCards": [
+      {
+        "serviceName": "Passenger car tire replacement",
+        "serviceDescription": "Quick and precise tire replacement to get your vehicle ready for any journey."
+      },
+      {
+        "serviceName": "Truck tire replacement",
+        "serviceDescription": "Professional service that ensures the safety and reliability of truck tires."
+      },
+      {
+        "serviceName": "Retreading",
+        "serviceDescription": "Extend the life of your tires with quality retreading to save your money and the environment."
+      },
+      {
+        "serviceName": "Tire repair",
+        "serviceDescription": "We repair your tires quickly and reliably so you can move forward worry-free."
+      },
+      {
+        "serviceName": "Tire hotel",
+        "serviceDescription": "Store your off-season tires safely and comfortably in our tire hotel."
+      }
+    ],
+    "aims": [
+      { "aim": "Precision and speed in every service" },
+      { "aim": "Quality materials and solutions" },
+      { "aim": "A team that cares about your car's needs" },
+      { "aim": "Modern equipment and methods" }
+    ]
+  },
+  "counter": [
+    { "heading": "Years of experience" },
+    { "heading": "Technicians" },
+    { "heading": "Cars serviced" },
+    { "heading": "Satisfied customers" }
+  ],
+  "contactForm": {
+    "textSection": {
+      "secondaryHeading": "Contact us",
+      "mainHeading": ["Let's find the best", "solution together!"],
+      "text": "If you have any questions or need more information, feel free to contact us. We are here to help!",
+      "phone": "phone",
+      "mail": "email"
+    },
+    "formFields": {
+      "name": "Your name",
+      "mail": "Your email",
+      "subject": "Your subject",
+      "message": "Your message",
+      "submit": "Send message"
+    }
+  },
+  "footer": {
+    "logo": "logo",
+    "footerItems": [
+      {
+        "heading": "Want to call us?",
+        "contactChoice": "phone"
+      },
+      {
+        "heading": "Want to write to us?",
+        "contactChoice": "email"
+      },
+      {
+        "heading": "Want to visit us?",
+        "contactChoice": "location"
+      }
+    ]
+  },
+  "about": {
+    "section1": {
+      "heading": ["Our journey since ", "1995. "],
+      "text": "EUROVIA-M started its operations in the Estonian market in 1995, offering a wide range of services related to car tires..."
+    },
+    "section2": {
+      "heading": ["Our ", "mission", "– quality and environmental sustainability"],
+      "text": "EUROVIA-M's mission is to provide high-quality, environmentally friendly, and cost-effective tire solutions for transport companies..."
+    },
+    "section3": {
+      "heading": ["Vision ", "– to be the leading tire solution provider"],
+      "text": "Our vision is to become the leading provider of tire restoration and maintenance services in the region..."
+    },
+    "headings": {
+      "secondaryHeading": "EUROVIA-M services – everything for car tires",
+      "mainHeading": ["We offer a wide range of services related to", "car tires"]
+    },
+    "serviceCarousel": [
+      {
+        "serviceName": "Passenger car tire replacement",
+        "serviceDescription": "Quick and precise tire replacement to get your vehicle ready for any journey."
+      },
+      {
+        "serviceName": "Truck tire replacement",
+        "serviceDescription": "Professional service that ensures the safety and reliability of truck tires."
+      },
+      {
+        "serviceName": "Retreading",
+        "serviceDescription": "We use modern equipment and cold-vulcanization methods..."
+      },
+      {
+        "serviceName": "Tire repair",
+        "serviceDescription": "Professional services that ensure the maximum reliability of your tires."
+      },
+      {
+        "serviceName": "Tire hotel",
+        "serviceDescription": "Store your off-season tires safely and comfortably in our tire hotel."
+      }
+    ]
+  },
+  "contact": {
+    "mainHeading": ["Contact ", "us"],
+    "secondaryHeading": "We look forward to your questions or comments",
+    "contactElements": [
+      { "heading": "address" },
+      { "heading": "email" },
+      { "heading": "call us" },
+      { "heading": "online booking" }
+    ]
+  },
+  "servicePages": [
+    {
+      "heading": "Car Tire Change",
+      "mainText": "Changing car tires is an important task for every driver, ensuring both vehicle safety and optimal driving comfort. Seasonal tire changes are not only required by law but also a practical way to adapt the vehicle to weather conditions, offering better traction and reducing the risk of accidents.",
+      "secondaryText": "Our service ensures a fast, convenient, and high-quality tire change for all types of cars. Additionally, we offer a wide range of supplementary services that make vehicle maintenance easy and reliable.",
+      "listItems": [
+        "Professional change process – we use modern equipment to avoid damaging the tires or rims.",
+        "Balancing – after each change, we balance the tires to prevent vibration and extend the tire life.",
+        "Tire condition assessment – we check the tread depth and overall condition of the tires, offering advice on purchasing new tires when necessary."
+      ]
+    },
+    {
+      "heading": "Truck Tire Change",
+      "mainText": "Changing truck tires is crucial for every transport company. Truck tires are constantly under heavy load and wear from long-term use, making timely tire changes key to ensuring smooth operations and safety.",
+      "secondaryText": "Our team specializes in truck tire changes, providing high-quality service and professional advice.",
+      "listItems": [
+        "Special equipment for large tires – we perform tire changes quickly and efficiently, regardless of their size or type.",
+        "Balancing and fuel efficiency – properly balanced tires reduce vibration, fuel consumption, and uneven tire wear.",
+        "Personalized advice – we help you select the right tires based on your truck's load and operational areas."
+      ]
+    },
+    {
+      "heading": "Retreading",
+      "mainText": "Retreading is an economical and environmentally friendly way to extend tire life. EUROVIA-M has been operating in Estonia since 1995 and specializes in retreading, offering the highest quality services supported by modern technology and long-term experience. Retreading means replacing the worn tread with a new one, restoring the tire's original functionality and appearance. This process is significantly cheaper than buying a new tire and helps save valuable resources. In addition, it extends tire life, reduces waste, and supports environmental sustainability.",
+      "secondaryText": "EUROVIA-M offers a full retreading service, including innovative technologies and strict quality control procedures. Retreading is especially useful for transport companies wishing to reduce costs while maintaining vehicle and tire safety. Our long-term experience in this field makes EUROVIA-M a reliable partner.",
+      "listItems": [
+        "Modern cold-vulcanization – we use cold vulcanization methods to ensure high quality and long-lasting retreaded tires.",
+        "100% inspection – each tire undergoes thorough quality control with a special high-pressure device to eliminate possible defects.",
+        "Warranty and reliability – each retreaded tire comes with a warranty pass and a one-year tread warranty.",
+        "Transport and logistics – we offer door-to-door transport, delivering and picking up tires. Our partners collect tires throughout Estonia to ensure speed and convenience.",
+        "ISO 9001 certification – the quality of our services is confirmed by an international certification that guarantees high standards and professionalism."
+      ]
+    },
+    {
+      "heading": "Tire Repair",
+      "mainText": "Tire repair is often a cost-effective and quick solution to restore damaged tires. Small damages, such as punctures or cuts, can cause significant headaches, but timely repair can prevent bigger problems and extend the tire's lifespan.",
+      "secondaryText": "EUROVIA-M offers high-quality and fast tire repair services to ensure your vehicle's safety and tire reliability.",
+      "listItems": [
+        "Puncture and cut repair – we use high-quality materials to ensure tire durability after repair.",
+        "Valve and tire pressure check – we eliminate possible leaks and ensure correct tire pressure.",
+        "Safety-compliant quality – every repaired tire undergoes a thorough inspection to ensure vehicle safety."
+      ]
+    },
+    {
+      "heading": "Tire Hotel",
+      "mainText": "A tire hotel is a convenient and practical solution to save space and keep your tires in optimal condition during the off-season. EUROVIA-M's tire hotel is designed to provide maximum comfort and assurance that your tires are always in the best possible condition.",
+      "secondaryText": "We offer a comprehensive tire storage service, including both storage and maintenance.",
+      "listItems": [
+        "Ideal storage conditions – we protect tires from moisture, temperature fluctuations, and sunlight to maintain their quality.",
+        "Tire condition check – before and after storage, we check the tire condition and perform maintenance work if necessary.",
+        "Ready-to-install tires – we prepare tires and keep them ready for the next season."
+      ]
+    }
+  ]
+
+}

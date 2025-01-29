@@ -1,17 +1,30 @@
 import React from 'react'
 import Styles from './ContactSection.module.css'
 import {GiCarWheel} from "react-icons/gi";
+import {IoLocationOutline} from "react-icons/io5";
+import {MdOutlineEmail} from "react-icons/md";
+import {FiPhone} from "react-icons/fi";
+import {LuBookCheck} from "react-icons/lu";
 
+let iconStylesContact = {padding: "15px", fontSize:"50px", color:"red", border: "2px solid red", borderRadius: "50%"};
 
-function ContactSection({state}) {
+const iconMap = {
+    icon1: <IoLocationOutline style={iconStylesContact}/>,
+    icon2: <MdOutlineEmail style={iconStylesContact}/>,
+    icon3: <FiPhone style={iconStylesContact}/>,
+    icon4: <LuBookCheck style={iconStylesContact}/>
+};
+
+function ContactSection({state, staticData}) {
+
 
     let wheelIcon = {fontSize: "25px", color: "red"}
 
-    const iconElements = state.contactElements.map(element =>
+    const iconElements = state.contactElements.map((element, index) =>
         <div className={Styles.iconElement}>
-            {element.icon}
+            {iconMap[staticData[index].icon]}
             <h1>{element.heading}</h1>
-            <p>{element.text}</p>
+            <p>{staticData[index].text}</p>
         </div>
     )
 

@@ -4,10 +4,14 @@ import { GiCarWheel } from "react-icons/gi";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Link from "next/link";
+import {useTranslation} from "next-i18next";
 
 function Header({state}) {
 
     let wheelIcon = {fontSize: "25px", color: "red"}
+
+
+    console.log("state", state);
 
     return (
         <div className={Styles.HeaderWrapper}>

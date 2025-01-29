@@ -5,18 +5,25 @@ import { TiTick } from "react-icons/ti";
 import { FaArrowRight } from "react-icons/fa6";
 import {GiCarWheel} from "react-icons/gi";
 import Link from "next/link";
+import {TbCircleNumber1, TbCircleNumber2, TbCircleNumber3} from "react-icons/tb";
 
+let iconStylesHome = {fontSize: "3.5em", color: "red"};
 
+const iconMap = {
+    icon1: <TbCircleNumber1 style={iconStylesHome} />,
+    icon2: <TbCircleNumber2 style={iconStylesHome} />,
+    icon3: <TbCircleNumber3 style={iconStylesHome} />
+};
 
-const Services = ({state}) => {
+const Services = ({state, staticData}) => {
     let wheelIcon = {fontSize: "25px", color: "red"}
     let arrow = {color: "red"}
     let tickStyles = {fontSize: "2em", color: "red"};
 
 
-    let promiseElements = state.promises.map(promise =>
+    let promiseElements = state.promises.map((promise, index) =>
         <div className={Styles.promise}>
-            <div>{promise.icon}</div>
+            <div>{iconMap[staticData.promises[index].icon]}</div>
             <div className={Styles.promiseText}>
                 <p>{promise.promiseHeading}</p>
                 <p>{promise.promiseText}</p>
@@ -24,12 +31,12 @@ const Services = ({state}) => {
         </div>
     )
 
-    let ServicElements = state.serviceCards.map(service =>
-        <div className={Styles.Service} style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${service.imageUrlRaw})` }}>
+    let ServicElements = state.serviceCards.map((service, index) =>
+        <div className={Styles.Service} style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${staticData.serviceCards[index].imageUrlRaw})` }}>
             <h1 className={Styles.serviceHeading}>{service.serviceName}</h1>
             <p>{service.serviceDescription}</p>
             <Link
-                href={service.link}>
+                href={staticData.serviceCards[index].link}>
                 <div className={Styles.arrow}>
                     <div className={Styles.arrow}>
                         <p>Loe lähemalt</p>

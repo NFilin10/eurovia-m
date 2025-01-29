@@ -5,8 +5,11 @@ import MainLayout from "@/layouts/MainLayout";
 import state from "@/state";
 import { useAuth } from "@/hooks/useAuth";
 import "@/global.css";
+import { appWithTranslation } from 'next-i18next'
 
-export default function MyApp({ Component, pageProps }) {
+
+
+function MyApp({ Component, pageProps }) {
     useEffect(() => {
         AOS.init({});
     }, []);
@@ -14,10 +17,9 @@ export default function MyApp({ Component, pageProps }) {
     const { isAuthenticated, isLoading, setIsAuthenticated } = useAuth();  // Include isLoading
 
     return (
-        <MainLayout state={state} setIsAuthenticated={setIsAuthenticated} isAuthenticated={isAuthenticated} >
+        <MainLayout setIsAuthenticated={setIsAuthenticated} isAuthenticated={isAuthenticated} >
             <Component
                 {...pageProps}
-                state={state}
                 isAuthenticated={isAuthenticated}
                 isLoading={isLoading} // Pass isLoading to components
                 setIsAuthenticated={setIsAuthenticated}
@@ -25,3 +27,6 @@ export default function MyApp({ Component, pageProps }) {
         </MainLayout>
     );
 }
+
+export default appWithTranslation(MyApp)
+

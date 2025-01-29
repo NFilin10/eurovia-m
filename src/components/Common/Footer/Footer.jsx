@@ -2,18 +2,34 @@ import React from 'react';
 import Styles from './Footer.module.css'
 import Link from "next/link";
 import Image from "next/image";
+import {useTranslation} from "next-i18next";
+import {FaPhone} from "react-icons/fa6";
+import {MdEmail} from "react-icons/md";
+import {IoLocationSharp} from "react-icons/io5";
 
-const Footer = ({state}) => {
+let iconStylesFooter = {fontSize: "30px", color:"red"};
 
 
-    const footerElements = state.footerItems.map((item) =>
+const iconMap = {
+    icon1: <FaPhone style={iconStylesFooter} />,
+    icon2: <MdEmail style={iconStylesFooter} />,
+    icon3: <IoLocationSharp style={iconStylesFooter} />
+};
+
+const Footer = ({staticData}) => {
+
+    const { t } = useTranslation('common')
+
+
+
+    const footerElements = t('footer', {returnObjects: true}).footerItems.map((item, index) =>
         <div className={Styles.contactElem}>
             <p className={Styles.question}>{item.heading}</p>
             <div className={Styles.icon}>
-                {item.icon}
+                {iconMap[staticData.footerItems[index].icon]}
                 <div className={Styles.contactInfo}>
                     <p>{item.contactChoice}</p>
-                    <p>{item.value}</p>
+                    <p>{staticData.footerItems[index].value}</p>
                 </div>
             </div>
         </div>
@@ -24,7 +40,7 @@ const Footer = ({state}) => {
             <div className={Styles.footerContainer}>
                 <div className={Styles.header__middle__logo}>
                     <Link exact activeClassName='is-active' href={"/"}>
-                        <Image className={Styles.footerImg} src={state.logo} alt="logo"/>
+                        <Image className={Styles.footerImg} src={staticData.logo} alt="logo"/>
                     </Link>
                 </div>
 

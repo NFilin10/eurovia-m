@@ -5,7 +5,7 @@ import { MdEmail } from "react-icons/md";
 
 
 
-const ContactFormSection = ({className, state}) => {
+const ContactFormSection = ({className, state, staticData}) => {
 
     let iconStyles = {fontSize: "30px", color:"white", backgroundColor:"red", padding: "13px"};
 
@@ -20,14 +20,14 @@ const ContactFormSection = ({className, state}) => {
                         <div className={Styles.contactElem}>
                             <FaPhone className={Styles.icon} style={iconStyles}/>
                             <div className={Styles.contactInfo}>
-                                <p>{state.textSection.phone}</p>
+                                <p>{staticData.textSection.phone}</p>
                                 <span>473 4837248</span>
                             </div>
                         </div>
                         <div className={Styles.contactElem}>
                             <MdEmail className={Styles.icon} style={iconStyles}/>
                             <div className={Styles.contactInfo}>
-                                <p>{state.textSection.mail}</p>
+                                <p>{staticData.textSection.mail}</p>
                                 <span>eurovia-m@hot.ee</span>
                             </div>
 

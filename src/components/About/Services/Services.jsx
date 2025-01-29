@@ -5,7 +5,7 @@ import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import Image from "next/image";
 
-const Services = ({ state }) => {
+const Services = ({ state, staticData }) => {
     const [windowWidth, setWindowWidth] = useState(0);  // State for tracking window width
 
     useEffect(() => {
@@ -25,13 +25,13 @@ const Services = ({ state }) => {
         1024: { items: windowWidth < 1024 ? 1 : 3 }, // Adjust based on windowWidth
     };
 
-    const serviceElements = state.map(service => (
-        <div className={Styles.serviceWrapper} key={service.id}>
+    const serviceElements = state.map((service, index) => (
+        <div className={Styles.serviceWrapper} key={staticData[index].id}>
             <div className={Styles.serviceImage}>
-                <Image src={service.serviceImg} onDragStart={handleDragStart} role="presentation" />
+                <Image src={staticData[index].serviceImg} onDragStart={handleDragStart} role="presentation" />
             </div>
             <div className={Styles.serviceText}>
-                <span className={Styles.serviceNum}>0{service.id}</span>
+                <span className={Styles.serviceNum}>0{staticData[index].id}</span>
                 <h6 className={Styles.serviceHeading}>{service.serviceName}</h6>
                 <p className={Styles.serviceDescription}>{service.serviceDescription}</p>
             </div>

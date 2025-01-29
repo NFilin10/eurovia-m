@@ -4,15 +4,15 @@ import {GiCarWheel} from "react-icons/gi";
 import Image from "next/image";
 
 
-function MainSection({state}) {
+function MainSection({state, staticData}) {
 
     let wheelIcon = {fontSize: "25px", color: "red"}
 
-
+    console.log(state)
     return (
         <div className={Styles.mainSectionWrapper}>
             <div className={Styles.history}>
-                <Image className={Styles.image} src={state.section1.image} alt="" data-aos="fade-right"/>
+                <Image className={Styles.image} src={staticData.section1.image} alt="" data-aos="fade-right"/>
 
                 <div className={Styles.textPart} data-aos="fade-left">
                     <h1 className={Styles.heading}>{state.section1.heading[0]}<span
@@ -26,11 +26,11 @@ function MainSection({state}) {
                     <h1 className={Styles.heading}>{state.section2.heading[0]}<span className={Styles.whiteWord}>{state.section2.heading[1]}</span>{state.section2.heading[2]}</h1>
                     <p className={Styles.mainText}>{state.section2.text}</p>
                 </div>
-                <Image className={Styles.image} src={state.section2.image} alt="" data-aos="fade-left"/>
+                <Image className={Styles.image} src={staticData.section2.image} alt="" data-aos="fade-left"/>
             </div>
 
             <div className={Styles.mission}>
-                <Image className={Styles.image} src={state.section3.image} alt="" data-aos="fade-right"/>
+                <Image className={Styles.image} src={staticData.section3.image} alt="" data-aos="fade-right"/>
                 <div className={Styles.textPart} data-aos="fade-left">
                     <h1 className={Styles.heading}><span className={Styles.whiteWord}>{state.section3.heading[0]}</span>{state.section3.heading[1]}</h1>
                     <p className={Styles.mainText}>

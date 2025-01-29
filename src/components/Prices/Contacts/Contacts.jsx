@@ -4,10 +4,10 @@ import Styles from './Contacts.module.css'
 
 import ContactForm from "../../Common/ContactForm/ContactForm";
 
-function Contacts({state}){
+function Contacts({state, staticData}){
     return (
         <div data-aos="fade-up">
-            <ContactForm className="contactFormContainerPricesPg" state={state}/>
+            <ContactForm className="contactFormContainerPricesPg" state={state} staticData={staticData} />
         </div>
     )
 }

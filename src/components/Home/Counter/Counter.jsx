@@ -3,11 +3,11 @@ import Styles from './Counter.module.css'
 
 
 
-const Counter = ({state}) => {
+const Counter = ({state, staticData}) => {
 
-    const counterElem = state.map(elem =>
+    const counterElem = state.map((elem, index) =>
         <div className={Styles.counterElem}>
-            <p>{elem.number}<span>+</span></p>
+            <p>{staticData[index].number}<span>+</span></p>
             <p>{elem.heading}</p>
         </div>
     )
