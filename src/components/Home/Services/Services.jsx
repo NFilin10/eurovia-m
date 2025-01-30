@@ -38,7 +38,7 @@ const Services = ({state, staticData}) => {
                 src={`/assets/service${index + 1}.jpg`} // Ensure your images are inside the `public/assets` folder
                 alt={service.serviceName}
                 className={Styles.serviceImage}
-                width={280}
+                width={480}
                 height={400}
             />
             <div className={Styles.serviceContent}>
