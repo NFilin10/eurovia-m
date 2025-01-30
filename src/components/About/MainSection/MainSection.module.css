@@ -123,6 +123,10 @@ body{
         margin-top: 0;
         text-align: left;
     }
+
+    .textPart{
+        width: 100%;
+    }
 }
 
 @media (min-width: 1400px) and (max-width: 1628px) {

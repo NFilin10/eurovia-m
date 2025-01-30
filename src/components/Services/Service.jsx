@@ -33,7 +33,7 @@ function Service({ state, staticData }) {
                         <p className={Styles.mainText}>{state.mainText}</p>
                         <div className={Styles.featureSection}>
                             <div className={Styles.serviceFeatureData}>
-                                <h2 className={Styles.serviceFeature}>Teenuse omadused</h2>
+                                <h2 className={Styles.serviceFeature}>{state.secondaryHeading}</h2>
                                 <p className={Styles.secondaryText}>{state.secondaryText}</p>
                             </div>
                             {/* Using Image for secondary image */}

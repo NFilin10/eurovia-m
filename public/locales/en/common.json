@@ -121,15 +121,15 @@
   "about": {
     "section1": {
       "heading": ["Our journey since ", "1995. "],
-      "text": "EUROVIA-M started its operations in the Estonian market in 1995, offering a wide range of services related to car tires..."
+      "text": "EUROVIA-M started operating in the Estonian market in 1995, offering a wide range of tire-related services. The company’s long-term experience in truck tire retreading has enabled it to establish reliable partnerships with both local and international clients. Since 2002, we have held the international quality certification ISO 9001, which confirms the high qualifications of our employees, technological capabilities, and a responsible warranty system. We remain committed to quality and innovation."
     },
     "section2": {
       "heading": ["Our ", "mission", "– quality and environmental sustainability"],
-      "text": "EUROVIA-M's mission is to provide high-quality, environmentally friendly, and cost-effective tire solutions for transport companies..."
+      "text": "EUROVIA-M’s goal is to provide transport companies with high-quality, environmentally friendly, and cost-effective tire solutions. Our work helps extend tire lifespan, reduce waste generation, and promote responsible business practices in the transport sector."
     },
     "section3": {
       "heading": ["Vision ", "– to be the leading tire solution provider"],
-      "text": "Our vision is to become the leading provider of tire restoration and maintenance services in the region..."
+      "text": "Our vision is to become the leading provider of tire retreading and maintenance services in the region, offering innovative solutions that support both our customers and environmental well-being. EUROVIA-M aims for continuous technological development and maintaining customer trust through impeccable service and quality."
     },
     "headings": {
       "secondaryHeading": "EUROVIA-M services – everything for car tires",
@@ -171,6 +171,7 @@
   "servicePages": [
     {
       "heading": "Car Tire Change",
+      "secondaryHeading": "Service Features",
       "mainText": "Changing car tires is an important task for every driver, ensuring both vehicle safety and optimal driving comfort. Seasonal tire changes are not only required by law but also a practical way to adapt the vehicle to weather conditions, offering better traction and reducing the risk of accidents.",
       "secondaryText": "Our service ensures a fast, convenient, and high-quality tire change for all types of cars. Additionally, we offer a wide range of supplementary services that make vehicle maintenance easy and reliable.",
       "listItems": [
@@ -181,6 +182,7 @@
     },
     {
       "heading": "Truck Tire Change",
+      "secondaryHeading": "Service Features",
       "mainText": "Changing truck tires is crucial for every transport company. Truck tires are constantly under heavy load and wear from long-term use, making timely tire changes key to ensuring smooth operations and safety.",
       "secondaryText": "Our team specializes in truck tire changes, providing high-quality service and professional advice.",
       "listItems": [
@@ -191,6 +193,7 @@
     },
     {
       "heading": "Retreading",
+      "secondaryHeading": "Service Features",
       "mainText": "Retreading is an economical and environmentally friendly way to extend tire life. EUROVIA-M has been operating in Estonia since 1995 and specializes in retreading, offering the highest quality services supported by modern technology and long-term experience. Retreading means replacing the worn tread with a new one, restoring the tire's original functionality and appearance. This process is significantly cheaper than buying a new tire and helps save valuable resources. In addition, it extends tire life, reduces waste, and supports environmental sustainability.",
       "secondaryText": "EUROVIA-M offers a full retreading service, including innovative technologies and strict quality control procedures. Retreading is especially useful for transport companies wishing to reduce costs while maintaining vehicle and tire safety. Our long-term experience in this field makes EUROVIA-M a reliable partner.",
       "listItems": [
@@ -203,6 +206,7 @@
     },
     {
       "heading": "Tire Repair",
+      "secondaryHeading": "Service Features",
       "mainText": "Tire repair is often a cost-effective and quick solution to restore damaged tires. Small damages, such as punctures or cuts, can cause significant headaches, but timely repair can prevent bigger problems and extend the tire's lifespan.",
       "secondaryText": "EUROVIA-M offers high-quality and fast tire repair services to ensure your vehicle's safety and tire reliability.",
       "listItems": [
@@ -213,6 +217,7 @@
     },
     {
       "heading": "Tire Hotel",
+      "secondaryHeading": "Service Features",
       "mainText": "A tire hotel is a convenient and practical solution to save space and keep your tires in optimal condition during the off-season. EUROVIA-M's tire hotel is designed to provide maximum comfort and assurance that your tires are always in the best possible condition.",
       "secondaryText": "We offer a comprehensive tire storage service, including both storage and maintenance.",
       "listItems": [

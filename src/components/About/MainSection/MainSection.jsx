@@ -8,7 +8,6 @@ function MainSection({state, staticData}) {
 
     let wheelIcon = {fontSize: "25px", color: "red"}
 
-    console.log(state)
     return (
         <div className={Styles.mainSectionWrapper}>
             <div className={Styles.history}>

@@ -38,7 +38,7 @@ export async function getStaticProps({ locale }) {
 
 
 export async function getStaticPaths() {
-    const locales = ['en', 'et']; // List of supported locales
+    const locales = ['en', 'et', 'ru']; // List of supported locales
 
     // Generate paths for each locale and dynamic page
     const paths = locales.flatMap((locale) =>
