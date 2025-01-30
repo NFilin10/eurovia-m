@@ -15,7 +15,7 @@ function Header({state}) {
         <div className={Styles.HeaderWrapper}>
             <div className={Styles.headerImage}>
                 <div className={Styles.HeaderContentContainer}>
-                    <div className={Styles.HeaderContent} data-aos="fade-left">
+                    <div className={Styles.HeaderContent}>
                         <div className={Styles.iconBlock}>
                             <GiCarWheel className={Styles.wheel} style={wheelIcon}/>
                             <p className={Styles.heading}>{state.secondaryHeading}</p>
