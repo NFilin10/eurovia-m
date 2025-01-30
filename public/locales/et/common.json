@@ -168,7 +168,7 @@
             { "heading": "online booking" }
         ]
     },
-    "servicePages":[
+    "servicePages": [
         {
             "heading": "Sõiduautode rehvide vahetus",
             "secondaryHeading": "Teenuse omadused",
@@ -204,5 +204,54 @@
             "secondaryText": "Pakume terviklikku rehvide hoiustamisteenust, mis hõlmab nii ladustamist kui ka hooldust",
             "listItems": ["Ideaalsed hoiutingimused – kaitseme rehve niiskuse, temperatuuri kõikumiste ja päikesevalguse eest, et säilitada nende kvaliteet.", "Rehvide seisukorra kontroll – enne ja pärast hoiustamist kontrollime rehvide seisukorda ning vajadusel teostame hooldustöid.", "Paigaldamiseks valmis rehvid – valmistame rehvid ette ja hoiame need valmis järgmiseks hooajaks."]
         }
+    ],
+    "homeSeo": {
+        "description": "Eurovia-m pakub professionaalset rehvide teenust, sealhulgas rehvide vahetust, remonti, protekteerimist ja rehvide hoiustamist. Meie eesmärk on tagada, et teie sõiduk oleks alati valmis turvaliseks ja usaldusväärseks sõiduks. Usaldage meid kõigis rehvide küsimustes!",
+        "keywords": "rehvide vahetus, rehvide remont, rehvide protekteerimine, rehvide hotell, rehvide teenused, usaldusväärsed rehvide teenused, professionaalsed rehvide teenused, Eurovia-m",
+        "title": "Eurovia-m – Professionaalsed rehvide teenused"
+    },
+    "aboutSeo": {
+        "description": "Eurovia-m pakub kvaliteetseid rehvide teenuseid alates 1995. aastast. Meie teenuste hulka kuuluvad rehvide protekteerimine, remont ja hooldus. Pakume kulutõhusaid ja keskkonnasõbralikke lahendusi, et pikendada rehvide eluiga ja vähendada jäätmete teket.",
+        "keywords": "rehvide teenused, rehvide protekteerimine, rehvide remont, rehvide hooldus, keskkonnasõbralikud rehvide lahendused, Eurovia-m, ISO 9001 sertifikaadiga rehvide teenused",
+        "title": "Meist"
+    },
+    "priceListSeo": {
+        "description": "Tutvuge Eurovia-m-i läbipaistva ja konkurentsivõimelise hinnakirjaga rehvide teenuste kohta, sealhulgas rehvide vahetus, remont, protekteerimine ja hoiustamine. Pakume parimat hinna ja kvaliteedi suhet, et hoida teie sõiduk turvalisena ja valmis teele minema.",
+        "keywords": "rehvide hinnakiri, rehvide vahetuse hind, rehvide remondi hind, rehvide protekteerimise hind, rehvide hoiustamise hind, taskukohased rehvide teenused, Eurovia-m hinnakiri",
+        "title": "Hinnakiri"
+    },
+    "contactSeo": {
+        "description": "Võtke Eurovia-m-iga ühendust kõigi küsimuste või kommentaaride jaoks. Pakume mitmeid kontaktimisvõimalusi, sealhulgas meie aadress, e-post, telefon ja veebipõhine broneerimine. Oleme siin, et aidata teil rehvide teenuseid broneerida ja küsida.",
+        "keywords": "kontakt Eurovia-m, kontaktvorm, aadress, e-post, telefon, veebipõhine broneerimine, rehvide teenuste päringud",
+        "title": "Võtke meiega ühendust"
+    },
+    " ": [
+        {
+            "description": "Eurovia-m pakub professionaalset sõiduautode rehvide vahetuse teenust, et tagada sõiduki ohutus ja mugavus. Kasutame kaasaegseid seadmeid kiireks, usaldusväärseks ja muretu rehvide vahetuseks, pakkudes lisateenuseid nagu tasakaalustamine ja rehvide seisukorra hindamine.",
+            "keywords": "sõiduautode rehvide vahetus, rehvide tasakaalustamine, rehvide seisukorra hindamine, rehvide vahetuse teenused",
+            "title": "Sõiduautode rehvide vahetus"
+        },
+       {
+            "description": "Eurovia-m pakub tõhusaid veoautode rehvide vahetuse teenuseid spetsialiseeritud seadmete abil igasuguste rehvide jaoks. Pakume rehvide tasakaalustamist ja professionaalset nõu, et tagada optimaalne töösooritus, kütusekulu ja ohutus teie kaubanduses kasutatavatel sõidukitel.",
+            "keywords": "veoautode rehvide vahetus, kommertslike rehvide teenused, rehvide tasakaalustamine, rehvide vahetus veoautodele, autopargi teenused",
+            "title": "Veoautode rehvide vahetus"
+        },
+        {
+            "description": "Protekteerimine on keskkonnasõbralik ja kulutõhus lahendus rehvide eluiga pikendamiseks. Eurovia-m pakub kõrge kvaliteediga protekteerimisteenuseid, kasutades kaasaegset tehnoloogiat rehvi funktsionaalsuse taastamiseks, ohutuse parandamiseks ja jäätmete vähendamiseks.",
+            "keywords": "protekteerimine, rehvi taastamine, keskkonnasõbralik rehvide teenus, külm-vulkaniseerimine, rehvi eluiga pikendamine",
+            "title": "Protekteerimine"
+        },
+        {
+            "description": "Eurovia-m pakub kvaliteetseid rehvide remonditeenuseid, lahendades selliseid probleeme nagu torked ja lõiked. Meie remondilahendused pikendavad rehvide eluiga ja tagavad ohutuse, pakkudes kulutõhusat alternatiivi rehvide vahetusele.",
+            "keywords": "rehvide remont, torke remont, lõigete remont, rehvide teenus, rehvide hooldus, sõiduauto rehvide remont",
+            "title": "Rehvide remont"
+        },
+        {
+            "description": "Eurovia-m pakub mugavat rehvide hoiustamise teenust, et kaitsta teie rehve hooajavälisel ajal. Tagame ideaalsed hoiutingimused, regulaarne kontroll ja hooldus, et säilitada rehvide kvaliteet kuni järgmise hooaja alguseni.",
+            "keywords": "rehvide hotell, hooajaväline rehvide hoiustamine, rehvide hooldus, rehvide teenus, rehvide hoiustamise teenused",
+            "title": "Rehvide hotell"
+        }
     ]
+
+
 }

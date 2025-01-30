@@ -4,6 +4,7 @@ import Service from '../../components/Services/Service'; // Import your Service 
 import state from "../../state";
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 import {useTranslation} from "next-i18next";
+import Head from "next/head";
 
 const ServicePage = (props) => {
     const router = useRouter();
@@ -20,7 +21,17 @@ const ServicePage = (props) => {
     const { t } = useTranslation('common');
 
 
-    return <Service state={t(`servicePages.${id}`, {returnObjects: true})} staticData={props.state.servicePages[id]} />;
+    return (
+        <div>
+            <Head>
+                <meta name="description" content={t(`servicePagesSeo.${id}.description`, {returnObjects:true})}/>
+                <meta name="keywords" content={t(`servicePagesSeo.${id}.keywords`, {returnObjects:true})}/>
+                <title>{t(`servicePagesSeo.${id}.title`, {returnObjects:true})}</title>
+            </Head>
+            <Service state={t(`servicePages.${id}`, {returnObjects: true})} staticData={props.state.servicePages[id]} />;
+
+        </div>
+    )
 };
 
 export default ServicePage;
@@ -47,7 +58,6 @@ export async function getStaticPaths() {
             locale, // Add the locale to the path object
         }))
     );
-    console.log(paths)
 
     return {paths, fallback: false};
 }

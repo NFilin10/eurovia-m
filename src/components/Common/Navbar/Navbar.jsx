@@ -41,7 +41,7 @@ const Navbar = ({ staticData, setIsAuthenticated, isAuthenticated }) => {
                 <div className={Styles.row}>
 
                     <div className={Styles.headerMiddleLogo}>
-                        <Link exact="true" activeClassName={Styles.isActive} href="/">
+                        <Link exact="true" href="/">
                             <Image  className={Styles.logo} src={logo} alt="logo" />
                         </Link>
                     </div>
@@ -76,7 +76,6 @@ const Navbar = ({ staticData, setIsAuthenticated, isAuthenticated }) => {
                                                 {item.subMenu.map((subItem, subIndex) => (
                                                     <li key={subIndex}>
                                                         <Link
-                                                            activeClassName={Styles.isActive}
                                                             onClick={toggleClass}
                                                          href={"/teenused" + subItem.to}>
                                                             {t(`navbar.menuItems.0.subMenu.${subIndex}.text`)}

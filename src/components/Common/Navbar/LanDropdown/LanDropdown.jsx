@@ -20,9 +20,15 @@ const LanDropdown = () => {
         const pathSegments = asPath.split('/').filter(Boolean);
 
         let newPath = `/${language}`;
-        console.log(newPath);
+        if (pathSegments.length > 1) {
+            newPath += `/teenused/${pathSegments[1]}`;
+        }
 
-        newPath += `/teenused/${pathSegments[1]}`;
+        if (pathSegments.length === 1) {
+            newPath += `/${pathSegments[0]}`;
+
+        }
+
 
         push(newPath, undefined, { locale: language });
         setShowDropdown(false);

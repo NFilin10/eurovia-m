@@ -6,7 +6,7 @@ import Styles from './Counter.module.css'
 const Counter = ({state, staticData}) => {
 
     const counterElem = state.map((elem, index) =>
-        <div className={Styles.counterElem}>
+        <div className={Styles.counterElem} key={index}>
             <p>{staticData[index].number}<span>+</span></p>
             <p>{elem.heading}</p>
         </div>

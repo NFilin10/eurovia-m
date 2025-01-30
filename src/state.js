@@ -5,7 +5,6 @@ import {IoLocationOutline, IoLocationSharp} from "react-icons/io5";
 
 import logo from '../public/assets/logo-modified.png'
 
-console.log(logo)
 import service1Image from "../public/assets/service1.jpg";
 import service2Image from "../public/assets/service4.jpg";
 import service3Image from "../public/assets/service2.jpg";

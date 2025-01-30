@@ -8,7 +8,6 @@ import MainLayout from "@/layouts/MainLayout";
 function Service({ state, staticData }) {
     const tickIcon = { fontSize: "25px", color: "red" };
 
-    console.log(state)
 
     // Generate list items dynamically from state
     const listItems = state.listItems.map((item, index) => (

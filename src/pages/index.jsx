@@ -8,6 +8,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import { useTranslation } from 'next-i18next'
 import state from "@/state";
+import Head from "next/head";
 
 function Index(props) {
 
@@ -17,6 +18,11 @@ function Index(props) {
 
     return (
         <div>
+            <Head>
+                <meta name="description" content={t('homeSeo.description', {returnObjects:true})}/>
+                <meta name="keywords" content={t('homeSeo.keywords', {returnObjects:true})}/>
+                <title>{t('homeSeo.title', {returnObjects:true})}</title>
+            </Head>
             <Header state={t('header', {returnObjects: true})}/>
             <Services state={t('services', {returnObjects: true})} staticData={props.state.services} />
             <Counter state={t('counter', {returnObjects: true})} staticData={props.state.counter}/>

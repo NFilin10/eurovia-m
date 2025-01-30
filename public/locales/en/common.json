@@ -226,6 +226,54 @@
         "Ready-to-install tires – we prepare tires and keep them ready for the next season."
       ]
     }
+  ],
+  "homeSeo": {
+    "description": "Eurovia-m offers professional car tire services including tire change, tire repair, retreading, and tire storage. Our goal is to ensure your vehicle is always ready for safe and reliable travel. Trust us for all your tire needs!",
+    "keywords": "tire change, tire repair, tire retreading, tire storage, car tire services, reliable tire services, professional tire services, Eurovia-m",
+    "title": "Eurovia-m – Professional Tire Services"
+  },
+  "aboutSeo": {
+    "description": "Eurovia-m has been providing high-quality tire services since 1995. Specializing in tire retreading, repair, and maintenance, we are committed to innovation and sustainability. We offer cost-effective and eco-friendly solutions for the transport sector, ensuring extended tire life and reduced waste.",
+    "keywords": "tire services, tire retreading, tire repair, tire maintenance, sustainable tire solutions, eco-friendly tire services, Eurovia-m, ISO 9001 certified tire services",
+    "title": "About Us"
+  },
+  "priceListSeo": {
+    "description": "View Eurovia-m's transparent and competitive price list for tire services, including tire change, repair, retreading, and storage. We offer the best value for money to keep your vehicle safe and ready for the road.",
+    "keywords": "tire price list, tire change price, tire repair price, tire retreading price, tire storage price, affordable tire services, Eurovia-m price list",
+    "title": "Price List"
+  },
+  "contactSeo": {
+    "description": "Get in touch with Eurovia-m for any inquiries or comments. We offer multiple contact methods including our address, email, phone, and online booking options. We're here to assist you with your tire service needs.",
+    "keywords": "contact Eurovia-m, contact form, address, email, phone, online booking, tire service inquiries",
+    "title": "Contact Us"
+  },
+  "servicePagesSeo": [
+    {
+      "description": "Eurovia-m offers professional passenger car tire change services to ensure safety and comfort. We use modern equipment to guarantee a quick, reliable, and hassle-free tire change experience, with additional services like balancing and tire condition assessments.",
+      "keywords": "passenger car tire change, tire balancing, tire condition check, car tire services, tire replacement",
+      "title": "Passenger Car Tire Change Service"
+    },
+    {
+      "description": "Eurovia-m provides efficient truck tire change services with specialized equipment for all tire sizes. We offer tire balancing and expert advice to ensure optimal performance, fuel efficiency, and safety for your commercial vehicles.",
+      "keywords": "truck tire change, commercial tire services, truck tire balancing, tire replacement for trucks, fleet tire services",
+      "title": "Truck Tire Change Service"
+    },
+    {
+      "description": "Retreading is an eco-friendly and cost-effective solution to extend the life of your tires. Eurovia-m offers high-quality retreading services using modern technology to restore tire functionality, improve safety, and reduce waste.",
+      "keywords": "retreading, tire restoration, eco-friendly tire services, cold vulcanization, tire life extension",
+      "title": "Retreading Services for Tires"
+    },
+    {
+      "description": "Eurovia-m offers high-quality tire repair services, addressing issues like punctures and cuts. Our repair solutions extend tire life and ensure safety, providing a cost-effective alternative to tire replacement.",
+      "keywords": "tire repair, puncture repair, tire cuts, tire service, tire maintenance, car tire repair",
+      "title": "Tire Repair Services"
+    },
+    {
+      "description": "Eurovia-m offers convenient tire storage services to protect your tires during the off-season. We ensure optimal conditions, regular checks, and maintenance to preserve the quality of your tires until they are needed again.",
+      "keywords": "tire storage, seasonal tire storage, tire care, tire maintenance, tire storage services",
+      "title": "Tire Storage Services"
+    }
   ]
+
 
 }
