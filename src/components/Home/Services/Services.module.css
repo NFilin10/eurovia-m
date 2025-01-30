@@ -5,6 +5,7 @@
     justify-content: center;
     background-color: black;
     flex-direction: column;
+
 }
 
 .textArea{
@@ -78,16 +79,45 @@
     color: #D7CFC7;
 }
 
-.Service{
-    background-size: cover;
-    height: 400px;
+.Service {
+    position: relative;
     width: 280px;
+    height: 400px;
     display: flex;
-    flex-direction: column;
     justify-content: flex-end;
-    padding-left: 12px;
-    padding-right: 12px;
+    align-items: flex-start;
+    overflow: hidden;
 }
+
+.Service::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust opacity (0.5 = 50% darkness) */
+    pointer-events: none;
+}
+
+.serviceImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.serviceContent {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    color: white;
+    padding: 12px;
+    z-index: 1;
+}
+
+
 
 .Service h1{
     color: white;

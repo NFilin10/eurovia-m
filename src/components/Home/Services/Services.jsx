@@ -6,6 +6,7 @@ import { FaArrowRight } from "react-icons/fa6";
 import {GiCarWheel} from "react-icons/gi";
 import Link from "next/link";
 import {TbCircleNumber1, TbCircleNumber2, TbCircleNumber3} from "react-icons/tb";
+import Image from "next/image";
 
 let iconStylesHome = {fontSize: "3.5em", color: "red"};
 
@@ -31,25 +32,31 @@ const Services = ({state, staticData}) => {
         </div>
     )
 
-    let ServicElements = state.serviceCards.map((service, index) =>
-        <div className={Styles.Service} style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(${staticData.serviceCards[index].imageUrlRaw})` }}>
-            <h1 className={Styles.serviceHeading}>{service.serviceName}</h1>
-            <p>{service.serviceDescription}</p>
-            <Link
-                href={staticData.serviceCards[index].link}>
-                <div className={Styles.arrow}>
+    let ServiceElements = state.serviceCards.map((service, index) => (
+        <div className={Styles.Service}>
+            <Image
+                src={`/assets/service${index + 1}.jpg`} // Ensure your images are inside the `public/assets` folder
+                alt={service.serviceName}
+                className={Styles.serviceImage}
+                width={280}
+                height={400}
+            />
+            <div className={Styles.serviceContent}>
+                <h1 className={Styles.serviceHeading}>{service.serviceName}</h1>
+                <p>{service.serviceDescription}</p>
+                <Link href={staticData.serviceCards[index].link}>
                     <div className={Styles.arrow}>
                         <p>Loe lähemalt</p>
-                        <FaArrowRight style={arrow}/>
+                        <FaArrowRight style={arrow} />
                     </div>
-                </div>
-            </Link>
-
-
+                </Link>
+            </div>
         </div>
-)
+    ));
 
-let aimElements = state.aims.map(aim =>
+
+
+    let aimElements = state.aims.map(aim =>
         <div className={Styles.listElem}>
             <div><TiTick style={tickStyles}/></div>
             <p className={Styles.mainAim}>{aim.aim}</p>
@@ -87,7 +94,7 @@ let aimElements = state.aims.map(aim =>
                 <div className={Styles.Services}>
                     <h1>{state.headings.services}</h1>
                     <div className={Styles.ServiceElemWrapper}>
-                        {ServicElements}
+                        {ServiceElements}
                     </div>
 
                 </div>
