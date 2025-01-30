@@ -3,7 +3,7 @@ import axios from "axios";
 export const loginPost = async (email, password, setIsAuthenticated) => {
     try {
         const response =  await axios.post(
-            "http://localhost:5000/auth/login",
+            "https://eurovia-mbackend-production.up.railway.app/auth/login",
             {
                 password: password,
                 email: email,
@@ -25,7 +25,7 @@ export const loginPost = async (email, password, setIsAuthenticated) => {
 export const authenticate = async () => {
     try {
         // Send request to server to validate the token
-        const response = await axios.get("http://localhost:5000/auth/authenticate", {
+        const response = await axios.get("https://eurovia-mbackend-production.up.railway.app/auth/authenticate", {
             withCredentials: true,  // Ensure cookies are sent with the request
         });
         return response;  // Server will respond with 200 or an error if the token is invalid
@@ -38,7 +38,7 @@ export const authenticate = async () => {
 
 export const logout = async (setIsAuthenticated) => {
     try {
-        const response = await fetch("http://localhost:5000/auth/logout", {
+        const response = await fetch("https://eurovia-mbackend-production.up.railway.app/auth/logout", {
             credentials: 'include',
         });
 

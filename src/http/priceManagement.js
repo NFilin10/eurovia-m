@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const sendPriceInfo = async (data) => {
     try {
-        const response = await axios.post('http://localhost:5000/add', data, {
+        const response = await axios.post('https://eurovia-mbackend-production.up.railway.app/add', data, {
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -19,7 +19,7 @@ export const sendPriceInfo = async (data) => {
 
 export const fetchPriceData = async () => {
     try {
-        const response = await axios.get('http://localhost:5000/api/get-prices');
+        const response = await axios.get('https://eurovia-mbackend-production.up.railway.app/api/get-prices');
         return response.data;
     } catch (error) {
         console.error('Error fetching data:', error);
@@ -29,7 +29,7 @@ export const fetchPriceData = async () => {
 
 export const deleteService = async (serviceId) => {
     try {
-        await axios.delete(`http://localhost:5000/delete-service/${serviceId}`);
+        await axios.delete(`https://eurovia-mbackend-production.up.railway.app/delete-service/${serviceId}`);
     } catch (error) {
         console.error('Error deleting service:', error);
         throw error;
@@ -38,7 +38,7 @@ export const deleteService = async (serviceId) => {
 
 export const updateService = async (serviceId, updatedPrices) => {
     try {
-        const response = await fetch(`http://localhost:5000/update/${serviceId}`, {
+        const response = await fetch(`https://eurovia-mbackend-production.up.railway.app/update/${serviceId}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -59,7 +59,7 @@ export const updateService = async (serviceId, updatedPrices) => {
 
 export const sendPrice = async (data) => {
     try {
-        const response = await fetch('http://localhost:5000/addService', {
+        const response = await fetch('https://eurovia-mbackend-production.up.railway.app/addService', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
