@@ -5,4 +5,6 @@ module.exports = {
         locales: ['en', 'et', 'ru'],
         localeDetection: false
     },
+    react: { useSuspense: false },
+
 }

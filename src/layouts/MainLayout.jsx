@@ -4,6 +4,7 @@ import Navbar from "@/components/Common/Navbar/Navbar";
 import Footer from "@/components/Common/Footer/Footer";
 import state from "@/state";
 
+
 const MainLayout = ({ children, setIsAuthenticated, isAuthenticated }) => {
     return (
         <>

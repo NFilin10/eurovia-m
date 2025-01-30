@@ -25,8 +25,6 @@ function PriceManagement({data, setData}) {
         }
     };
 
-    console.log("rows",  rows)
-
     // Adds a new row with blank cells based on the number of columns
     const addRow = () => {
         setRows(prevRows => [
@@ -86,7 +84,6 @@ function PriceManagement({data, setData}) {
             prices,
         };
 
-        console.log('Payload:', JSON.stringify(payload, null, 2));
         try {
             await sendPriceInfo(payload);
             await refreshPrices();

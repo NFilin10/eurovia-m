@@ -11,8 +11,6 @@ function Header({state}) {
     let wheelIcon = {fontSize: "25px", color: "red"}
 
 
-    console.log("state", state);
-
     return (
         <div className={Styles.HeaderWrapper}>
             <div className={Styles.headerImage}>

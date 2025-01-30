@@ -20,15 +20,13 @@ const Footer = ({staticData}) => {
 
     const { t } = useTranslation('common')
 
-
-
-    const footerElements = t('footer', {returnObjects: true}).footerItems.map((item, index) =>
+    const footerElements = staticData.footerItems.map((item, index) =>
         <div className={Styles.contactElem}>
-            <p className={Styles.question}>{item.heading}</p>
+            <p className={Styles.question}>{t(`footer.footerItems.${index}.heading`)}</p>
             <div className={Styles.icon}>
                 {iconMap[staticData.footerItems[index].icon]}
                 <div className={Styles.contactInfo}>
-                    <p>{item.contactChoice}</p>
+                    <p>{t(`footer.footerItems.${index}.contactChoice`)}</p>
                     <p>{staticData.footerItems[index].value}</p>
                 </div>
             </div>

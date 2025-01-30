@@ -15,14 +15,11 @@ const LoginForm = ({ setIsAuthenticated }) => {
         const data = {email: login, password: password};
         try {
             const loginResponse = await loginPost(data.email, data.password, setIsAuthenticated);  // Handle login request
-            console.log("login response made", loginResponse.status); // Log the response status to check what you're getting
 
             if (loginResponse.status === 201) {  // Most likely you will get 200 or 201
-                console.log("Login successful");
                 setIsAuthenticated(true);  // Now set isAuthenticated to true
                 router.push("/admin");
             } else {
-                console.log("login response not good", loginResponse.status);
                 setError("Invalid credentials. Please try again.");
             }
         } catch (error) {
