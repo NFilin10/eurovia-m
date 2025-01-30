@@ -65,7 +65,7 @@ const Services = ({state, staticData}) => {
 
 
     return (
-        <div className={Styles.ServicesWrapper} data-aos="fade-up">
+        <div className={Styles.ServicesWrapper}>
             <div className={Styles.textArea}>
                 <div className={Styles.iconBlock}>
                     <GiCarWheel className={Styles.wheel} style={wheelIcon}/>
@@ -79,7 +79,7 @@ const Services = ({state, staticData}) => {
                     <h1>{state.headings.promises}</h1>
                     {promiseElements}
 
-                    <div className={Styles.textSection} data-aos="fade-up-right">
+                    <div className={Styles.textSection}>
                         <div className={Styles.iconBlock1}>
                             <GiCarWheel className={Styles.wheel} style={wheelIcon}/>
                             <p>{state.headings.tech}</p>
