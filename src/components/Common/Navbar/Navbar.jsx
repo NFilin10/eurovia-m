@@ -6,6 +6,7 @@ import {logout} from "../../../http/authentication";
 import Link from "next/link";
 import Image from "next/image";
 import {useTranslation} from "next-i18next";
+import LanDropdown from "@/components/Common/Navbar/LanDropdown/LanDropdown";
 
 const Navbar = ({ staticData, setIsAuthenticated, isAuthenticated }) => {
     const [isMenu, setIsMenu] = useState(false);
@@ -77,7 +78,7 @@ const Navbar = ({ staticData, setIsAuthenticated, isAuthenticated }) => {
                                                         <Link
                                                             activeClassName={Styles.isActive}
                                                             onClick={toggleClass}
-                                                         href={subItem.to}>
+                                                         href={"/teenused" + subItem.to}>
                                                             {t(`navbar.menuItems.0.subMenu.${subIndex}.text`)}
                                                         </Link>
                                                     </li>
@@ -91,6 +92,7 @@ const Navbar = ({ staticData, setIsAuthenticated, isAuthenticated }) => {
                                         <button className={`${Styles.logoutBtn}`} onClick={() => logout(setIsAuthenticated)}>Log out</button>
                                     </li>
                                 }
+                                <LanDropdown/>
                             </ul>
                         </nav>
                     </div>

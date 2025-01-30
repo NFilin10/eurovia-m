@@ -1,5 +1,7 @@
 
 import LoginForm from "../components/Login/LoginForm";
+import {serverSideTranslations} from "next-i18next/serverSideTranslations";
+import state from "@/state";
 
 function Login({setIsAuthenticated}) {
 
@@ -11,3 +13,18 @@ function Login({setIsAuthenticated}) {
 }
 
 export default Login;
+
+export const getStaticProps = async ({ locale }) => {
+
+    return {
+
+        props: {
+
+            ...(await serverSideTranslations(locale, ["common"])),
+            state
+
+        },
+
+    };
+
+};

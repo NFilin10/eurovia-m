@@ -207,27 +207,27 @@ const state = {
         {
             mainImg: service1_1,
             secondaryImg: service1_2,
-            path: "/sõiduauto-rehvi-vahetus"
+            path: "sõiduauto-rehvi-vahetus"
         },
         {
             mainImg: service2_1,
             secondaryImg: service2_2,
-            path: "/veoauto-rehvi-vahetus"
+            path: "veoauto-rehvi-vahetus"
         },
         {
             mainImg: service3_1,
             secondaryImg: service3_2,
-            path: "/protekteerimine"
+            path: "protekteerimine"
         },
         {
             mainImg: service4_1,
             secondaryImg: service4_2,
-            path: "/remont"
+            path: "remont"
         },
         {
             mainImg: service5_1,
             secondaryImg: service5_2,
-            path: "/hotell"
+            path: "hotell"
         }
     ],
 

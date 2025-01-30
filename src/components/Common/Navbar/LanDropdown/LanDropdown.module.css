@@ -1,0 +1,44 @@
+.languageDropdown {
+    position: relative;
+    background-color: transparent;
+    display: flex;
+}
+
+.selectedLanguage {
+    background-color: transparent;
+    color: #333;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.options {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.options button {
+    display: block;
+    padding: 8px;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+
+.options button:hover {
+    background-color: #ddd;
+}
+
+.icon{
+    width: 20px;
+    height: 20px;
+}
