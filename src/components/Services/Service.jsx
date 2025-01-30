@@ -18,7 +18,7 @@ function Service({ state, staticData }) {
     ));
 
     return (
-            <div className={Styles.serviceContainerWrapper} data-aos="flip-up">
+            <div className={Styles.serviceContainerWrapper}>
                 <div className={Styles.serviceContainer}>
                     <div className={Styles.mainImgContainer}>
                         <Image
