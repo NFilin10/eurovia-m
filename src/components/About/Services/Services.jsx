@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import Styles from './Services.module.css';
-import './ServicesCarousel.css';
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
 import Image from "next/image";
