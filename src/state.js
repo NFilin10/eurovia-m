@@ -114,16 +114,16 @@ const state = {
     },
     counter: [
         {
-            number: "20"
+            number: "25"
         },
         {
             number: "7"
         },
         {
-            number: "3500"
+            number: "35000"
         },
         {
-            number: "3000"
+            number: "10000"
         }
     ],
     contactForm: {
@@ -145,7 +145,7 @@ const state = {
             },
             {
                 icon: "icon3",
-                value: "suur manniku 8",
+                value: "Suur männiku 8",
             }
         ]
     },
@@ -186,7 +186,7 @@ const state = {
         contactElements: [
             {
                 icon: "icon1",
-                text: "suur manniku 8",
+                text: "Suur männiku 8",
             },
             {
                 icon: "icon2",
@@ -198,7 +198,6 @@ const state = {
             },
             {
                 icon: "icon4",
-                text: "book time",
             }
         ]
     },

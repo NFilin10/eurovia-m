@@ -25,6 +25,15 @@
     align-items: center;
 }
 
+.iconElement h1{
+    font-size: 27px;
+}
+
+.iconElement p{
+    margin-top: -10px;
+    font-size: 20px;
+}
+
 .map{
     width: 50%;
 }

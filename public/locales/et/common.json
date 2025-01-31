@@ -162,10 +162,10 @@
         "mainHeading": ["Võtke  meeiega ", "ühendust"],
         "secondaryHeading": "Ootame teie küsimusi või kommentaare",
         "contactElements": [
-            { "heading": "address" },
+            { "heading": "aadress" },
             { "heading": "email" },
-            { "heading": "call us" },
-            { "heading": "online booking" }
+            { "heading": "helistaga meile" },
+            { "heading": "täitke vorm" }
         ]
     },
     "servicePages": [

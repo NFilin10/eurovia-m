@@ -98,7 +98,7 @@
       "mail": "Your email",
       "subject": "Your subject",
       "message": "Your message",
-      "submit": "Send message"
+      "submit": "Send"
     }
   },
   "footer": {
@@ -165,7 +165,7 @@
       { "heading": "address" },
       { "heading": "email" },
       { "heading": "call us" },
-      { "heading": "online booking" }
+      { "heading": "fill the form" }
     ]
   },
   "servicePages": [
