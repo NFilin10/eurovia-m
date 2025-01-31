@@ -175,6 +175,7 @@
 
     .contactInfo p, .contactInfo span{
         font-size: 14px;
+        color: white;
     }
 
     .icon{

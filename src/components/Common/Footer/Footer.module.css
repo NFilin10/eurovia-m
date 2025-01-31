@@ -120,4 +120,8 @@
         display: flex;
         gap: 6px
     }
+
+    .contactInfo{
+        color: white;
+    }
 }
