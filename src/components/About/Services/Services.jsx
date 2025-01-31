@@ -27,7 +27,7 @@ const Services = ({ state, staticData }) => {
     const serviceElements = state.map((service, index) => (
         <div className={Styles.serviceWrapper} key={staticData[index].id}>
             <div className={Styles.serviceImage}>
-                <Image src={staticData[index].serviceImg} onDragStart={handleDragStart} role="presentation" />
+                <Image src={staticData[index].serviceImg} onDragStart={handleDragStart} role="presentation"  alt={'service'}/>
             </div>
             <div className={Styles.serviceText}>
                 <span className={Styles.serviceNum}>0{staticData[index].id}</span>
