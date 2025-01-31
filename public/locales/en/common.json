@@ -53,23 +53,28 @@
     "serviceCards": [
       {
         "serviceName": "Passenger car tire replacement",
-        "serviceDescription": "Quick and precise tire replacement to get your vehicle ready for any journey."
+        "serviceDescription": "Quick and precise tire replacement to get your vehicle ready for any journey.",
+        "readMore": "Read more"
       },
       {
         "serviceName": "Truck tire replacement",
-        "serviceDescription": "Professional service that ensures the safety and reliability of truck tires."
+        "serviceDescription": "Professional service that ensures the safety and reliability of truck tires.",
+        "readMore": "Read more"
       },
       {
         "serviceName": "Retreading",
-        "serviceDescription": "Extend the life of your tires with quality retreading to save your money and the environment."
+        "serviceDescription": "Extend the life of your tires with quality retreading to save your money and the environment.",
+        "readMore": "Read more"
       },
       {
         "serviceName": "Tire repair",
-        "serviceDescription": "We repair your tires quickly and reliably so you can move forward worry-free."
+        "serviceDescription": "We repair your tires quickly and reliably so you can move forward worry-free.",
+        "readMore": "Read more"
       },
       {
         "serviceName": "Tire hotel",
-        "serviceDescription": "Store your off-season tires safely and comfortably in our tire hotel."
+        "serviceDescription": "Store your off-season tires safely and comfortably in our tire hotel.",
+        "readMore": "Read more"
       }
     ],
     "aims": [

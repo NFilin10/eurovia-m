@@ -53,23 +53,28 @@
         "serviceCards": [
             {
                 "serviceName": "Sõiduautode rehvide vahetus",
-                "serviceDescription": "Kiire ja täpne rehvide vahetus, et teie sõiduk oleks valmis igaks teekonnaks."
+                "serviceDescription": "Kiire ja täpne rehvide vahetus, et teie sõiduk oleks valmis igaks teekonnaks.",
+                "readMore": "Loe lähemalt"
             },
             {
                 "serviceName": "Veoautode rehvide vahetus",
-                "serviceDescription": "Professionaalne teenus, mis tagab veoautode rehvide turvalisuse ja töökindluse."
+                "serviceDescription": "Professionaalne teenus, mis tagab veoautode rehvide turvalisuse ja töökindluse.",
+                "readMore": "Loe lähemalt"
             },
             {
                 "serviceName": "Protekteerimine",
-                "serviceDescription": "Pikendame rehvide eluiga kvaliteetse protekteerimise abil, et säästa teie raha ja keskkonda."
+                "serviceDescription": "Pikendame rehvide eluiga kvaliteetse protekteerimise abil, et säästa teie raha ja keskkonda.",
+                "readMore": "Loe lähemalt"
             },
             {
                 "serviceName": "Rehvide remont",
-                "serviceDescription": "Parandame teie rehvid kiiresti ja usaldusväärselt, et saaksite muretult edasi liikuda."
+                "serviceDescription": "Parandame teie rehvid kiiresti ja usaldusväärselt, et saaksite muretult edasi liikuda.",
+                "readMore": "Loe lähemalt"
             },
             {
                 "serviceName": "Rehvide hotell",
-                "serviceDescription": "Hoidke oma hooajavälised rehvid turvaliselt ja mugavalt meie rehvide hotellis."
+                "serviceDescription": "Hoidke oma hooajavälised rehvid turvaliselt ja mugavalt meie rehvide hotellis.",
+                "readMore": "Loe lähemalt"
             }
         ],
         "aims": [

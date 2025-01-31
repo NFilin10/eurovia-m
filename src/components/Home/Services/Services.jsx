@@ -44,9 +44,10 @@ const Services = ({state, staticData}) => {
             <div className={Styles.serviceContent}>
                 <h1 className={Styles.serviceHeading}>{service.serviceName}</h1>
                 <p>{service.serviceDescription}</p>
-                <Link href={staticData.serviceCards[index].link}>
+                <Link href={`/teenused${staticData.serviceCards[index].link}`}
+                >
                     <div className={Styles.arrow}>
-                        <p>Loe lähemalt</p>
+                        <p>{service.readMore}</p>
                         <FaArrowRight style={arrow} />
                     </div>
                 </Link>
