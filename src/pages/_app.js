@@ -17,12 +17,11 @@ function MyApp({ Component, pageProps }) {
 
 
 
-
     return (
         <MainLayout >
             <Component
                 {...pageProps}
-                isLoading={isLoading} // Pass isLoading to components
+
             />
         </MainLayout>
     );
