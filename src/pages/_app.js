@@ -17,15 +17,12 @@ function MyApp({ Component, pageProps }) {
 
 
 
-    const { isAuthenticated, isLoading, setIsAuthenticated } = useAuth();  // Include isLoading
 
     return (
-        <MainLayout setIsAuthenticated={setIsAuthenticated} isAuthenticated={isAuthenticated} >
+        <MainLayout >
             <Component
                 {...pageProps}
-                isAuthenticated={isAuthenticated}
                 isLoading={isLoading} // Pass isLoading to components
-                setIsAuthenticated={setIsAuthenticated}
             />
         </MainLayout>
     );
