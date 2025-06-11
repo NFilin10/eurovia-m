@@ -2,13 +2,12 @@ import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import { FiAlignRight, FiXCircle, FiChevronDown } from "react-icons/fi";
 import Styles from './Navbar.module.css';
-import {logout} from "../../../http/authentication";
 import Link from "next/link";
 import Image from "next/image";
 import {useTranslation} from "next-i18next";
 import LanDropdown from "@/components/Common/Navbar/LanDropdown/LanDropdown";
 
-const Navbar = ({ staticData, setIsAuthenticated, isAuthenticated }) => {
+const Navbar = ({ staticData }) => {
     const [isMenu, setIsMenu] = useState(false);
     const [isResponsiveClose, setIsResponsiveClose] = useState(false);
     const [activeSubMenu, setActiveSubMenu] = useState(null);
@@ -86,11 +85,6 @@ const Navbar = ({ staticData, setIsAuthenticated, isAuthenticated }) => {
                                         )}
                                     </li>
                                 ))}
-                                {
-                                    isAuthenticated && <li className={`${Styles.menuItem1} `}>
-                                        <button className={`${Styles.logoutBtn}`} onClick={() => logout(setIsAuthenticated)}>Log out</button>
-                                    </li>
-                                }
                                 <LanDropdown/>
                             </ul>
                         </nav>

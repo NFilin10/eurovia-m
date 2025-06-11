@@ -1,6 +1,5 @@
 import React from 'react';
 import Styles from "./PriceTable.module.css";
-import useFetchPrices from "../../../hooks/useFetchPrices";
 
 function PriceTable() {
 
