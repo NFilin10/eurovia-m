@@ -252,7 +252,7 @@
         "keywords": "kontakt Eurovia-m, kontaktvorm, aadress, e-post, telefon, veebipõhine broneerimine, rehvide teenuste päringud",
         "title": "Võtke meiega ühendust"
     },
-    " ": [
+    "servicePagesSeo": [
         {
             "description": "Eurovia-m pakub professionaalset sõiduautode rehvide vahetuse teenust, et tagada sõiduki ohutus ja mugavus. Kasutame kaasaegseid seadmeid kiireks, usaldusväärseks ja muretu rehvide vahetuseks, pakkudes lisateenuseid nagu tasakaalustamine ja rehvide seisukorra hindamine.",
             "keywords": "sõiduautode rehvide vahetus, rehvide tasakaalustamine, rehvide seisukorra hindamine, rehvide vahetuse teenused",
@@ -262,6 +262,11 @@
             "description": "Eurovia-m pakub tõhusaid veoautode rehvide vahetuse teenuseid spetsialiseeritud seadmete abil igasuguste rehvide jaoks. Pakume rehvide tasakaalustamist ja professionaalset nõu, et tagada optimaalne töösooritus, kütusekulu ja ohutus teie kaubanduses kasutatavatel sõidukitel.",
             "keywords": "veoautode rehvide vahetus, kommertslike rehvide teenused, rehvide tasakaalustamine, rehvide vahetus veoautodele, autopargi teenused",
             "title": "Veoautode rehvide vahetus"
+        },
+        {
+            "description": "Eurovia-M pakub professionaalset tööstuslike rataste paigaldust, kasutades spetsialiseeritud seadmeid täpseks ja turvaliseks paigalduseks. Töötame täiskummist, pneumaatiliste ja superelastsete rehvidega erineval rasketehnikal.",
+            "keywords": "tööstuslike rataste paigaldus, rasketehnika rehvid, täiskummrehvide paigaldus, superelastsed rehvid, tööstuslik rehviteenus",
+            "title": "Tööstuslike Rataste Paigaldusteenus"
         },
         {
             "description": "Protekteerimine on keskkonnasõbralik ja kulutõhus lahendus rehvide eluiga pikendamiseks. Eurovia-m pakub kõrge kvaliteediga protekteerimisteenuseid, kasutades kaasaegset tehnoloogiat rehvi funktsionaalsuse taastamiseks, ohutuse parandamiseks ja jäätmete vähendamiseks.",
