@@ -22,12 +22,15 @@ import service1_1 from "../public/assets/servicePage1_1.jpg";
 import service1_2 from "../public/assets/servicePage1_2.jpg";
 import service2_1 from "../public/assets/servicePage2_1.jpg";
 import service2_2 from "../public/assets/servicePage2_2.avif";
-import service3_1 from '../public/assets/servicePage3_1.jpg'
-import service3_2 from '../public/assets/servicePage3_2.jpg'
-import service4_1 from "../public/assets/servicePage4_1_dark.jpg";
-import service4_2 from "../public/assets/servicePage4_2.jpg";
+import service3_1 from '../public/assets/ret.webp'
+import service3_2 from '../public/assets/ret.jpg'
+import service4_1 from "../public/assets/fix.jpg";
+import service4_2 from "../public/assets/fix1.jpg";
 import service5_1 from "../public/assets/servicePage5_1.jpg";
 import service5_2 from "../public/assets/servicePage5_2.jpg";
+import service6_1 from "../public/assets/service6_1.jpg"
+import service6_2 from "../public/assets/service6_2.png"
+
 
 let iconStylesHome = {fontSize: "3.5em", color: "red"};
 let iconStylesFooter = {fontSize: "30px", color:"red"};
@@ -48,6 +51,9 @@ const state = {
                   },
                   {
                       to: "/veoauto-rehvi-vahetus",
+                  },
+                  {
+                      to: "/tööstuslike-rataste-paigaldus",
                   },
                   {
                       to: "/protekteerimine",
@@ -96,18 +102,23 @@ const state = {
                 link: "/veoauto-rehvi-vahetus"
             },
             {
-                imageUrl: service3Image,
+                imageUrl: service3_2,
                 imageUrlRaw: "./assets/service3.jpg",
+                link: "/tööstuslike-rataste-paigaldus"
+            },
+            {
+                imageUrl: service3Image,
+                imageUrlRaw: "./assets/service4.jpg",
                 link: "/protekteerimine"
             },
             {
                 imageUrl: service4Image,
-                imageUrlRaw: "./assets/service4.jpg",
+                imageUrlRaw: "./assets/service5.jpg",
                 link: "/remont"
             },
             {
                 imageUrl: service5Image,
-                imageUrlRaw: "./assets/service5.jpg",
+                imageUrlRaw: "./assets/service6.jpg",
                 link: "/hotell",
             }
         ],
@@ -137,11 +148,11 @@ const state = {
         footerItems: [
             {
                 icon: "icon1",
-                value: "372 384724775"
+                value: "+372 5202967, +372 5153722"
             },
             {
                 icon: "icon2",
-                value: "euroviam@hot.ee"
+                value: "s.gorlanov@eurovia-m.ee, j.suurkuusk@eurovia-m.ee"
             },
             {
                 icon: "icon3",
@@ -170,14 +181,18 @@ const state = {
             },
             {
                 id: 3,
-                serviceImg: service3Image,
+                serviceImg: service3_1,
             },
             {
                 id: 4,
-                serviceImg: service4Image,
+                serviceImg: service3Image,
             },
             {
                 id: 5,
+                serviceImg: service4Image,
+            },
+            {
+                id: 6,
                 serviceImg: service5Image,
             }
         ]
@@ -190,11 +205,13 @@ const state = {
             },
             {
                 icon: "icon2",
-                text: "euroviam@hot.ee",
+                text1: "s.gorlanov@eurovia-m.ee",
+                text2: "j.suurkuusk@eurovia-m.ee"
             },
             {
                 icon: "icon3",
-                text: "442 4732832",
+                text1: "+372 5202967",
+                text2: "+372 5153722"
             },
             {
                 icon: "icon4",
@@ -211,6 +228,11 @@ const state = {
             mainImg: service2_1,
             secondaryImg: service2_2,
             path: "veoauto-rehvi-vahetus"
+        },
+        {
+            mainImg: service6_1,
+            secondaryImg: service6_2,
+            path: "tööstuslike-rataste-paigaldus"
         },
         {
             mainImg: service3_1,

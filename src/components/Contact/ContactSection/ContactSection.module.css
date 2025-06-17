@@ -83,6 +83,14 @@
     font-weight: 100;
 }
 
+.iconElement div{
+    display: flex;
+    flex-direction: column;
+}
+
+.iconElement div p{
+    margin-bottom: 10px;
+}
 
 @media (min-width: 320px) and (max-width: 480px) {
     .mainSection{

@@ -6,7 +6,7 @@
 }
 
 .contactSection{
-    width: 35%;
+    width: 50%;
 }
 
 .contactFormContainer{
@@ -63,7 +63,7 @@
 
 .contactData{
     display: flex;
-    gap: 30px
+    gap: 30px;
 }
 
 .contactInfo p{
@@ -72,9 +72,11 @@
     text-transform: uppercase;
 }
 
-.contactInfo span {
+.contactInfo div {
     margin-top: -15px;
     font-size: 16px;
+    display: flex;
+    flex-direction: column;
 }
 
 .form{

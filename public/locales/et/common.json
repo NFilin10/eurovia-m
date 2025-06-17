@@ -6,6 +6,7 @@
                 "subMenu": [
                     { "text": "Sõiduautode rehvide vahetus" },
                     { "text": "Veoautode rehvide vahetus" },
+                    { "text": "Tööstuslike rataste paigaldus" },
                     { "text": "Protekteerimine" },
                     { "text": "Rehvide remont" },
                     { "text": "Rehvide hotell" }
@@ -59,6 +60,11 @@
             {
                 "serviceName": "Veoautode rehvide vahetus",
                 "serviceDescription": "Professionaalne teenus, mis tagab veoautode rehvide turvalisuse ja töökindluse.",
+                "readMore": "Loe lähemalt"
+            },
+            {
+                "serviceName": "Tööstuslike rataste paigaldus",
+                "serviceDescription": "Professionaalne teenus, mis tagab Tööstuslike rataste turvalisuse ja töökindluse.",
                 "readMore": "Loe lähemalt"
             },
             {
@@ -150,6 +156,10 @@
                 "serviceDescription": "Professionaalne teenus, mis tagab veoautode rehvide turvalisuse ja töökindluse."
             },
             {
+                "serviceName": "Tööstuslike rataste paigaldus",
+                "serviceDescription": "Professionaalne teenus, mis tagab tööstuslike rataste turvalisuse ja töökindluse."
+            },
+            {
                 "serviceName": "Protekteerimine",
                 "serviceDescription": "Kasutame kaasaegseid seadmeid ja külm-vulkaniseerimise meetodit..."
             },
@@ -167,10 +177,10 @@
         "mainHeading": ["Võtke  meeiega ", "ühendust"],
         "secondaryHeading": "Ootame teie küsimusi või kommentaare",
         "contactElements": [
-            { "heading": "aadress" },
-            { "heading": "email" },
-            { "heading": "helistaga meile" },
-            { "heading": "täitke vorm" }
+            { "heading": "Aadress" },
+            { "heading": "Email" },
+            { "heading": "Helistage meile" },
+            { "heading": "Täitke vorm" }
         ]
     },
     "servicePages": [
@@ -189,6 +199,18 @@
             "listItems": ["Erivarustus suurte rehvide jaoks – teostame rehvide vahetuse kiiresti ja tõhusalt, sõltumata nende suurusest või tüübist.", "Tasakaalustamine ja kütusesääst – õigesti tasakaalustatud rehvid vähendavad vibratsiooni, kütusekulu ja rehvide ebaühtlast kulumist.", "Personaalne nõustamine – aitame valida teie vajadustele vastavad rehvid, arvestades veoauto töökoormust ja liikumispiirkondi."]
         },
         {
+            "heading": "Tööstuslike rataste paigaldus",
+            "secondaryHeading": "Teenuse omadused",
+            "mainText": "Tööstuslike rataste paigaldus nõuab professionaalset lähenemist ja spetsialiseeritud varustust. Selliseid rattaid kasutatakse rasketes tingimustes – ehitus-, lao-, põllumajandus- ja muudes tööstusmasinates – ning korrektne paigaldus mõjutab otseselt seadme eluiga ja ohutut kasutust.",
+            "secondaryText": "EUROVIA-M pakub kvalifitseeritud tööstusrataste paigaldusteenust igal keerukuse tasemel. Meie spetsialistidel on vajalikud teadmised ja kogemused täiskummist, pneumaatiliste ja superelastsete rehvidega töötamiseks.\n\nMe töötame erinevate tööstusseadmetega, sealhulgas tõstukid, ekskavaatorid, kärud, tõsteplatvormid ja muud rasketehnikad.\n\nKasutame spetsialiseeritud seadmeid ja usaldusväärseid kulumaterjale, sealhulgas paigalduspastasid, tihendeid ja tööriistu Techilt, tagades ka kõige raskemate rataste täpse ja ohutu paigalduse.",
+            "listItems": [
+                "Professionaalne demontaaž ja montaaž – ohutu ja täpne tööstusrataste paigaldus vastavalt tehnilistele nõuetele.",
+                "Tasakaalustamine ja rõhukontroll – tagame seadmete stabiilse ja ohutu töö.",
+                "Kvaliteedigarantii – iga tööetapp vastab tööstusstandarditele ja tootjate soovitustele."
+            ]
+        },
+
+        {
             "heading": "Protekteerimine",
             "secondaryHeading": "Teenuse omadused",
             "mainText": "Protekteerimine on majanduslikult ja keskkonnasõbralik viis rehvide kasutusiga pikendada. EUROVIA-M on tegutsenud Eestis alates 1995. aastast ja on spetsialiseerunud protekteerimisele, pakkudes kõrgeima kvaliteediga teenuseid, mida toetavad kaasaegne tehnoloogia ja pikaajaline kogemus. Protekteerimine tähendab rehvi kulunud mustrilindi asendamist uuega, mis taastab selle algse funktsionaalsuse ja välimuse. See protsess on oluliselt odavam kui uue rehvi ostmine ja aitab säästa väärtuslikke ressursse. Lisaks pikendab see rehvide eluiga, vähendades samal ajal jäätmete hulka ja toetades keskkonnasäästlikkust.",
@@ -199,7 +221,7 @@
             "heading": "Rehvide remont",
             "secondaryHeading": "Teenuse omadused",
             "mainText": "Rehvide remont on sageli säästlik ja kiire lahendus kahjustatud rehvide taastamiseks. Väikesed kahjustused, nagu torked või lõiked, võivad põhjustada suurt peavalu, kuid õigel ajal tehtud remont aitab vältida suuremaid probleeme ja pikendada rehvide eluiga.",
-            "secondaryText": "EUROVIA-M pakub kvaliteetseid ja kiireid rehvide remonditeenuseid, et tagada teie sõiduki ohutus ja rehvide usaldusväärsus.",
+            "secondaryText": "EUROVIA-M pakub kvaliteetset ja kiiret rehvide parandus\u00ADtegevust, tagades teie sõiduki ohutuse ja rehvide töökindluse. Me teostame sõiduautode, veokite ja tööstuslike rehvide parandust, kasutades professionaalseid materjale ja tehnoloogiaid.\n\nKasutame kvaliteetseid paikasid, tihendeid ja muid remondilahendusi juhtivalt ettevõttelt Tech, mis tagab töö vastupidavuse ja usaldusväärsuse.",
             "listItems": ["Torke- ja lõikekahjustuste parandamine – kasutame kvaliteetseid materjale, et tagada rehvi vastupidavus pärast remonti.", "Ventiiilide ja rehvirõhu kontroll – kõrvaldamine võimalikke lekkeid ja tagame rehvirõhu korrektsuse.", "Turvanõuetele vastav kvaliteet – iga remonditud rehv läbib põhjaliku kontrolli, et tagada sõiduki ohutus."]
         },
         {

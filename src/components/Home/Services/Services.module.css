@@ -210,11 +210,10 @@
 .bulletList{
     /*height: 250px;*/
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    column-gap: 50px;
+    column-gap: 20px;
     width: 890px;
-    justify-content: space-between;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {

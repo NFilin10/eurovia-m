@@ -12,7 +12,7 @@ const ContactFormSection = ({ className, state, staticData }) => {
         e.preventDefault();
 
         emailjs
-            .sendForm('service_p7v2at9', 'service_p7v2at9', form.current, {
+            .sendForm('service_p7v2at9', 'template_oagljvd', form.current, {
                 publicKey: 'VZrLJJjY6X2w8JNpR',
             })
             .then(
@@ -42,14 +42,22 @@ const ContactFormSection = ({ className, state, staticData }) => {
                             <FaPhone className={Styles.icon} style={iconStyles} />
                             <div className={Styles.contactInfo}>
                                 <p>{staticData.textSection.phone}</p>
-                                <span>473 4837248</span>
+                                <div>
+                                    <span>+372 5202967</span>
+                                    <span>+372 5153722</span>
+                                </div>
+
                             </div>
                         </div>
                         <div className={Styles.contactElem}>
                             <MdEmail className={Styles.icon} style={iconStyles} />
                             <div className={Styles.contactInfo}>
                                 <p>{staticData.textSection.mail}</p>
-                                <span>eurovia-m@hot.ee</span>
+                                <div>
+                                    <span>s.gorlanov@eurovia-m.ee</span>
+                                    <span>j.suurkuusk@eurovia-m.ee</span>
+                                </div>
+
                             </div>
                         </div>
                     </div>

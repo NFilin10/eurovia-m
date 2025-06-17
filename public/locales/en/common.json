@@ -6,6 +6,7 @@
         "subMenu": [
           { "text": "Passenger car tire replacement" },
           { "text": "Truck tire replacement" },
+          { "text": "Industrial wheel installation" },
           { "text": "Retreading" },
           { "text": "Tire repair" },
           { "text": "Tire hotel" }
@@ -59,6 +60,11 @@
       {
         "serviceName": "Truck tire replacement",
         "serviceDescription": "Professional service that ensures the safety and reliability of truck tires.",
+        "readMore": "Read more"
+      },
+      {
+        "serviceName": "Industrial wheel installation",
+        "serviceDescription": "Professional service that ensures the safety and reliability of industrial wheels.",
         "readMore": "Read more"
       },
       {
@@ -150,6 +156,10 @@
         "serviceDescription": "Professional service that ensures the safety and reliability of truck tires."
       },
       {
+        "serviceName": "Industrial wheel installation",
+        "serviceDescription": "Professional service that ensures the safety and reliability of industrial wheels."
+      },
+      {
         "serviceName": "Retreading",
         "serviceDescription": "We use modern equipment and cold-vulcanization methods..."
       },
@@ -167,10 +177,10 @@
     "mainHeading": ["Contact ", "us"],
     "secondaryHeading": "We look forward to your questions or comments",
     "contactElements": [
-      { "heading": "address" },
-      { "heading": "email" },
-      { "heading": "call us" },
-      { "heading": "fill the form" }
+      { "heading": "Address" },
+      { "heading": "Email" },
+      { "heading": "Call us" },
+      { "heading": "Fill the form" }
     ]
   },
   "servicePages": [
@@ -197,6 +207,17 @@
       ]
     },
     {
+      "heading": "Industrial Wheel Installation",
+      "secondaryHeading": "Service Features",
+      "mainText": "Installing industrial wheels requires a professional approach and specialized equipment. These wheels are used in demanding conditions – on construction, warehouse, agricultural, and other heavy-duty machinery – so proper installation directly affects the equipment’s lifespan and safe operation.",
+      "secondaryText": "EUROVIA-M provides expert industrial wheel installation services of any complexity. Our specialists have the knowledge and experience to work with solid, pneumatic, and superelastic tires.\n\nWe service a wide range of machinery, including forklifts, excavators, carts, lifts, and other types of industrial transport.\n\nWe use specialized equipment and trusted consumables, including mounting pastes, sealants, and tools from Tech, ensuring safe and precise installation even for the heaviest wheels.",
+      "listItems": [
+        "Professional dismounting and mounting – safe and precise installation of industrial wheels according to technical specifications.",
+        "Balancing and pressure checks – we ensure stable and safe equipment performance.",
+        "Quality assurance – every stage of work meets industry standards and manufacturer recommendations."
+      ]
+    },
+    {
       "heading": "Retreading",
       "secondaryHeading": "Service Features",
       "mainText": "Retreading is an economical and environmentally friendly way to extend tire life. EUROVIA-M has been operating in Estonia since 1995 and specializes in retreading, offering the highest quality services supported by modern technology and long-term experience. Retreading means replacing the worn tread with a new one, restoring the tire's original functionality and appearance. This process is significantly cheaper than buying a new tire and helps save valuable resources. In addition, it extends tire life, reduces waste, and supports environmental sustainability.",
@@ -213,7 +234,7 @@
       "heading": "Tire Repair",
       "secondaryHeading": "Service Features",
       "mainText": "Tire repair is often a cost-effective and quick solution to restore damaged tires. Small damages, such as punctures or cuts, can cause significant headaches, but timely repair can prevent bigger problems and extend the tire's lifespan.",
-      "secondaryText": "EUROVIA-M offers high-quality and fast tire repair services to ensure your vehicle's safety and tire reliability.",
+      "secondaryText": "EUROVIA-M offers high-quality and efficient tire repair services, ensuring the safety of your vehicle and the reliability of your tires. We repair passenger car, truck, and industrial tires using professional-grade materials and technologies.\n\nWe use high-quality patches, sealants, and other repair solutions from the leading company Tech, ensuring durability and reliability of the repair work.",
       "listItems": [
         "Puncture and cut repair – we use high-quality materials to ensure tire durability after repair.",
         "Valve and tire pressure check – we eliminate possible leaks and ensure correct tire pressure.",

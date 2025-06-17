@@ -24,7 +24,12 @@ function ContactSection({state, staticData}) {
         <div className={Styles.iconElement}>
             {iconMap[staticData[index].icon]}
             <h1>{element.heading}</h1>
-            <p>{staticData[index].text}</p>
+            <div>
+                <p>{staticData[index].text}</p>
+                <p>{staticData[index].text1}</p>
+                <p>{staticData[index].text2}</p>
+            </div>
+
         </div>
     )
 
